@@ -93,11 +93,14 @@ em {
     /* 배경때문에 글자의 색상이 변경되었다면, 배경과 글자색상을 동시에 선언하는 것이 좊음 */
     text-align: right;
     margin: 80px 0 84px 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 .Overview h1 {
     font-size: 40px;
     font-weight: 700;
-    margin: 0 0 15px 0;
-
+    margin: 0 83px 15px 0;
+    padding: 80px 0 0 0;
+}
+.Overview p {
+    margin: 0 83px 15px 0;
 }
