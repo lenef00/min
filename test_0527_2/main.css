@@ -5,7 +5,7 @@ body {
     font-family: "Noto Sans KR", sans-serif; /* 서체 */
     font-weight: 400; /* 두께 - regular 400*/
     font-size: 15px; /* 글자크기 */
-    letter-spacing: -0.05; /* 자간 -50*/
+    letter-spacing: 0; /* 자간 -50*/
     line-height: 1.4; /* 행간 - 1.4 배수 */   
     word-break: keep-all; /* 단어별로 줄바꿈 */
 }
