@@ -137,7 +137,7 @@ header .gnb ul li a:hover {
 .promotion {
     /* 배경보다 promotion 콘텐츠 길이가 더 길다.. 배경의 위치를 정확하게 - 
     가운데 상단 background-size 주면 안됨... 디자인한 사이즈대로 들어가야 하니까 */
-    background: url(../images/promotion_bg.png) no-repeat center top;
+    background: url(../images/promotion_bg2.png) no-repeat center top;
 }
 .promotion em {
     color: #ff8e2b;
@@ -161,16 +161,7 @@ header .gnb ul li a:hover {
 .promotion .news .tit p {
     margin: 2px 0 15px 0;
 }
-.promotion .news .tit a {
-    border: 1px solid rgba(255,255,255,0.7);
-    padding: 6px 15px;
-    display: inline-block; /* inline요소는 padding 적용 안됨 */
-}
-.promotion .news .tit a:hover {
-    border: 1px solid #fff;
-    background-color: #fff;
-    color: #0D2137;
-}
+
 .promotion .news .list {
     width: 650px;
 }
@@ -194,6 +185,33 @@ header .gnb ul li a:hover {
 .promotion .news .list ul li a:hover strong {
     font-weight: 700;
     color: #fff;
+}
+.promotion .news .wrapper {
+    position: relative;
+    /* more정렬의 기준
+        more를 감싸는 wrapper를 기준으로 정렬 
+        wrapper에 position값을 줘야 함 
+        relative 값만이 요소에 아무런 영향을 끼치지 않음 */
+}
+.promotion .news .more {
+    border: 1px solid rgba(255,255,255,0.7);
+    padding: 6px 15px;
+    display: inline-block; /* inline요소는 padding 적용 안됨 */
+    position: absolute;
+    left: 0;
+    top: 90px;
+    /* position:absolute는 반드시
+    좌우위치 left light
+    위아래 위치 top bottom 값이 필수이고
+    이 값을 어디서부터 계산하는지
+    기준이 필요함 
+    나를 감싸는 요소 중에서 position 속성을 가진 요소를 기준으로 정렬 
+    ----. wraper를 기준으로 정렬 */
+}
+.promotion .news .more:hover {
+    border: 1px solid #fff;
+    background-color: #fff;
+    color: #0D2137;
 }
 .promotion .movie .tit h2 {
     font-size: 45px;
@@ -273,5 +291,26 @@ footer .f_info span {
         span은 margin을 적용시키려고 */
 }
 footer .copyright {
-    color: rgba(255,255,255,0.6);
+    color: rgba(255,255,255,0.5);
+}
+footer .wrapper {
+    /* footer .family 정렬의 기준 */
+    position: relative;
+}
+footer .family {
+    position: absolute;
+    right: 0;
+    top: 0;
+    /* footer .wrapper 기준으로 정렬 */
+}
+footer .family button {
+    border: 1px solid rgba(255,255,255,0.5);
+    width: 200px;
+    height: 30px;
+    /* 원래 버튼 태그는 요소가 좌우에 가운데 위아래 가운데 정렬 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 위아래 가운데 */
+    padding: 0 15px;
+    /* 내부 두 요소를 좌우 끝단에 배치하기 위해서 */
 }
