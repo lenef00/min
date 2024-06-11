@@ -380,6 +380,26 @@ footer .f_nav ul {
     display: flex;
     gap: 38px /* li 사이 여백 */
 }
+footer .f_nav ul li {
+    position: relative; /* after 정렬의 기준 */
+}
+footer .f_nav ul li::after {
+    content: ""; 
+    /*  가상요소 before와 after 사용할 때에는 반드니 content 필요
+        지우면 나타나지 않음*/
+    width: 1px;
+    height: 11px;
+    background-color: #ccc;
+    display: block;
+    position: relative; /* 각각의 li를 기준으로 정렬 */
+    position: absolute;
+    right: -20px;
+    top: 4px;
+}
+/* li중에서 마지막 li의 after */
+footer .f_nav ul li:last-child:after{
+    display: none; /* 숨김 */
+}
 footer .f_info {
     margin: 33px 0 20px 0;
     display: flex;
