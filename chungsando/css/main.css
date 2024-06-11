@@ -141,7 +141,7 @@ header .gnb ul li a:hover {
 }
 .culture .list ul li a .photo {
     overflow: hidden;
-    /* 이미기자 photo의 크기보다 커지면 넘치는 부분 숨김 */
+    /* 이미지가 photo의 크기보다 커지면 넘치는 부분 숨김 */
     font-size: 0;
     line-height: 0;
     /* 이미지 하단에는 글자의 행간(여백)값이 들어감. 그래서 하단에 여백이 조금 발생
@@ -257,6 +257,7 @@ header .gnb ul li a:hover {
     border-radius: 20px;
     display: inline-block;
     background: url(../images/more.svg) no-repeat right 9px center;
+    transition: 0.5s;
 }
 .tour .more a:hover {
     border-color: #263D71;
@@ -283,6 +284,9 @@ header .gnb ul li a:hover {
     font-weight: 800;
     color: #fff;
 }
+.community .tit h2 em {
+    color: #A6C9E5;
+}
 .community .tit strong {
     font-size: 35px;
     color: #fff;
@@ -292,6 +296,7 @@ header .gnb ul li a:hover {
 .community .news {
     background-color: rgba(58,98,165,0.4);
     backdrop-filter: blur(11px); /* 박스의 뒷배경을 흐리게 하는 효과 */
+    border-radius: 15px;
     width: 511px;
     height: 354px;
     margin: 186px 0 0 0;
@@ -300,9 +305,95 @@ header .gnb ul li a:hover {
 .community .news h3 {
     font-weight: 800;
     font-size: 20px;
-    margin: 30px 30px 22px 0;
+    margin: 30px 30px 15px 0;
+    color: #fff;
+}
+.community .news ul li {
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+.community .news ul li:first-child {
+    border-top: 0;
+}
+.community .news ul li a {
+    display: flex;
+    justify-content: space-between;
+    padding: 11px 0;
+}
+.community .news ul li a strong {
+    color: #fff;
+}
+.community .news ul li a:hover strong {
+    font-weight: 800;
+    color: #A6C9E5;
+}
+
+.community .link {
+    width: 428px;
+    margin: 186px 0 0 24px;
+}
+.community .link ul {
+    display: flex;
+    flex-wrap: wrap; /* 두 줄 허용 */
+    gap: 24px; /* li사이의 여백 */
+}
+.community .link ul li {
+    width: 190px;
+    background-color: rgba(58,98,165,0.4);
+    backdrop-filter: blur(11px);
+    border-radius: 15px;
+}
+.community .link ul li a {
+    display: block;
+    height: 165px;
+    padding: 30px 0 0 30px;
+    font-size: 20px;
+    font-weight: 800;
+    color: #fff;
+    background-position: right 30px bottom 30px;
+    background-repeat: no-repeat;
+}
+.community .link ul li a:hover {
+    background-color: #A6C9E5;
+    border-radius: 15px;
+}
+.community .link ul li.link1 a {
+    background-image: url(../images/community_ico1.svg);
+}
+.community .link ul li.link2 a {
+    background-image: url(../images/community_ico2.svg);
+}
+.community .link ul li.link3 a {
+    background-image: url(../images/community_ico3.svg);
+}
+.community .link ul li.link4 a {
+    background-image: url(../images/community_ico4.svg);
 }
 
 footer {
-    margin-top: 500px;
+    padding: 40px 0 64px 0;
+}
+footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+footer .f_nav ul {
+    display: flex;
+    gap: 38px /* li 사이 여백 */
+}
+footer .f_info {
+    margin: 33px 0 20px 0;
+    display: flex;
+    gap: 38px /* li 사이 여백 */
+}
+footer .copy {
+    color: #666;
+}
+footer .family button {
+    width: 168px;
+    height: 38px;
+    border: 1px solid #707070;
+    border-radius: 5px;
+    padding: 0 11px;
+    text-align: left; /* 버튼의 기본은 가운데 */
+    background: url(../images/more.svg) no-repeat right 16px center;
 }
