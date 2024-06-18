@@ -1,0 +1,109 @@
+@import url(default.css);
+@import url(fonts.css);
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-display: swap;
+    src: local('Pretendard Bold'), url(../fonts/Pretendard-Bold.woff2) format('woff2'), url(../fonts/Pretendard-Bold.woff) format('woff');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
+}
+html, body {
+    font-family: "Pretendard" , sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #3d3d3d;
+    line-height: 1.4;
+    letter-spacing: 0;
+    word-break: keep-all;  
+}
+#wrap {
+    min-width: 1260px;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+.biz .tit {
+    color: #1d1d1d;
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+    margin: 85px 0 20px 0;
+}
+.biz ul {
+    display: flex;
+    justify-content: space-between;
+}
+.biz .list ul li {
+    width: 297px;
+}
+.biz .list ul li a{
+    display: block;
+}
+.biz .list ul li a h3 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin: 13px 0 0 0;
+}
+.biz .list ul li a p {
+    margin: 7px 0 0 0;
+}
+
+.tech {
+    margin: 87px 0 0 0;
+    background-color: #f4f4f4;
+}
+.tech .tit {
+    color: #1d1d1d;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 0.675;
+    padding: 98px 0 20px 0;
+    text-align: center;
+}
+.tech .list {
+    margin: 20px 0 80px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.tech .list .group1 {
+    background: url(../images/tech01.png);
+    width: 618px;
+    height: 514px;
+}
+.tech .list .group1 h2 {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    padding: 196px 0 0 0;
+}
+.tech .list .group1 p {
+    color: #fff;
+    text-align: center;
+    margin: 12px 0 0 0;
+}
+.tech .list .group2 {
+    background: url(../images/tech02.png);
+    width: 618px;
+    height: 514px;
+}
+.tech .list .group2 h2 {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    padding: 196px 0 0 0;
+}
+.tech .list .group2 p {
+    color: #fff;
+    text-align: center;
+    margin: 12px 0 0 0;
+}

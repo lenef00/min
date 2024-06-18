@@ -668,7 +668,171 @@ header .gnb .gnb_wrap ul li:last-child a::after {
         content: ""; /* after를 보이게 하는 값 */
     }
 }
+
+.introduce {
+    background-color: #ededed;
+    padding: 100px 0 100px 0;
+    margin: 100px 0 0 0;
+}
+.introduce .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.introduce .list ul li {
+    width: 618px;
+}
+.introduce .list ul li a {
+    display: block;
+    color: #fff;
+    height: 220px;
+    padding: 134px 30px 0 30px;
+    border-radius: 25px;
+}
+.introduce .list ul li a p {
+    margin: 5px 0 0 0;
+}
+.introduce .list ul li.intro1 a {
+    background: url(../images/introduce_1.png) no-repeat center center / cover; 
+}
+.introduce .list ul li.intro2 a {
+    background: url(../images/introduce_2.png) no-repeat center center / cover;
+}
+.introduce .list ul li a .tit_b {
+    font-size: 25px;
+}
+
+@media screen and (max-width:640px) {
+    .introduce {
+        background-color: transparent;
+        padding: 0;
+        margin: 45px 0 0 0;
+    }
+    .introduce .wrapper {
+        margin: 0;
+    }
+    .introduce .list ul {
+        display: block;
+    }
+    .introduce .list ul li {
+        width: auto;
+    }
+    .introduce .list ul li a {
+        display: block;
+        height: 130px;
+        padding: 88px 20px 0 20px;
+        border-radius: 0;
+    }
+    .introduce .list ul li.intro2 a h3 {
+        text-align: right;
+    }
+    .introduce .list ul li a p {
+        display: none;
+    }
+    .introduce .list ul li a .tit_b {
+        font-size: 20px;
+    }
+}
     
 footer {
-    margin-top: 1000px;
+    background-color: #2d2d2d;
+    padding: 60px 0 75px 0;
+    color: rgba(255,255,255,0.8);
+}
+footer .wrapper {
+    position: relative; /* top 정렬의 기준 */
+}
+footer .top {
+    position: absolute;
+    right: 0;
+    top: -20px;
+}
+footer .top button {
+    width: 60px;
+    height: 60px;
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 50%; /* 동그라미 */
+    padding: 15px 0 0 0;
+    position: relative; /* before 정렬의 기준 */
+}
+footer .top button::before {
+    position: absolute;
+    left: 17px;
+    top: 8px;
+    width: 24px;
+    height: 24px;
+    background: url(../images/top.svg) no-repeat center center / contain;
+    content: "";
+}
+footer .f_nav ul {
+    display: flex;
+    gap: 38px;
+}
+footer .f_nav ul li {
+    position: relative; /* after 정렬의 기준 */
+}
+footer .f_nav ul li::after {
+    position: absolute; /* li를 기준으로 정렬 */
+    right: -20px;
+    top: 3px;
+    width: 1px;
+    height: 11px;
+    background-color: rgba(255,255,255,0.2);
+    content: "";
+}
+footer .f_nav ul li:last-child:after {
+    display: none;
+}
+footer .f_info {
+    margin: 20px 0 0 0;
+    display: flex;
+    gap: 38px;
+}
+footer .copy {
+    margin: 5px 0 0 0;
+    color: rgba(255,255,255,0.4);
+}
+
+@media screen and (max-width:640px) {
+    footer {
+        padding: 11px 0 43px 0;
+    }
+    footer .top {
+        position: relative;
+        right: auto;
+        top: auto;
+        text-align: right;
+        font-size: 13px;
+        margin: 0 0 4px 0;
+    }
+    footer .top button {
+        width: 40px;
+        height: 40px;
+        padding: 15px 0 0 0;
+    }
+    footer .top button::before {
+        left: 10px;
+        top: 3px;
+        width: 20px;
+        height: 20px;
+    }
+    footer .f_nav ul {
+        flex-wrap: wrap; /* 두 줄 허용 */
+        gap: 0;
+    }
+    footer .f_nav ul li {
+       margin: 0 30px 5px 0;
+    }
+    footer .f_nav ul li::after {
+        position: absolute; /* li를 기준으로 정렬 */
+        right: -16px;
+        height: 8px;
+    }
+    footer .f_nav ul li:last-child:after {
+        display: none;
+    }
+    footer .f_info {
+        margin: 20px 0 0 0;
+        flex-wrap: wrap;
+        gap: 0;
+    }
 }
