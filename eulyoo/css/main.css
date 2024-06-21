@@ -240,6 +240,85 @@
     }
 }
 
+.interview {
+    background-color: #EEE8E5;
+    margin: 150px 0 0 0;
+    padding: 100px 0 110px 0;
+}
+.interview .wrapper {
+    position: relative; /* more 정렬의 기준 */
+}
+.interview .tit {
+    text-align: center;
+    margin: 0 0 133px 0;
+}
+.interview .tit h2 {
+    font-family: 'Eulyoo';
+    font-size: 50px;
+    color: #1d1d1d;
+}
+.interview .more {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+.interview .more a {
+    padding: 10px 93px 11px 15px;
+    border: 1px solid #999;
+    display: inline-block;
+    color: #3d3d3d;
+    position: relative; /* after 정렬의 기준 */
+}
+.interview .more a::after {
+    position: absolute; /* a를 기준으로 정렬 */
+    right: 12px;
+    top: 15px;
+    width: 10px;
+    height: 10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_9_492' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='10' height='10'%3E%3Crect width='10' height='10' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_9_492)'%3E%3Cpath d='M3.3357 8.87804L2.89258 8.43492L6.32768 4.99981L2.89258 1.56471L3.3357 1.12158L7.21393 4.99981L3.3357 8.87804Z' fill='%233D3D3D'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+.interview .more a:hover {
+    border-color: #767775;
+    background-color: #767775;
+    color: #fff;
+} 
+.interview .more a:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_9_937' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='10' height='10'%3E%3Crect width='10' height='10' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_9_937)'%3E%3Cpath d='M3.3357 8.87804L2.89258 8.43492L6.32768 4.99981L2.89258 1.56471L3.3357 1.12158L7.21393 4.99981L3.3357 8.87804Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");   
+}
+.interview .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.interview .list ul li {
+    width: 404px;
+}
+/* 디자인상 무조건 두 번째 요소에 적용되는 스타일 */
+.interview .list ul li:nth-child(2) {
+    margin: 40px 0 0 0;
+}
+.interview .list ul li a .photo {
+    overflow: hidden;
+    font-size: 0; /* 이미지 하단 여백 삭제 */
+    line-height: 0;
+    border-radius: 50px 0 50px 0;
+}
+.interview .list ul li:nth-child(2) a .photo {
+    border-radius: 0 50px 0 50px;
+}
+.interview .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 감싸는 요소 photo 영역에 이미지 꽉채우기 */
+    transition: 0.5s;
+    filter: grayscale(100%);
+}
+
 footer {
     margin: 200px 0 0 0;
 }
