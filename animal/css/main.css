@@ -37,21 +37,86 @@ header .logo a::before {
     background-image: url(../images/logo_w.svg);
     content: "";
 }
-header .gnb .gnb_open,
-header .gnb .gnb_close {
-    display: none; /* 모바일에서만 나옴 */
-}
-header .gnb .gnb_wrap .depth1 {
-    display: flex;
-}
-header .gnb .gnb_wrap .depth1 > li > a {
-    padding: 45px 26px;
-    display: block;
-    font-size: 20px;
-    font-weight: 700;
-}
-header .gnb .gnb_wrap ul.depth2 {
-    display: none;
+@media screen and (min-width:1025px) { /* 1025이상 - pc 버전 메뉴 */
+    /* 메뉴가 상단에 표시되는 것은 브라우저 넓이가 1025px 이상일 때 까지만 */
+        header .gnb .gnb_open,
+        header .gnb .gnb_close {
+            display: none; /* 모바일에서만 나옴 */
+        }
+        header .gnb .gnb_wrap ul.depth1 {
+            display: flex;
+        }
+        header .gnb .gnb_wrap ul.depth1 > li {
+            position: relative; /* 2차메뉴 정렬의 중심 */
+        }
+        header .gnb .gnb_wrap ul.depth1 > li > a {
+            padding: 0 26px; /* 좌우여백만 줌 */
+            line-height: 100px;
+            /* header의 높이와 동일하게 행간을 줌 */
+            display: block;
+            font-size: 20px;
+            font-weight: 700;
+            position: relative;
+            white-space: nowrap;
+        }
+        /* has 가상 선택자는 하위요소중에서 depth2라는 클래스 명을 가진 요소가 있는지 계산
+            브라우저 높은 버전만 지원 - 하위 브라우저에서 구현 x
+            ---기능상 문제는 x (화살표만 안나옴) */
+        header .gnb .gnb_wrap ul.depth1 > li:has(.depth2) > a::after {
+            position: absolute;
+            right: 12px;
+            top: 40px;
+            width: 10px;
+            height: 17px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.108' height='5' viewBox='0 0 8.108 5'%3E%3Cpath id='chevron_right_24dp_FILL0_wght400_GRAD0_opsz24' d='M323.108-715.946,320-719.054l.946-.946L325-715.946l-4.054,4.054-.946-.946Z' transform='translate(-711.892 -320) rotate(90)' fill='%23fff'/%3E%3C/svg%3E%0A");
+            content: ""; 
+        }
+        header .gnb .gnb_wrap ul.depth2 {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 100px;
+            padding: 10px 0 0 0;
+            text-align: center;
+        }
+        header .gnb .gnb_wrap ul.depth2::before {
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 100%;
+            height: calc(100% - 9px);
+        }
+        header .gnb .gnb_wrap ul.depth2 > li {
+            background-color: #1d1d1d;
+        }
+        header .gnb .gnb_wrap ul.depth2 > li > a {
+            display: block;
+            white-space: nowrap;
+            line-height: 2;
+            padding: 0 12px;
+        }
+        header .gnb .gnb_wrap ul.depth2 > li > a:hover {
+            font-weight: 700;
+        }
+        /* 1차메뉴에 오버해서 하위메뉴가 나타나는 스타일 */
+        header .gnb .gnb_wrap ul.depth1 > li.on > a {
+            color: #DE6E6A;
+        }
+        header .gnb .gnb_wrap ul.depth1 > li.on:has(.depth2) > a::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16.216' height='10' viewBox='0 0 16.216 10'%3E%3Cpath id='chevron_right_24dp_FILL0_wght400_GRAD0_opsz24' d='M326.216-711.892,320-718.108,321.892-720,330-711.892l-8.108,8.108L320-705.676Z' transform='translate(720 330) rotate(-90)' fill='%23fff'/%3E%3C/svg%3E%0A");
+        }
+        header .gnb .gnb_wrap ul.depth1 > li.on > ul.depth2 {
+            display: block;
+        }
+        
+}    
+@media screen and (min-width:1025px) and (max-width:1300px) {
+    header .gnb .gnb_wrap .depth1 > li > a {
+        padding: 0 16px;
+    }
 }
 header .tnb {
     display: flex;
@@ -125,30 +190,63 @@ header .tnb .link a::after {
     content: "";
 }
 /* header가 상단에 고정되었을 때 */
-header.fixed {  
+header.fixed,
+header.fixed.menu_over {  
     position: fixed;
     background-color: #1d1d1d;
 }
 @media screen and (max-width:1300px) {
-    header .gnb .gnb_wrap .depth1 > li > a {
-        padding: 45px 16px;
-    }
+    
 }
 @media screen and (max-width:1024px) {
+    /* 모바일 메뉴 스타일 */
     header .gnb .gnb_wrap {
         display: none;
+        position: absolute; /* header를 중심으로 정렬 */
+        left: 0;
+        top: 0;
+        z-index: 110;
+        width: 100%;
+        height: 100vh;
+        /* vh라는 단위는 브라우저 높이를 100으로 보는 단위
+            감싸는 요소의 넓이는 고려하지 않음 */
+        background-color: #fff;
+        color: #1d1d1d;
     }
-    header .gnb .gnb_open {
+    header .gnb .gnb_wrap ul.depth1 {
+        margin: 72px 20px 20px 20px;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > a {
+        display: block;
+        font-size: 20px;
+        line-height: 2.5;
+        font-weight: 700;
+    }
+    header .gnb .gnb_wrap ul.depth2 {
+        background-color: #EBECF1;
+        padding: 15px;
+        border-radius: 10px;
+    }
+    header .gnb .gnb_wrap ul.depth2 > li > a {
+        font-size: 15px;
+        color: #3d3d3d;
+        font-weight: 700;
+        line-height: 2.5;
+    }
+    header .gnb .gnb_open,
+    header .gnb .gnb_close  {
         position: absolute; /* header를 중심으로 정렬 */
         right: 0;
         top: 0;
+        z-index: 120;
         display: block; /* 숨긴거 보임 */
         width: 64px;
         height: 100%; /* header 높이만큼 */
         font-size: 0;
         line-height: 0;
     }
-    header .gnb .gnb_open::before {
+    header .gnb .gnb_open::before,
+    header .gnb .gnb_close::before {
         position: absolute;
         left: 50%;
         top: 50%;
@@ -161,8 +259,24 @@ header.fixed {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='31.605' height='21.07' viewBox='0 0 31.605 21.07'%3E%3Cpath id='menu_24dp_FILL0_wght400_GRAD0_opsz24' d='M120-698.929v-3.514h31.6v3.514Zm0-8.779v-3.513h31.6v3.513Zm0-8.78V-720h31.6v3.51Z' transform='translate(-120 719.999)' fill='%23fff'/%3E%3C/svg%3E%0A");
         content: "";
     }
+    header .gnb .gnb_close::before {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9.73' height='6' viewBox='0 0 9.73 6'%3E%3Cpath id='chevron_right_24dp_FILL0_wght400_GRAD0_opsz24' d='M323.73-715.135l-3.73-3.73L321.135-720,326-715.135l-4.865,4.865L320-711.406Z' transform='translate(-710.27 -320) rotate(90)' fill='%231d1d1d'/%3E%3C/svg%3E%0A");
+    }
+    header .gnb .gnb_close {
+        display: none;
+    }
     header .tnb {
         margin-right: 45px;
+    }
+    /* 메뉴가 열렸을 때 */
+    header.mobile_open .gnb .gnb_wrap {
+        display: block; /* 보이기 */
+    }
+    header.mobile_open .gnb .gnb_close {
+        display: block; /* 보이기 */
+    }
+    header.mobile_open .gnb .gnb_open {
+        display: none; /* 숨김 */
     }
 }
 @media screen and (max-width:768px) {
