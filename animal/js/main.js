@@ -122,4 +122,52 @@ $(document).ready(function(){
     })
 
 
+    /* find swiper */
+
+    const find01_swiper = new Swiper('.find .tab .find01 .swiper', { /* 팝업을 감싼는 요소의 class명 */
+        slidesPerView: 'auto', /* li의 넓이 비율로 안함 - css에서 준 넓이대로 함 */
+        spaceBetween: 16, /* li와 li사이 - 제일 작은 여백 */
+        breakpoints: {
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 24,
+            }
+        },
+        loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+        navigation: {
+            nextEl: '.find .tab .find01 .btn_wrap .next',
+            prevEl: '.find .tab .find01 .btn_wrap .prev',
+        }       
+    });
+    const find02_swiper = new Swiper('.find .tab .find02 .swiper', { /* 팝업을 감싼는 요소의 class명 */
+        slidesPerView: 'auto',
+        spaceBetween: 16,
+        breakpoints: {
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 24,
+            },
+        },
+        loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+        navigation: {
+            nextEl: '.find .tab .find02 .btn_wrap .next',
+            prevEl: '.find .tab .find02 .btn_wrap .prev',
+        }       
+    });
+
+    /*
+        find의 탭메뉴
+        .find .tab > ul > li 를 클릭하면
+        클릭한 li에만 on클래스 줌
+        1. 원래 html에 기본적으로 하나의 li on클래스가 있어야함
+            juqery에서 클릭하면 on을 다른 li에는 주는 것 뿐
+    */
+   $('.find .tab > ul > li').on('click', function(){
+    /* 모든 li에 있는 on클래스를 모두 지웠다가 */
+    $('.find .tab > ul > li').removeClass('on')  
+    /* click한 li에만 e다시 on클래스를 줌 */
+    $(this).addClass('on')
+   })
+
+
 })//document

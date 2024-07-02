@@ -430,6 +430,227 @@ header.fixed.menu_over {
     }
 }
 
+.find {
+    background-color: #4E576E;
+    color: #fff;
+    padding: 150px 0 50px 0;
+}
+.find h2 {
+    font-size: 50px;
+    font-family:'DNFBitBitv2';
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+.find .tab > ul > li .tab_menu {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 13px 25px;
+}  
+.find .tab > ul > li.find01.on .tab_menu {
+    background-color: #DE6E6A;
+    border-radius: 38px;
+}
+
+.find .tab > ul > li.find02.on .tab_menu {
+    background-color: #4E6DA2;
+    border-radius: 38px;
+}
+.find .tab .tab_detail ul li {
+    width: 297px;
+}
+@media screen and (max-width:768px) {
+    .find .tab .tab_detail ul li {
+        width: 208px;
+    }
+}
+.find .tab .tab_detail ul li a {
+    display: block;
+}
+.find .tab .tab_detail ul li a .photo {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    border-radius: 20px;
+}
+.find .tab .tab_detail ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.find .tab .tab_detail ul li a .tit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 10px 0;
+    font-weight: 700;
+    font-size: 20px;
+}
+.find .tab .tab_detail ul li a .tit strong {
+    width: 3.25em;
+    /* 글자크기 20px, 넓이가 65px이면 65/20 = 3.25
+        글자크기 하나가 1em */
+    height: 1.7em;
+    line-height: 1.7em;
+    text-align: center;
+    /*  넓이와 높이로 줌
+        옆에 h3에 정확한 넓이를 주기 위해서 strong태그의 넓이가 특정되어야 함 */
+    border-radius: 19px;
+    white-space: nowrap;
+    /* strong태그와 h3가 좌우로 배치
+        넓이 줄어들면 h3글자만 짤림 */
+}
+.find .tab .tab_detail ul li a .tit strong.cate01 {
+    background-color: #DE6E6A;
+}
+.find .tab .tab_detail ul li a .tit strong.cate02 {
+    background-color: #76888F;
+}
+.find .tab .tab_detail ul li a .tit strong.cate03 {
+    background-color: #916BA4;
+}
+.find .tab .tab_detail ul li a .tit strong.cate04 {
+    background-color: #4E6DA2;
+}
+.find .tab .tab_detail ul li a .tit h3 {
+    width: calc(100% - 3.75em);
+    /* 1줄 제한 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.find .tab .tab_detail ul li a p {
+    color: rgba(255,255,255,0.8);
+    /* 내용이 2줄이지만 <br>태그를 이용하여 줄바꿈을 했으면 1줄로 계산 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.find .tab .tab_detail .btn_wrap {
+    margin: 72px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+.find .tab .tab_detail .btn_wrap button {
+    width: 40px;
+    height: 40px;
+    font-size: 0;
+    line-height: 0;
+    margin-right: 5px;
+    position: relative;
+}
+.find .tab .tab_detail .btn_wrap button::before {
+    position: absolute; /* button을 기준으로 정렬 */
+    width: 40px;
+    height: 40px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* 정렬의 기준이 되는 영역의 위아래 가운데 좌우의 가운데 */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+.find .tab .tab_detail .btn_wrap button.prev::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath id='expand_circle_down_24dp_FILL0_wght300_GRAD0_opsz24' d='M120-833.381l8.725-8.725-2.251-2.2L120-837.83l-6.474-6.474-2.251,2.2ZM120-820a19.484,19.484,0,0,1-7.8-1.575,20.2,20.2,0,0,1-6.352-4.274,20.2,20.2,0,0,1-4.276-6.349A19.467,19.467,0,0,1,100-840a19.484,19.484,0,0,1,1.575-7.8,20.2,20.2,0,0,1,4.274-6.352,20.2,20.2,0,0,1,6.349-4.276A19.466,19.466,0,0,1,120-860a19.482,19.482,0,0,1,7.8,1.575,20.2,20.2,0,0,1,6.352,4.274,20.2,20.2,0,0,1,4.276,6.349A19.466,19.466,0,0,1,140-840a19.484,19.484,0,0,1-1.575,7.8,20.2,20.2,0,0,1-4.274,6.352,20.2,20.2,0,0,1-6.349,4.276A19.466,19.466,0,0,1,120-820Zm0-3.158a16.255,16.255,0,0,0,11.947-4.895A16.255,16.255,0,0,0,136.842-840a16.255,16.255,0,0,0-4.895-11.947A16.255,16.255,0,0,0,120-856.842a16.255,16.255,0,0,0-11.947,4.895A16.255,16.255,0,0,0,103.158-840a16.255,16.255,0,0,0,4.895,11.948A16.255,16.255,0,0,0,120-823.158ZM120-840Z' transform='translate(-820 -100) rotate(90)' fill='%23fff' opacity='0.8'/%3E%3C/svg%3E%0A");
+}
+.find .tab .tab_detail .btn_wrap button.next::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath id='expand_circle_down_24dp_FILL0_wght300_GRAD0_opsz24' d='M120-833.381l8.725-8.725-2.251-2.2L120-837.83l-6.474-6.474-2.251,2.2ZM120-820a19.484,19.484,0,0,1-7.8-1.575,20.2,20.2,0,0,1-6.352-4.274,20.2,20.2,0,0,1-4.276-6.349A19.467,19.467,0,0,1,100-840a19.484,19.484,0,0,1,1.575-7.8,20.2,20.2,0,0,1,4.274-6.352,20.2,20.2,0,0,1,6.349-4.276A19.466,19.466,0,0,1,120-860a19.482,19.482,0,0,1,7.8,1.575,20.2,20.2,0,0,1,6.352,4.274,20.2,20.2,0,0,1,4.276,6.349A19.466,19.466,0,0,1,140-840a19.484,19.484,0,0,1-1.575,7.8,20.2,20.2,0,0,1-4.274,6.352,20.2,20.2,0,0,1-6.349,4.276A19.466,19.466,0,0,1,120-820Zm0-3.158a16.255,16.255,0,0,0,11.947-4.895A16.255,16.255,0,0,0,136.842-840a16.255,16.255,0,0,0-4.895-11.947A16.255,16.255,0,0,0,120-856.842a16.255,16.255,0,0,0-11.947,4.895A16.255,16.255,0,0,0,103.158-840a16.255,16.255,0,0,0,4.895,11.948A16.255,16.255,0,0,0,120-823.158ZM120-840Z' transform='translate(860 140) rotate(-90)' fill='%23fff' opacity='0.8'/%3E%3C/svg%3E%0A");
+}
+.find .tab .tab_detail .btn_wrap .more {
+    width: 112px;
+    height: 40px;
+    line-height: 40px;
+    border: 2px solid rgba(255,255,255,0.8);
+    color: rgba(255,255,255,0.8);
+    border-radius: 20px;
+    padding: 0 0 0 18px;
+    position: relative; /* after 정렬의 기준 */
+}
+.find .tab .tab_detail .btn_wrap .more::after {
+    position: absolute;
+    right: 15px;
+    top: 13px;
+    width: 10px;
+    height: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath id='add_24dp_FILL0_wght300_GRAD0_opsz24' d='M224.423-734.423H220v-1.154h4.423V-740h1.154v4.423H230v1.154h-4.423V-730h-1.154Z' transform='translate(-220 740)' fill='%23fff' opacity='0.8'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+
+/* 탭메뉴 구현 하나의 li에만 on클래스가 들어가 있음 */
+.find .tab {
+    position: relative; /* tab_menu 정렬의 중심 */
+}
+.find .tab > ul > li .tab_menu {
+    position: absolute;
+    top: 0;
+}
+.find .tab > ul > li.find01 .tab_menu {
+    right: 50%;
+}
+.find .tab > ul > li.find02 .tab_menu {
+    left: 50%;
+}
+.find .tab > ul > li .tab_detail { 
+    display: none; /* 숨김 */
+    padding: 110px 0 0 0;
+}
+.find .tab > ul > li.on .tab_detail {
+    display: block;
+} 
+
+@media screen and (max-width:768px) {
+    .find .tab .tab_detail ul li {
+        width: 208px;
+    }
+    .find .tab .tab_detail ul li a .tit {
+        font-size:  15px;
+        margin: 16px 0 8px 0;
+    }
+}
+@media screen and (max-width:768px){
+    .find {
+        padding: 50px 0 50px 0;
+    }
+    .find h2 {
+        font-size: 25px;
+        margin: 0 0 6px 0;
+    }
+    .find .tab > ul > li .tab_menu {
+        font-size: 15px;
+        padding: 6px 15px;
+    }
+    .find .tab .tab_detail ul li {
+        width: 208px;
+    }
+
+    .find .tab .tab_detail .btn_wrap {
+        margin: 60px 0 0 0;
+    }
+    .find .tab .tab_detail .btn_wrap button {
+        display: none;
+    }
+    .find .tab .tab_detail .btn_wrap .more {
+        width: 90px;
+        height: 29px;
+        line-height: 29px;
+        padding: 0 0 0 15px;
+    }
+    .find .tab .tab_detail .btn_wrap .more::after {
+        position: absolute;
+        right: 10px;
+        top: 8px;
+        width: 9px;
+        height: 9px;
+    }
+    .find .tab > ul > li .tab_detail {
+        padding: 67px 0 0 0;
+    }
+}
+
 footer {
     margin-top: 1000px;
 }
