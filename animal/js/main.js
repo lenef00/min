@@ -169,5 +169,23 @@ $(document).ready(function(){
     $(this).addClass('on')
    })
 
+   // family swiper
+   const family_swiper = new Swiper('.family .swiper', {
+	slidesPerView: 2,
+	spaceBetween: 16,
+	breakpoints: {
+		768: {  /* 768px 이상이 되면 적용 */
+            slidesPerView: 'auto',
+			spaceBetween: 0, 
+		},
+	},
+	centeredSlides: true, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
+	loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+	navigation: {
+		nextEl: '.family .btn_wrap .next',
+		prevEl: '.family .btn_wrap .prev',
+	},
+});
+
 
 })//document
