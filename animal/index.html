@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- swiper 플러그인 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <title>동물보호센터</title>
+</head>
+<body>
+    <div id="wrap">
+        <!-- 스크롤을 내려서 header가 고정이 됐을 때 (fixed) 
+            pc버전 메뉴에 마우스를 오버했을 때 (menu_over)
+            모바일 버전에서 메뉴 열기를 클릭했을 때 (mobile_open) -->
+        <header>
+            <div class="wrapper">
+                <h1 class="logo"><a href="index.html">동물보호센터</a></h1>
+                <nav class="gnb">
+                    <button class="gnb_open">메뉴열기</button>
+                    <div class="gnb_wrap">
+                        <ul class="depth1">
+                            <!-- 메뉴가 열리면 li에 on 클래스를 추가 (pc/mobile에서) -->
+                            <li>
+                                <a href="#n">찾습니다</a>
+                                <ul class="depth2">
+                                    <li><a href="#n">분실신고</a></li>
+                                    <li><a href="#n">구조정보/목격담</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#n">구조분양</a></li>
+                            <li><a href="#n">네트워크</a></li>
+                            <li><a href="#n">재회성공담</a></li>
+                            <li>
+                                <a href="#n">대처방법</a>
+                                <ul class="depth2">
+                                    <li><a href="#n">실종시 대처방법</a></li>
+                                    <li><a href="#n">구조시 대처방법</a></li>
+                                    <li><a href="#n">고양이에 대해</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="gnb_close">메뉴닫기</button>
+                </nav>
+                <div class="tnb">
+                    <!-- pc에서는 검색 입력이 있고, 모바일에서는 검색버튼을 클릭하면 검색창이 나타남 -->
+                    <a href="#n" class="btn_open">검색 페이지 이동</a>
+                    <div class="search">
+                        <form> <!-- form fieldset은 개발자가 삭제할수도 있으므로 이름 불러 코딩 x -->
+                            <fieldset>
+                                <div class="search_box">
+                                    <legend>검색어입력</legend>
+                                    <label for="keyword">검색어</label>
+                                    <input type="text" id="keyword" placeholder="검색">
+                                    <input type="submit">
+                                </div>    
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="link"><a href="http://dogcat-e.com/index.php?code=apply" target="_blank" title="새창열림">전단지</a></div>
+                </div>
+            </div>
+        </header>
+        <main class="container">
+            <section class="visual">
+                <!-- section 태그 안에는 h2 ~ h6 제목이 반드시 존재해야 함
+                    이 section 영역을 대표하는 제목
+                    디자인상 표현되지 않는다면 css이 display:none 숨김 -->
+                <h2>비쥬얼 팝업</h2>
+                <div class="swiper"> 
+                    <ul class="swiper-wrapper"> 
+                        <li class="swiper-slide bg1">
+                            <div class="wrapper">
+                                <p>반려동물, <br> 사랑으로 입양하세요</p>
+                            </div>
+                        </li> 
+                        <li class="swiper-slide bg2">
+                            <div class="wrapper">
+                                <p>당신의 사랑을 <br> 기다립니다.</p>
+                            </div>
+                        </li>
+                        <li class="swiper-slide bg3">
+                            <div class="wrapper">
+                                <p>새로운 가족을 <br> 기다리고 있어요</p>
+                            </div>
+                        </li>
+                        <li class="swiper-slide bg4">
+                            <div class="wrapper">
+                                <p>사지마세요 <br> 입양하세요</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="btn_wrap">
+                        <button class="btn_prev">이전 팝업보기</button>
+                        <button class="btn_next">다음 팝업보기</button> 
+                        <button class="btn_stop">일시정지</button>
+                        <button class="btn_play">다시시작</button>
+                    </div>
+                </div>
+                <div class="slogan"><img src="images/slogan_w.svg" alt="animal protect center"></div>
+            </section>
+            <section class="find">
+                <div class="wrapper">
+                    <h2>찾습니다</h2>
+                    <div class="tab">
+                        <ul>
+                            <!-- jquery에서 on클래스 추가 -->
+                            <li class="find01 on">
+                                <button class="tab_menu">가족을</button>
+                                <div class="tab_detail">
+                                    <div class="swiper">
+                                        <ul class="swiper-wrapper">
+                                            <li class="swiper-slide">
+                                                <a href="#n">
+                                                    <div class="photo"><img src="images/find01 1.png" alt="동물사진"></div>
+                                                    <div class="tit">
+                                                        <strong class="cate01">실종</strong>
+                                                        <h3>아랑이를 찾습니다</h3>
+                                                    </div>
+                                                    <p>시바견 / 암컷 / 16살 / 이름(아랑) <br>
+                                                        충청북도 괴산군 승암159캠핑장 (2024-06-26) </p>
+                                                </a>
+                                            </li> 
+                                            <li class="swiper-slide">
+                                                <a href="#n">
+                                                    <div class="photo"><img src="images/find01 2.png" alt="동물사진"></div>
+                                                    <div class="tit">
+                                                        <strong class="cate02">종료</strong>
+                                                        <h3>반지를 찾습니다</h3>
+                                                    </div>
+                                                    <p>코리아 쇼트 헤어 / 암컷 / 4살 / 이름(반지) <br>
+                                                        대구광역시 달성군 현풍읍 LH (2024-05-29) </p>
+                                                </a>
+                                            </li> 
+                                            <li class="swiper-slide">
+                                                <a href="#n">
+                                                    <div class="photo"><img src="images/find01 3.png" alt="동물사진"></div>
+                                                    <div class="tit">
+                                                        <strong class="cate01">실종</strong>
+                                                        <h3>노을이를 찾습니다</h3>
+                                                    </div>
+                                                    <p>보더 콜리 / 수컷 / 3살 / 이름(노을이) <br>
+                                                    충청남도 아산시 삽교천로 35-17 (2024-05-19) </p>
+                                                </a>
+                                            </li> 
+                                            <li class="swiper-slide">
+                                                <a href="#n">
+                                                    <div class="photo"><img src="images/find01 4.png" alt="동물사진"></div>
+                                                    <div class="tit">
+                                                        <strong class="cate01">실종</strong>
+                                                        <h3>솜사탕이를 찾습니다</h3>
+                                                    </div>
+                                                    <p>포메라니언 / 암컷 / 8살 / 이름(솜사탕) <br>
+                                                            충청북도 진천군 이월대지카센타 (2024-05-07) </p>
+                                                </a>
+                                            </li> 
+                                            <li class="swiper-slide">
+                                                <a href="#n">
+                                                    <div class="photo"><img src="images/find01 5.png" alt="동물사진"></div>
+                                                    <div class="tit">
+                                                        <strong class="cate01">실종</strong>
+                                                        <h3>아랑이를 찾습니다</h3>
+                                                    </div>
+                                                    <p>코리아 쇼트 헤어 / 암컷 / 5살 / 이름(별하) <br>
+                                                        서울특별시 강남구 역삼로4길 16 (2024-04-21) </p>
+                                                </a>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <a href="#n">
+                                                    <div class="photo"><img src="images/find01 6.png" alt="동물사진"></div>
+                                                    <div class="tit">
+                                                        <strong class="cate02">종료</strong>
+                                                        <h3>미르를 찾습니다</h3> 
+                                                    </div>
+                                                    <p>푸들/토이 푸들 / 암컷 / 16살 / 이름(미르) <br>
+                                                        전라남도 영광군 묘량면 물무산 (2024-04-20) </p>
+                                                </a>
+                                            </li>  
+                                        </ul>
+                                    </div><!-- swiper -->
+                                    <div class="btn_wrap">
+                                        <button class="prev">이전팝업보기</button>
+                                        <button class="next">다음팝업보기</button>
+                                        <a href="#n" class="more">전체보기</a>
+                                    </div>
+                                </div><!-- tab_detail -->
+                            </li><!-- find01 -->
+                            <li class="find02">
+                                <button class="tab_menu">주인을</button>
+                                <div class="tab_detail">
+                                    <div class="swiper">
+                                        <ul class="swiper-wrapper">
+                                            <li class="swiper-slide">
+                                                <a href="#n">
+                                                    <div class="photo"><img src="images/find02 1.png" alt="동물사진"></div>
+                                                    <div class="tit">
+                                                        <strong class="cate03">목격</strong>
+                                                        <h3>충청남도 서산시</h3>
+                                                    </div>
+                                                    <p>믹스견/ 성별모름 / 나이모름 <br>
+                                                        충청남도 서산시 해미면 한서대 (2024-06-17) </p>
+                                                </a>
+                                            </li> 
+                                            <li class="swiper-slide">
+                                                <a href="#n">
+                                                    <div class="photo"><img src="images/find02 2.png" alt="동물사진"></div>
+                                                    <div class="tit">
+                                                        <strong class="cate03">목격</strong>
+                                                        <h3>경기도 수원시</h3>
+                                                    </div>
+                                                    <p>말티즈 / 수컷 / 나이모름 <br>
+                                                        경기도 수원시 권선구 서둔동 (2024-06-13) </p>
+                                                </a>
+                                            </li> 
+                                            <li class="swiper-slide">
+                                                <a href="#n">
+                                                    <div class="photo"><img src="images/find02 3.png" alt="동물사진"></div>
+                                                    <div class="tit">
+                                                        <strong class="cate04">구조</strong>
+                                                        <h3>인천광역시 남동구</h3>
+                                                    </div>
+                                                    <p>코리아 쇼트 헤어 / 암컷 / 나이모름 <br>
+                                                        인천광역시 남동구 구월4동 (2024-05-28) </p>
+                                                </a>
+                                            </li> 
+                                            <li class="swiper-slide">
+                                                <a href="#n">
+                                                    <div class="photo"><img src="images/find02 4.png" alt="동물사진"></div>
+                                                    <div class="tit">
+                                                        <strong class="cate03">목격</strong>
+                                                        <h3>경기도 화성시</h3>
+                                                    </div>
+                                                    <p>푸들/미디엄 푸들 / 수컷 / 나이모름 <br>
+                                                        경기도 화성시 병점 중심상가 (2024-05-08) </p>
+                                                </a>
+                                            </li> 
+                                            <li class="swiper-slide">
+                                                <a href="#n">
+                                                    <div class="photo"><img src="images/find02 5.png" alt="동물사진"></div>
+                                                    <div class="tit">
+                                                        <strong class="cate04">구조</strong>
+                                                        <h3>경기도 시흥시</h3>
+                                                    </div>
+                                                    <p>닥스훈트 / 암컷 / 나이모름 <br>
+                                                        경기도 시흥시 월곶동 풍림2단지 (2024-04-29) </p>
+                                                </a>
+                                            </li> 
+                                            <li class="swiper-slide">
+                                                <a href="#n">
+                                                    <div class="photo"><img src="images/find02 6.png" alt="동물사진"></div>
+                                                    <div class="tit">
+                                                        <strong class="cate04">구조</strong>
+                                                        <h3>서울특별시 강서구</h3>
+                                                    </div>
+                                                    <p>요크셔테리어/ 수컷 / 나이모름 <br>
+                                                        서울특별시 강서구 (2024-04-21) </p>
+                                                </a>
+                                            </li> 
+                                        </ul>
+                                    </div><!-- swiper -->
+                                    <div class="btn_wrap">
+                                        <button class="prev">이전팝업보기</button>
+                                        <button class="next">다음팝업보기</button>
+                                        <a href="#n" class="more">전체보기</a>
+                                    </div>
+                                </div><!-- tab_detail -->
+                            </li><!-- find02 -->
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="campaign">
+                <div class="wrapper">
+                    <h2>캠페인</h2> <!-- css에서 숨김처리 -->
+                    <p>
+                        <span>공공장소</span><span class="cam01"></span><span>에서 주인 없이 떠도는</span> <br>
+                        <span>동물</span><span class="cam02"></span><span>을 발견할 경우</span><span class="cam03"></span><span></span> <br>
+                        <span>관할 시군구청 또는 유기동물</span><span class="cam04"></span><span>보호시설에</span> <br>
+                        <span>신고</span><span class="cam05"></span><span>하시기 바랍니다.</span>
+                    </p>
+                    <strong>주인을 잃은 반려동물과 유기동물을 신속히 구조하기 위하여 구조자를 지정하여 운영하고 있습니다. <br>
+                            유기동물을 주인 없는 동물이라 여겨 마음대로 팔거나 죽이면 2년 이하의 징역 또는 2천만원 이하의 벌금이 부과됩니다.</strong>
+                </div>
+            </section>
+            <section class="family">
+                <h2>가족이 되어주세요</h2>
+                <div class="list">
+                    <div class="swiper">
+                        <ul class="swiper-wrapper"> 
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/family01.png" alt="동물 사진"></div>
+                                    <strong class="cate02">임보</strong>
+                                    <p>수컷(중성화 O) <br>
+                                        2살 5개월 / 7.4kg / 브라운</p>
+                                </a>
+                            </li> 
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/family02.png" alt="동물 사진"></div>
+                                    <strong class="cate01">분양</strong>
+                                    <p>암컷(중성화 O) <br>
+                                        6개월 / 6.8kg / 블랙 화이트</p>
+                                </a>
+                            </li> 
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/family03.png" alt="동물 사진"></div>
+                                    <strong class="cate01">분양</strong>
+                                    <p>암컷(중성화 O) <br>
+                                        6살 3개월 / 1.8kg /블랙</p>
+                                </a>
+                            </li> 
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/family04.png" alt="동물 사진"></div>
+                                    <strong class="cate02">임보</strong>
+                                    <p>암컷(중성화 O) <br>
+                                        2살 11개월 / 12.8kg / 화이트</p>
+                                </a>
+                            </li> 
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/family05.png" alt="동물 사진"></div>
+                                    <strong class="cate01">분양</strong>
+                                    <p>암컷(중성화 O) <br>
+                                        9살 2개월 / 5.5kg / 그레이</p>
+                                </a>
+                            </li> 
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/family06.png" alt="동물 사진"></div>
+                                    <strong class="cate01">분양</strong>
+                                    <p>암컷(중성화 O) <br>
+                                        5살 3개월 / 2.2kg / 화이트</p>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/family07.png" alt="동물 사진"></div>
+                                    <strong class="cate02">임보</strong>
+                                    <p>수컷(중성화 O) <br>
+                                        4살 6개월 / 18.1kg / 그레이</p>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/family08.png" alt="동물 사진"></div>
+                                    <strong class="cate01">분양</strong>
+                                    <p>암컷(중성화 O) <br>
+                                        12살 5개월 / 6.9kg / 브라운</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn_wrap">
+                        <button class="prev">이전 팝업 보기</button>
+                        <button class="next">다음 팝업 보기</button>
+                        <a href="#n" class="more">전체보기</a>
+                    </div>
+                </div>
+                <div class="slogan">
+                    <p>사지말고 입양하세요.사랑으로 입양하세요.사지말고 입양하세요.사랑으로 입양하세요.</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="wrapper">
+                <div class="sns">
+                    <ul>
+                        <li class="facebook"><a href="#n">페이스북</a></li>
+                        <li class="twitter"><a href="#n">트위터</a></li>
+                        <li class="naver"><a href="#n">네이버 카페</a></li>
+                        <li class="daum"><a href="#n">다음 카페</a></li>
+                    </ul>
+                </div>
+                <div class="f_nav">
+                    <ul>
+                        <li><a href="#n">동물정보</a></li>
+                        <li><a href="#n">동물찾기네트워크</a></li>
+                        <li><a href="#n">구조동물분양</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#n">개인정보취급방침</a></li>
+                        <li><a href="#n">로그인</a></li>
+                        <li><a href="#n">회원가입</a></li>
+                        <li><a href="#n">마이페이지</a></li>
+                        <li><a href="#n">운영자에게</a></li>
+                    </ul>
+                </div>
+                <!-- 모바일에서 열기 버튼을 클릭하면 jquery가 family_site에 open클래스 추가 -->
+                <div class="family_site">
+                    <button class="open" title="열기">관련사이트</button>
+                    <div class="list">
+                        <ul>
+                            <li><a href="#n"><span>전국 공고내역</span></a></li>
+                            <li><a href="#n"><span>지역별 동물보호센터 연락처</span></a></li>
+                            <li><a href="#n"><span>지역별 동물보호 업무 부서</span></a></li>
+                        </ul>
+                    </div> 
+                    <button class="close" title="닫기">관련사이트</button>
+                </div>
+                <div class="copyright">© 동물보호센터 Since 2004</div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>대전복합터미널</title>
+</head>
+<body>
+    <!-- 홈페이지 전체를 감싸는 요소 -->
+    <div id="wrap">
+        <header>
+            <!-- 레이아웃 그리드 영역 : 넓이를 제한하고 가운데 정렬 -->
+            <div class="wrapper">
+                <!-- 로고를 클릭하면 무조건 첫 페이지로 이동 -->
+                <h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="대전복합터미널 Daejeon Terminal Complex"></a></h1>
+                <!-- global navigation bar (홈페이지의 모든 페이지에서 보여지는 메뉴) -->
+                <nav class="gnb">
+                    <ul>
+                        <!-- 임시링크 #n -->
+                        <li><a href="#n">대전복합터미널 개요</a></li>
+                        <li><a href="#n">버스운행안내</a></li>
+                        <li><a href="#n">DTC아트센터</a></li>
+                        <li><a href="#n">홍보마당</a></li>
+                        <li><a href="#n">고객지원센터(재)</a></li>
+                        <li><a href="#n">이구열 장학재단</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="container"> <!-- header와 footer를 제외한 나머지 전부를 container -->
+            <section class="visual">
+                <div class="wrapper">
+                    <strong>365일 불이 꺼지지 않는 곳</strong>
+                    <h2><em>오늘</em>도 대전복합터미널은<br>
+                        <em>내일</em>을 위한 만남을 준비합니다</h2>
+                </div>
+            </section>
+            <section class="introduce">
+                <div class="wrapper">
+                    <div class="art">
+                        <div class="photo"><img src="images/art.png" alt="아트센터 사진"></div>
+                        <div class="txt">
+                            <h2>DTC아트센터</h2>
+                            <strong>예술인들의 꿈이 자라나는 공간,<br>
+                                예술의 실험정신이 존중받는 공간</strong>
+                            <p>전통에서 현대로 흐르는 다양한 예술세계가 펼쳐지는<br>문화예술공간을 상상합니다.</p>
+                            <div class="btn">
+                                <a href="#n">야외조각상</a>
+                                <a href="#n">작품안내</a>
+                                <a href="#n">공연안내</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scholarship">
+                        <div class="txt">
+                            <h2>이구열 장학재단</h2>
+                            <strong>대전터미널시티 인재육성 장학사업</strong>
+                            <p>1970년대 말부터 대전 지역의 교통문화 발전에 큰 기여를 해왔으며<br>
+                                기업 이윤을 사회에 환원하고 지역사회의 인재를 육성하고자<br>
+                                창업주 故이구열 회장의 이름으로 장학재단을 설립하였습니다.</p>
+                            <div class="btn">
+                                <a href="#n">재단소개</a>
+                                <a href="#n">기부금 모금 및 사용실적</a>
+                            </div>
+                        </div>
+                        <div class="photo"><img src="images/scholarship.png" alt="장학재단 활동 사진"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- 색션 news와 movie는 배경이 연결되어 있어서 div로 묶어줌
+                (section태그는 section으로 감싸는게 불가능해서 사용 불가) -->
+            <div class="promotion">
+                <section class="news">
+                    <div class="wrapper">
+                        <div class="tit">
+                            <h2><em>DTC</em> 소식</h2>
+                            <p>대전복합터미널의 새로운 소식을 만나보세요.</p>
+                            
+                        </div>
+                        <div class="list">
+                            <ul>
+                                <li>
+                                    <a href="#n">
+                                        <strong>대전복합터미널, 2024 통합소방훈련 실시</strong>
+                                        <span>2024.05.22</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#n">
+                                        <strong>시중유화 화중유시</strong>
+                                        <span>2024.05.11</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#n">
+                                        <strong>DTC아트센터 미술사 초청 강연 개최</strong>
+                                        <span>2024.05.01</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#n">
+                                        <strong>DTC 아트센터 소장품전 : 일획으로부터</strong>
+                                        <span>2024.03.17</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#n">
+                                        <strong>청년작가 프로젝트-dYap2023</strong>
+                                        <span>2024.02.12</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="#n" class="more">더보기</a>
+                        <!-- 공지사항의 더보기는 공지사항 죄근 글을 보고나서
+                            더 보고 싶을 때 클릭을 할 수 있는 구조가 되어야 함
+                            그럼 코딩의 순서가 최근 게시물이 나오고 나서
+                            그 다음에 더보기 버튼이 배치되어야 함
+                            웹접근성 때문 -->
+                    </div>
+                </section>
+                <section class="movie">
+                    <div class="wrapper">
+                        <div class="tit">
+                            <h2><em>DTC</em> 홍보영상</h2>
+                        </div>
+                        <div class="list">
+                            <ul>
+                                <li>
+                                    <a href="#n">
+                                        <div class="photo"><img src="images/movie1.png" alt="영상 썸네일"></div>
+                                        <strong>KBS대전 뉴스</strong>
+                                        <h3>버스터미널, 특별한 예술공간으로 변신 / KBS</h3>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#n">
+                                        <div class="photo"><img src="images/movie2.png" alt="영상 썸네일"></div>
+                                        <strong>DTC 아트센터</strong>
+                                        <h3>dtc갤러리 TJB 'START 2019 展'</h3>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#n">
+                                        <div class="photo"><img src="images/movie3.png" alt="영상 썸네일"></div>
+                                        <strong>DTC 아트센터</strong>
+                                        <h3>dtc갤러리 대전KBS '임동식초대전'</h3>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div> 
+        <footer>
+            <div class="wrapper">
+                <div class="f_nav">
+                    <ul>
+                        <li class="privacy"><a href="#n">개인정보처리방침</a></li>
+                        <li><a href="#n">이용약관</a></li>
+                        <li><a href="#n">회사소개</a></li>
+                        <li><a href="#n">사이트맵</a></li>
+                    </ul>
+                </div>
+                <div class="f_info">
+                    <span>대전복합터미널(주)</span><br>
+                    <address>주소 : 대전 동구 동서대로 1695번길 30</address>
+                    <span>TEL : 1668-3300</span>
+                    <span>사업자등록번호 : 306-81-02924</span>
+                </div>
+                <div class="copyright">ⓒ대전복합터미널(주) ALL RIGHT RESERVED</div>
+                <div class="family">
+                    <button>
+                        <span>FAMILY SITE</span> 
+                        <img src="images/FAMILY_ico.svg" alt="열기">
+                        <!-- 아이콘은 alt를 비워도 된다고 허락 -->
+                    </button>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
