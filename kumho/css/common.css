@@ -5,7 +5,7 @@
 영문, 숫자, 특수문자는 영문 폰트가 적용 나머지는 한글 폰트 적용 
 */
 html, body {
-    font-family: "nsr", "Malgun Gothic", "맑은 고딕", Dotum, 돋움, Helvetica, "Apple SD Gothic Neo", "애플 SD 산돌고딕 Neo";
+    font-family: "Montserrat", 'Pretendard', "Malgun Gothic", "맑은 고딕", Dotum, 돋움 ;
     font-weight: 400;
     font-size: 15px;
     letter-spacing: 0em; /* 자간 */
