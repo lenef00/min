@@ -16,13 +16,13 @@
     text-align: center;
 }
 .visual ul li.bg1 {
-    background-image: url(../images/visual_bg1.png);
+    background-image: url(../images/main/visual_bg1.png);
 }
 .visual ul li.bg2 {
-    background-image: url(../images/visual_bg2.png);
+    background-image: url(../images/main/visual_bg2.png);
 }
 .visual ul li.bg3 {
-    background-image: url(../images/visual_bg3.png);
+    background-image: url(../images/main/visual_bg3.png);
 }
 .visual ul li h3 {
     font-size: 45px;
@@ -37,7 +37,7 @@
 .visual .btn_wrap {
     position: absolute; /* swiper를 기준으로 정렬 */
     left: 50%;
-    bottom: 81px;
+    bottom: 7%;
     transform: translate(-50%, 0);
     /* 정렬이 되는 기준 swiper의 넓이의 왼쪽 50%부터 (left:50%) 정렬
         btn_wrap 넓이와 절반을 왼쪽으로 이동 (transform)
@@ -45,15 +45,18 @@
     z-index: 10;
     color: #fff;
     display: flex;
+    align-items: center;
 }
 .visual .btn_wrap .paging {
     width: auto; /* swiper가 준  width:100% 속성 삭제 */
+    display: flex;
 }
 .visual .btn_wrap .paging .swiper-pagination-bullet {
     width: 150px;
     height: 5px;
     border-radius: 0;
     background-color: rgba(255,255,255,0.5);
+    opacity: 1;
     position: relative;
 }
 .visual .btn_wrap .paging .swiper-pagination-bullet-active::before {
@@ -67,6 +70,7 @@
     animation-duration: 5s;
     animation-iteration-count: 1; /* 1번만 실행 */
     animation-fill-mode: forwards; /* 종료 후에 마지막상태 유지, 애니메이션 반복횟수가 제한되었을 때 */
+    animation-timing-function: linear;
 }
 @keyframes visual_count {
     0% { width:0;}
@@ -78,6 +82,7 @@
     font-size: 0;
     line-height: 0;
     position: relative; /* before 정렬의 기준 */
+    margin-left: 5px; /* 여백 */
 }
 .visual .btn_wrap button::before {
     position: absolute;
@@ -106,8 +111,14 @@
     background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.9462 11.9999L8.34619 7.39994L9.39994 6.34619L15.0537 11.9999L9.39994 17.6537L8.34619 16.5999L12.9462 11.9999Z' fill='white'/%3E%3C/svg%3E%0A");
 }
 
-@media screen and (max-width:1300px){}
-@media screen and (max-width:1024px){}
+@media screen and (max-width:1300px){
+    .visual ul li h3 {
+        font-size: 40px;
+    }
+}
+@media screen and (max-width:1024px){
+
+}
 @media screen and (max-width:768px){ /* 모바일 디자인 적용 */
     .visual ul li {
         height: 420px;
@@ -123,14 +134,193 @@
         margin: 5px 0 0 0;
         font-size: 13px
     }
+    .visual .btn_wrap .paging .swiper-pagination-bullet {
+        width: 90px;
+        height: 3px;
+    }
     .visual .btn_wrap button.btn_prev {
         display: none;
     }
     .visual .btn_wrap button.btn_next {
         display: none;
-    }   
-    .visual .btn_wrap .paging .swiper-pagination-bullet {
+    }     
+}
+@media screen and (max-width:500px){}
+
+.biz .tit h2 {
+    font-size: 15px;
+    color: #D1272E;
+    font-weight: 700;
+    margin: 98px 0 0 0;
+}
+.biz .tit h2 span {
+    position: relative; /* after 정렬의 기준 */
+}
+.biz .tit h2 span::after {
+    position: absolute;
+    right: -12px;
+    top: -6px;
+    width: 15px;
+    height: 15px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 5.95994C0 6.16727 0.0301613 6.38215 0.113118 6.58571C0.478879 7.49045 1.41025 8.04837 2.59426 7.57715C2.87707 7.46406 10.7089 4.3088 10.7089 4.3088C10.7089 4.3088 7.62443 12.1272 7.50754 12.4175C7.05882 13.5371 7.59803 14.5511 8.51432 14.8904C8.71794 14.9658 8.92911 15.0035 9.1365 14.9997C9.88688 14.996 10.5468 14.5549 10.871 13.6728C10.9201 13.5409 14.7775 2.9517 14.8605 2.69912C14.9095 2.54834 15 2.19398 15 1.94895C15 1.42496 14.8077 0.931123 14.4344 0.55792C14.0686 0.188486 13.5784 0 13.0618 0C12.8092 0 12.6056 0.0452367 12.2964 0.14325C12.1116 0.203565 2.16817 3.90167 1.31976 4.21832C0.471342 4.53498 -2.07124e-06 5.21353 0.00376867 5.95994' fill='%23ED1C24'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+.biz .tit p {
+    font-size: 32px;
+    color: #1d1d1d;
+    line-height: 1.1;
+    margin: 0 0 40px 0;
+}
+.biz .list ul {
+    display: flex;
+}
+.biz .list ul li {
+    width: 25%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    position: relative; /* before 정렬의 기준 */
+    transition: 0.5s;
+}
+.biz .list ul li.biz1 {
+    background-image: url(../images/main/biz1.png);
+}
+.biz .list ul li.biz2 {
+    background-image: url(../images/main/biz2.png);
+}
+.biz .list ul li.biz3 {
+    background-image: url(../images/main/biz3.png);
+}
+.biz .list ul li.biz4 {
+    background-image: url(../images/main/biz4.png);
+}
+.biz .list ul li::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.3;
+    content: "";
+}
+.biz .list ul li a {
+    display: block;
+    height: 800px;
+    position: relative;
+    z-index: 10;
+}
+.biz .list ul li a .inner {
+    margin: 0 24px;
+    /* a를 기준으로 정렬
+        마우스를 오버했을 때 효과를 부드럽게 주기 위해 absolute */
+    position: absolute;
+    bottom: 40px;
+    width: 80%;
+    transition: 0.5s;
+}
+.biz .list ul li a .inner strong {
+    font-weight: 700;
+    display: block;
+}
+.biz .list ul li a .inner h3 {
+    font-size: 28px;
+    line-height: 1.1;
+    margin: 0 0 5px 0;
+}
+.biz .list ul li a .inner p {
+    opacity: 0;
+    transition: 0.5s;
+    /* 무조건 한 줄 */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+@media screen and (min-width:1024px) {
+    /* 하나의 li에 오버했을 때 */
+    .biz .list ul li.on {
+        width: 70%;
+    }
+    .biz .list ul li.off {
+        /*width: 16%;*/
+        /* 16*3 = 48+52 = 100 */
+    }  
+    .biz .list ul li.on::before {
+        opacity: 0;
+    }
+    .biz .list ul li.off::before {
+        opacity: 0.5;
+    }
+    .biz .list ul li.off a {
+        opacity: 0.8;
+    }
+    .biz .list ul li.on a .inner {
+        bottom: 70px;
+    }
+    .biz .list ul li.on .inner h3 {
+        font-weight: 700;
+    }
+    .biz .list ul li.on .inner p {
+        opacity: 1;
+    }
+}
+@media screen and (max-width:1300px){
+    .biz .tit p {
+        font-size: 30px;
+    }
+    .biz .list ul li a {
+        height: 700px;
+    }
+}
+@media screen and (max-width:1024px){
+    .biz .list ul {
+        display: block;
+    }
+    .biz .list ul li {
+        width: auto;
+    }
+    .biz .list ul li a {
+        height: 150px;
+    }
+    .biz .list ul li a .inner {
+        margin: 0 20px;
+        /* a를 기준으로 정렬
+            마우스를 오버했을 때 효과를 부드럽게 주기 위해 absolute */
+        position: absolute;
+        bottom: 10px;
+        width: calc(100%-40px);
+        transition: 0.5s;
+    }
+    .biz .list ul li a .inner strong {
+        font-size: 13px;
+    }
+    .biz .list ul li a .inner h3 {
+        font-size: 20px;
+        margin: 0;
+    }
+    .biz .list ul li a .inner p {
         display: none;
     }
 }
-@media screen and (max-width:500px){}
+@media screen and (max-width:768px){
+    .biz .tit h2 {
+        font-size: 13px;
+        margin: 45px 0 0 0;
+    }
+    .biz .tit h2 span::after {
+        top: -4px;
+        width: 13px;
+        height: 13px;
+    }
+    .biz .tit p {
+        font-size: 22px;
+        margin: 0 0 15px 0;
+    }
+}
+@media screen and (max-width:500px){
+
+}
