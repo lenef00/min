@@ -422,6 +422,9 @@
     color: #1d1d1d;
     font-weight: 700;
 }
+.cts_map .map_addr .tell ul li {
+    margin-bottom: 2px;
+}
 .cts_map .map_addr .ect .etc_1 {
     border-top: 1px solid #D9D9D9;
     color: #666666;
