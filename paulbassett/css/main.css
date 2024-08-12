@@ -42,3 +42,66 @@
         display: block;
     }
 }
+
+.menu .tit {
+    text-align: center;
+    margin: 66px 0 58px 0;
+    font-family: Cafe24;
+    color: var(--color-brown);
+}
+.menu .tit h2 {
+    font-weight: 700;
+    font-size: var(--txt-tit-size);
+    line-height: 1;
+}
+.menu .list .popup .popup_item {
+    margin: 0 12px;
+    position: relative; /* before 정렬의 기준 */
+    text-align: center;
+    padding-bottom: 40px;
+}
+.menu .list .popup .popup_item::before {
+    position: absolute;
+    left: 0;
+    top: 130px;
+    z-index: -1;
+    width: 100%;
+    height: calc(100% - 137px);
+    border: 3px solid #443237;
+    content: "";
+}
+.menu .list .popup .popup_item .photo {
+    overflow: hidden;
+    margin: 0 5%;
+}
+.menu .list .popup .popup_item .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 이미지를 자르지 않고 모두 보이도록 */
+}
+.menu .list .popup .popup_item h3 {
+    font-size: 1.1rem;
+    line-height: 1.1;
+    font-weight: 700;
+    font-family: Cafe24;
+    color: var(--color-brown);
+    margin: 24px 0 3px 0;
+} 
+.menu .list .popup .popup_item strong {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: var(--color-brown);
+    padding: 0 10px;
+}
+
+@media screen and (max-width:1300px) {
+
+}
+@media screen and (max-width:1024px) {
+
+}
+@media screen and (max-width:768px) {
+    
+}
