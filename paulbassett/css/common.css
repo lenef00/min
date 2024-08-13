@@ -54,6 +54,7 @@ html, body {
     기본 15px일 때
     80px - 5.3rem
     72px - 4.8rem
+    48px - 3.2rem
     16px - 1.1rem
     15px - 1rem 
     
@@ -66,17 +67,20 @@ html, body {
     --txt-color-tit: #1d1d1d;
     --txt-color-gray: #666;
     --txt-tit-size : 5.3rem;
-    --txt-subtit-size : 1.1rem
+    --txt-subtit-size : 1.1rem;
+    --margin-tit : 157px 0 0 0;
 }
 
 @media screen and (max-width:1300px) {
     :root {
         --txt-tit-size : 4.667rem;
+        --margin-tit: 157px 0 0 0;
     }
 }
 @media screen and (max-width:1024px) {
     :root {
         --txt-tit-size : 4.267rem;
+        --margin-tit: 73px 0 0 0;
     }
 }
 @media screen and (max-width:768px) {
