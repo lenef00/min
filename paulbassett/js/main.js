@@ -87,4 +87,17 @@ $(document).ready(function(){
       variableWidth: true, //넓이를 자유롭게 설정
     })
 
+    $('.quick .open').on('click', function(){
+      $('.quick').addClass('open')
+    })
+    $('.quick .close').on('click', function(){
+      $('.quick').removeClass('open')
+    })
+
+    $('.quick .top').on('click', function(){
+      $('html, body').animate({
+        scrollTop : 0
+      }, 500)
+    })
+
 })//$(document).ready
