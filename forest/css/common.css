@@ -81,3 +81,6 @@ html, body {
 @media screen and (max-width:1300px) {
     :root {}
 }
+@media screen and (max-width:1024px) {
+    :root {}
+}
