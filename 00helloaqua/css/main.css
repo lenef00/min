@@ -1,0 +1,36 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css); 
+@import url(layout.css); 
+
+
+
+.visual ul li .wrapper {
+    height: 524px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.visual ul li.bg1 {
+    background-image: url(../images/visual_01.png);
+}
+.visual ul li.bg2 {
+    background-image: url(../images/visual_02.png);
+}
+.visual ul li.bg3 {
+    background-image: url(../images/visual_03.png);
+}
+.visual ul li strong {
+    font-size: 2rem;
+    font-family: 'Laundry';
+    font-weight: 400;
+    color: #fff;
+}
+.visual ul li p {
+    font-size: 3.25rem;
+    font-family: 'Laundry';
+    font-weight: 700;
+    color: #fff;
+}
