@@ -1,0 +1,72 @@
+html, body {
+    font-family: 'S-Core','Cafe24', "Malgun Gothic", "맑은 고딕", Dotum, 돋움 ;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0em; 
+    line-height: 1.4;
+    color: #3d3d3d;
+    word-break: break-all; /* 단어별로 줄바꿈 */
+    word-wrap: break-word; /* 만약 단어가 엄청 길면 줄바꿈 강제로 실행 */
+}
+
+#wrap {
+    min-width: 1260px;
+    overflow: hidden;
+}
+
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+@media screen and (max-width:1540px) {
+    .wrapper {
+        width: 1260px;
+        margin: 0 110px;
+    }
+}
+::selection {
+    background-color: #6A88BE;
+    color: #fff;
+}
+
+/*
+    기본 16px
+    52px - 3.25rem
+    40px - 2.5rem
+    28px - 1.75rem
+    22px - 1.375rem
+    18px - 1.125rem
+    15px - 0.938rem
+    13px - 0.813rem
+    
+*/
+
+:root {
+    --color-blue: #C9D9F0;
+    --color-blue2: #6A88BE;
+    --color-deepblue: #013C5A;
+    --color-red: #D42545;
+    --txt-color-tit: #1d1d1d;
+    --txt-color-txt: #3d3d3d;
+    --txt-color-gray: #666;
+    --txt-tit-size: 2.5rem;
+    --txt-sale-size: 1.75rem;
+    --txt-subtit-size: 0.813rem;
+}
+
+@media screen and (max-width:1300px) {
+    :root {}
+}
+@media screen and (max-width:1024px) {
+    :root {
+        --txt-tit-size: 2.375rem;
+        --txt-sale-size: 1.375rem;
+    }
+}
+@media screen and (max-width:768px) {
+    :root {
+        --txt-tit-size: 1.75rem;
+        --txt-subtit-size: 0.688rem;
+        --txt-sale-size: 1rem;
+    }
+}
