@@ -177,6 +177,54 @@ header {
     }
 }
 
+.quick_cont {
+    position: fixed;
+    right: 0;
+    bottom: 15%;
+    transform: translate(-50%);
+    z-index: 99;
+}
+.quick_cont ul li {
+    margin-bottom: 10px;
+}
+.quick_cont ul li a,
+.quick_cont ul li button {
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #cccccc;
+    text-align: center;
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+}
+.quick_cont ul li.service a {
+    background-color: var( --color-blue2);
+}
+.quick_cont ul li a::before,
+.quick_cont ul li button::before {
+    position: absolute;
+    left: 21px;
+    top: 21px;
+    width: 40px;
+    height: 40px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: "";
+}
+.quick_cont ul li.history a::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 35C16.1667 35 12.8264 33.7292 9.97917 31.1875C7.13194 28.6458 5.5 25.4722 5.08333 21.6667H8.5C8.88889 24.5556 10.1736 26.9444 12.3542 28.8333C14.5347 30.7222 17.0833 31.6667 20 31.6667C23.25 31.6667 26.0069 30.5347 28.2708 28.2708C30.5347 26.0069 31.6667 23.25 31.6667 20C31.6667 16.75 30.5347 13.9931 28.2708 11.7292C26.0069 9.46528 23.25 8.33333 20 8.33333C18.0833 8.33333 16.2917 8.77778 14.625 9.66667C12.9583 10.5556 11.5556 11.7778 10.4167 13.3333H15V16.6667H5V6.66667H8.33333V10.5833C9.75 8.80556 11.4792 7.43056 13.5208 6.45833C15.5625 5.48611 17.7222 5 20 5C22.0833 5 24.0347 5.39583 25.8542 6.1875C27.6736 6.97917 29.2569 8.04861 30.6042 9.39583C31.9514 10.7431 33.0208 12.3264 33.8125 14.1458C34.6042 15.9653 35 17.9167 35 20C35 22.0833 34.6042 24.0347 33.8125 25.8542C33.0208 27.6736 31.9514 29.2569 30.6042 30.6042C29.2569 31.9514 27.6736 33.0208 25.8542 33.8125C24.0347 34.6042 22.0833 35 20 35ZM24.6667 27L18.3333 20.6667V11.6667H21.6667V19.3333L27 24.6667L24.6667 27Z' fill='%233D3D3D'/%3E%3C/svg%3E%0A");
+}
+.quick_cont ul li.service a::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.3333 35V31.6667H31.6666V19.8333C31.6666 16.5833 30.5347 13.8264 28.2708 11.5625C26.0069 9.29861 23.25 8.16667 20 8.16667C16.75 8.16667 13.993 9.29861 11.7291 11.5625C9.46526 13.8264 8.33331 16.5833 8.33331 19.8333V30H6.66665C5.74998 30 4.96526 29.6736 4.31248 29.0208C3.6597 28.3681 3.33331 27.5833 3.33331 26.6667V23.3333C3.33331 22.75 3.47915 22.2014 3.77081 21.6875C4.06248 21.1736 4.4722 20.7639 4.99998 20.4583L5.12498 18.25C5.3472 16.3611 5.89581 14.6111 6.77081 13C7.64581 11.3889 8.74303 9.98611 10.0625 8.79167C11.3819 7.59722 12.8958 6.66667 14.6041 6C16.3125 5.33333 18.1111 5 20 5C21.8889 5 23.6805 5.33333 25.375 6C27.0694 6.66667 28.5833 7.59028 29.9166 8.77083C31.25 9.95139 32.3472 11.3472 33.2083 12.9583C34.0694 14.5694 34.625 16.3194 34.875 18.2083L35 20.375C35.5278 20.625 35.9375 21 36.2291 21.5C36.5208 22 36.6666 22.5278 36.6666 23.0833V26.9167C36.6666 27.4722 36.5208 28 36.2291 28.5C35.9375 29 35.5278 29.375 35 29.625V31.6667C35 32.5833 34.6736 33.3681 34.0208 34.0208C33.368 34.6736 32.5833 35 31.6666 35H18.3333ZM15 23.3333C14.5278 23.3333 14.1319 23.1736 13.8125 22.8542C13.493 22.5347 13.3333 22.1389 13.3333 21.6667C13.3333 21.1944 13.493 20.7986 13.8125 20.4792C14.1319 20.1597 14.5278 20 15 20C15.4722 20 15.868 20.1597 16.1875 20.4792C16.5069 20.7986 16.6666 21.1944 16.6666 21.6667C16.6666 22.1389 16.5069 22.5347 16.1875 22.8542C15.868 23.1736 15.4722 23.3333 15 23.3333ZM25 23.3333C24.5278 23.3333 24.1319 23.1736 23.8125 22.8542C23.493 22.5347 23.3333 22.1389 23.3333 21.6667C23.3333 21.1944 23.493 20.7986 23.8125 20.4792C24.1319 20.1597 24.5278 20 25 20C25.4722 20 25.868 20.1597 26.1875 20.4792C26.5069 20.7986 26.6666 21.1944 26.6666 21.6667C26.6666 22.1389 26.5069 22.5347 26.1875 22.8542C25.868 23.1736 25.4722 23.3333 25 23.3333ZM10.0416 20.75C9.8472 17.8056 10.7361 15.2778 12.7083 13.1667C14.6805 11.0556 17.1389 10 20.0833 10C22.5555 10 24.7291 10.7847 26.6041 12.3542C28.4791 13.9236 29.6111 15.9306 30 18.375C27.4722 18.3472 25.1458 17.6667 23.0208 16.3333C20.8958 15 19.2639 13.1944 18.125 10.9167C17.6805 13.1389 16.743 15.1181 15.3125 16.8542C13.8819 18.5903 12.125 19.8889 10.0416 20.75Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+.quick_cont ul li.top button::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 16.6668L27.5833 19.0002L21.6667 13.0835L21.6667 33.3335L18.3333 33.3335L18.3333 13.0835L12.4167 19.0002L10 16.6668L20 6.66683L30 16.6668Z' fill='%233D3D3D'/%3E%3C/svg%3E%0A");
+}
+
 footer {
     background-color: #f3f3f3;
     color: #666;
@@ -186,15 +234,20 @@ footer .wrapper {
     padding: 60px 0 60px 0;
 }
 footer .wrapper h3 {
+    font-size: 1.125rem;
+    color: #3d3d3d;
     font-weight: 700;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+footer .wrapper strong {
     line-height: 1;
 }
 footer .wrapper p {
     font-size: 0.875rem;
 }
-
 footer .f_counsel {
-    
+    width: 385px;
 }
 footer .f_counsel .top strong {
     color: #1d1d1d;
@@ -208,23 +261,44 @@ footer .f_counsel .top .f_2 {
     font-size: 0.813rem;
     margin-bottom: 15px;
 }
-footer .f_counsel .top .coun_btn {
-    display: flex;
-}
 footer .f_counsel .top .coun_btn span {
     font-size: 0.875rem;
     color: #3d3d3d;
     background-color: var(--color-blue);
+    padding: 6px;
 }
-
+footer .f_counsel .bottom {
+    margin-top: 40px;
+    width: 290px;
+}
+footer .f_guide {
+    width: 340px;
+    padding-left: 63px;
+}
+footer .f_guide .top {
+    margin-bottom: 40px;
+}
+footer .f_cont {
+    width: 535px;
+    padding-left: 51px;
+}
 footer .f_cont .f_nav {
-    font-size: 0.938rem;
+    margin:0 93px 60px 0;
 }
-
+footer .f_cont .f_nav ul {
+    font-size: 0.875rem;
+    display: flex;
+    justify-content: space-between;
+}
 footer .f_cont .f_info {
     font-size: 0.875rem;
 }
-
+footer .f_cont .f_info address {
+    margin-bottom: 20px;
+}
+footer .copy {
+    margin-top: 40px;
+}
 footer .f_cont .copy {
     font-size: 0.75rem;
 }
