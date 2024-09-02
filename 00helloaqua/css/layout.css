@@ -210,7 +210,7 @@ header {
         border-radius: 10px;
     }
     .header_sub .gnb_wrap ul.depth1 li:hover {
-        color: var(--color-blue2);
+        color: #fff;
     }
     .header_sub .gnb_wrap ul.search {
         justify-content: center;
