@@ -18,10 +18,26 @@ html, body {
     width: 1260px;
     margin: 0 auto;
 }
-@media screen and (max-width:1540px) {
+
+@media screen and (max-width:1024px) {
+    html, body {
+        font-size: 15px;
+    }
     .wrapper {
-        width: 1260px;
-        margin: 0 110px;
+        width: auto;
+        margin: 0 20px;
+    }
+}
+@media screen and (max-width:768px) {
+    html, body {
+        font-size: 0.875rem;
+    }
+    #wrap {
+        min-width: 100%
+    }
+    .wrapper {
+        width: auto;
+        margin: 0 20px;
     }
 }
 ::selection {

@@ -9,5 +9,5 @@ $(document).ready(function(){
             $('header').removeClass('fixed')
         }
     })
-    
+
 })//$(document).ready

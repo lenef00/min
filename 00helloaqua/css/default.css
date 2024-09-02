@@ -26,7 +26,6 @@ button {
     border: 0;
     cursor: pointer;
 }
-
 input, select, textarea, button {
     font-family: inherit;
     font-weight: inherit;
@@ -34,6 +33,7 @@ input, select, textarea, button {
     color: inherit;
     letter-spacing: inherit;
     line-height: inherit;
+    cursor: pointer;
 }
 legend {
     display: none;

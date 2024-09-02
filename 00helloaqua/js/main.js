@@ -11,6 +11,21 @@ $(document).ready(function(){
             prevEl: '.visual .btn_prev',  
         },
   });
+  const content_swiper = new Swiper('.content .swiper', { 
+    slidesPerView: "auto",
+    spaceBetween: 12,
+    breakpoints: {
+      640: {
+        spaceBetween: 24, 
+      },
+      1024: {
+        spaceBetween: 38,
+      },
+    },
+    centeredSlides: false ,
+    loop: false,
+	
+});
 
   const new_swiper = new Swiper('.new .swiper', {
     slidesPerView: "auto",
@@ -35,4 +50,5 @@ $(document).ready(function(){
     }, 500)
   })
 
+  
 })
