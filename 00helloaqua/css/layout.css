@@ -235,7 +235,7 @@ header {
 
 .quick_cont {
     position: fixed;
-    right: 0;
+    right: -30px;
     bottom: 15%;
     transform: translate(-50%);
     z-index: 99;
