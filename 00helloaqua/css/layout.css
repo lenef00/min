@@ -186,7 +186,6 @@ header {
        justify-content: space-between;
        align-items: center;
     }
-    
     .header_sub {
         height: 150px;
     }
@@ -201,6 +200,7 @@ header {
         margin: 10px 0 15px 0;
     }
     .header_sub .gnb_wrap ul.depth1 li {
+        font-size: 0.875rem;
         margin: 0 5px;
         width: 80px; 
         padding: 5px 0;
