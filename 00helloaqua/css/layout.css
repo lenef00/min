@@ -408,16 +408,14 @@ footer .f_cont .copy {
     }
     footer .f_counsel {
         width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        position: relative;
         margin: 0 0 50px 0;
     }
     footer .f_counsel::before {
         display: none;
     }
     footer .f_counsel .bottom p  {
-        text-align: left;
+       display: block;
+        text-align: center;
     }
     footer .f_counsel .top strong {
         color: #1d1d1d;
@@ -432,7 +430,8 @@ footer .f_cont .copy {
     }
     footer .f_counsel .bottom {
         margin-top: 50px;
-        width: 290px;
+        width: 100%;
+        text-align: center;
     }
     footer .f_guide {
         width: 100%;
