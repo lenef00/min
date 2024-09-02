@@ -283,17 +283,7 @@ header {
 
 @media screen and (max-width:768px) {
     .quick_cont {
-        bottom: 5%;
-    }
-    .quick_cont ul li a,
-    .quick_cont ul li button {
-        width: 70px;
-        height: 70px;
-    }
-    .quick_cont ul li a::before,
-    .quick_cont ul li button::before {
-        left: 16px;
-        top: 16px;
+        display: none;
     }
 }
 footer {
