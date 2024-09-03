@@ -36,32 +36,35 @@ header {
 .header_top .sns ul {
     display: flex;  
 }
+.header_top .sns ul li {
+    margin: 8px 16px 0 0;
+}
 .header_top .sns ul li a {
     font-size: 0;
     line-height: 0;
     position: relative;
+    width: 24px;
+    height: 24px;
+    display: block;
 }
 .header_top .sns ul li a::before {
     position: absolute;
     left: 0;
-    top: -9px;
-    width: 24px;
-    height: 24px;
+    top: 0;
+    width: 100%;
+    height: 100%;
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
     content: "";
 }
 .header_top .sns ul li.insta a::before {
-    left: 0;
     background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='12' fill='white'/%3E%3Cg clip-path='url(%23clip0_26_1260)'%3E%3Cpath d='M15.8093 7.37012C15.3445 7.37012 14.9646 7.75002 14.9646 8.2148C14.9646 8.67958 15.3445 9.05948 15.8093 9.05948C16.2741 9.05948 16.654 8.67958 16.654 8.2148C16.654 7.75002 16.2741 7.37012 15.8093 7.37012Z' fill='%236A88BE'/%3E%3Cpath d='M12.0586 8.45312C10.1025 8.45312 8.51416 10.0455 8.51416 11.9976C8.51416 13.9496 10.1065 15.542 12.0586 15.542C14.0107 15.542 15.603 13.9496 15.603 11.9976C15.603 10.0455 14.0107 8.45312 12.0586 8.45312ZM12.0586 14.2689C10.8057 14.2689 9.78724 13.2504 9.78724 11.9976C9.78724 10.7447 10.8057 9.72621 12.0586 9.72621C13.3115 9.72621 14.3299 10.7447 14.3299 11.9976C14.3299 13.2504 13.3115 14.2689 12.0586 14.2689Z' fill='%236A88BE'/%3E%3Cpath d='M14.8716 19.1998H9.12449C6.73999 19.1998 4.80005 17.2599 4.80005 14.8754V9.12829C4.80005 6.73974 6.73999 4.7998 9.12449 4.7998H14.8716C17.2561 4.7998 19.196 6.73974 19.196 9.12425V14.8713C19.196 17.2558 17.2561 19.1958 14.8716 19.1958V19.1998ZM9.12449 6.15372C7.48767 6.15372 6.15396 7.48743 6.15396 9.12425V14.8713C6.15396 16.5081 7.48767 17.8418 9.12449 17.8418H14.8716C16.5084 17.8418 17.8421 16.5081 17.8421 14.8713V9.12425C17.8421 7.48743 16.5084 6.15372 14.8716 6.15372H9.12449Z' fill='%236A88BE'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_26_1260'%3E%3Crect width='14.4' height='14.4' fill='white' transform='translate(4.80005 4.7998)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
 }
 .header_top .sns ul li.naver a::before {
-    left: 40px;
     background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='12' fill='white'/%3E%3Cg clip-path='url(%23clip0_26_1266)'%3E%3Cpath d='M19.2 5.6001V18.8399H14.3699L9.63022 12.1747V18.8399H4.80005V5.6001H9.63022L14.3699 12.5327V5.6001H19.2Z' fill='%236A88BE'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_26_1266'%3E%3Crect width='14.4' height='13.2398' fill='white' transform='translate(4.80005 5.6001)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
 }   
 .header_top .sns ul li.kakao a::before {
-    left: 80px;
     background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='12' fill='white'/%3E%3Cg clip-path='url(%23clip0_26_1270)'%3E%3Cpath d='M15.7801 11.1218V5.24609H8V13.3017H11.6C11.2585 15.3539 10.0736 16.9335 8.85577 17.8277L11.1186 20.1524C13.9287 18.1981 15.7842 14.8941 15.7842 11.126L15.7801 11.1218Z' fill='%236A88BE'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_26_1270'%3E%3Crect width='7.78011' height='14.902' fill='white' transform='translate(8 5.24609)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
 }
 .header_top .tnb ul {
@@ -111,29 +114,51 @@ header {
     align-items: center;
 }
 .header_sub .gnb_wrap ul.depth1 li {
-    margin-right: 35px;
     font-size: 1.125rem;
     font-weight: 700;   
+}
+.header_sub .gnb_wrap ul.depth1 li a {
+    display: block;
+    padding: 10px 24px 10px 24px;
+}
+.header_sub .gnb_wrap ul.depth1 li:first-child a {
+    padding-left: 0;
+}
+.header_sub .gnb_wrap ul.depth1 li a span {
+    position: relative;
+}
+.header_sub .gnb_wrap ul.depth1 li a:hover span::after {
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    width: 100%;
+    height: 3px;
+    background-color: #6A88BE;
+    content: "";
 }
 .header_sub .gnb_wrap ul.depth1 li:hover {
     color: var(--color-blue2);
 }
+
 .header_sub .gnb_wrap ul.search {
     display: flex;
     align-items: center;
 }
 .header_sub .gnb_wrap ul.search li a {
-    margin: 0 20px 0 10px;
+    margin: 0 5px 0 0;
+    display: block;
+    width: 24px;
+    height: 24px;
     font-size: 0;
     line-height: 0;
     position: relative;
 }
 .header_sub .gnb_wrap ul.search li a::before {
     position: absolute;
-    left: -10px;
-    top: -17px;
-    width: 24px;
-    height: 24px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -159,16 +184,14 @@ header {
 }
 .gnb_search_box .search_btn {
     position: absolute;
+    top: 7px;
+    right: 7px;
 }
 .gnb_search_box img {
-    position : absolute;
     width: 24px;
     height: 24px;
-    top: 9px;
-    right: 10px;
     margin: 0;
 }
-
 @media screen and (min-width:769px) {
     header.fixed .header_sub {
         position: fixed;
@@ -207,16 +230,25 @@ header {
     }
     .header_sub .gnb_wrap ul.depth1 {
         justify-content: center;
-        margin: 10px 0 15px 0;
+        margin: 10px 0;
+    }
+    .header_sub .gnb_wrap ul.depth1 li a {
+        display: block;
+        padding: 10px 24px 10px 24px;
     }
     .header_sub .gnb_wrap ul.depth1 li {
+        margin: 5px 5px 0 0;
+        width: 75px; 
+    }
+    .header_sub .gnb_wrap ul.depth1 li:last-child {
+        margin-right: 0; 
+    }
+    .header_sub .gnb_wrap ul.depth1 li a {
         font-size: 0.875rem;
-        margin: 0 5px;
-        width: 80px; 
-        padding: 5px 0;
+        padding: 5px 0; 
         text-align: center;
-        background-color: var(--color-blue2);
         color: #fff;
+        background-color: var(--color-blue2);
         border-radius: 10px;
     }
     .header_sub .gnb_wrap ul.depth1 li:hover {

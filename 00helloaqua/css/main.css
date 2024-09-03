@@ -3,6 +3,9 @@
 @import url(common.css); 
 @import url(layout.css); 
 
+.visual h2 {
+    display: none;
+}
 .visual ul li {
     background-position: center center;
     background-repeat: no-repeat;
@@ -49,6 +52,9 @@
     }
 }
 
+.content  h2 {
+    display: none;
+}
 .content .content_list {
     display: flex;
     justify-content: space-between;
@@ -57,7 +63,7 @@
     font-size: 1.125rem;
 }
 .content .content_list ul li {
-    width: 90px;
+    width: 100px;
 }
 .content .content_list figure {
     position: relative;
@@ -90,41 +96,39 @@
     .content .content_list {
         gap: 12px;
     }
-}   
+    .content .content_list ul li {
+        width: 80px;
+    }
+    .content .content_list figure {
+        width: 80px;
+        height: 80px;
+    }
+    .content .content_list li.another figure {
+        background-color: var(--color-blue);
+    }
+    .content .content_list figure img {
+        width: 40px;
+        height: 40px;
+    }
+    .content .content_list span {
+        margin-top: 6px;
+        font-size: 1.063rem;
+    }
+}  
 
-.new em {
+.new .wrapper {
+    position: relative;  
+}
+.new .tit strong {
     font-weight: 700;
     font-size: 0.813rem;
     color: var(--color-deepblue);
-}
-.new .tit {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
 }
 .new .tit h2{
     font-size: 2.5rem;
     font-weight: 300;
     color: #1d1d1d;
     line-height: 1;
-}
-.new .tit .more a {
-    font-size: 0.938rem;
-    color: #666;
-    position: relative;
-    margin-right: 15px;
-}
-.new .tit .more a::before {
-    position: absolute;
-    left: 45px;
-    top: 5px;
-    width: 12px;
-    height: 12px;
-    background-position: center center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_26_1454)'%3E%3Cpath d='M5.5 6.5H0V5.5H5.5V0H6.5V5.5H12V6.5H6.5V12H5.5V6.5Z' fill='%235F6368'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_26_1454'%3E%3Crect width='12' height='12' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
-    content: "";
 }
 .new .list {
     margin: 30px 0 83px 0;
@@ -161,7 +165,7 @@
 .new .list .info p:hover {
     text-decoration: underline;
 }
-.new .list .info span {
+.new .list .info .real {
     font-size: 1.75rem;
     font-weight: 700;
     color: var(--color-deepblue);
@@ -192,12 +196,35 @@
     right: -70px;
     background-image: url("data:image/svg+xml,%3Csvg width='30' height='118' viewBox='0 0 30 118' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L28 57.3662L1 117' stroke='%231D1D1D' stroke-width='2'/%3E%3C/svg%3E%0A");
 }
+.new .list .more {
+    position: absolute;
+    top: 60px;
+    right: 0;
+}
+.new .list .more a {
+    font-size: 0.938rem;
+    color: #666;
+    position: relative;
+    margin-right: 15px;
+}
+.new .list .more a::before {
+    position: absolute;
+    left: 45px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_26_1454)'%3E%3Cpath d='M5.5 6.5H0V5.5H5.5V0H6.5V5.5H12V6.5H6.5V12H5.5V6.5Z' fill='%235F6368'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_26_1454'%3E%3Crect width='12' height='12' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    content: "";
+}
+
 @media screen and (max-width:768px) {
-    .new em {
+    .new strong {
         display: block;
         font-weight: 700;
-        font-size: 1.125rem;
-        text-align: center;
+        font-size: 1.063rem;
     }
     .new .tit {
         display: block;
@@ -207,17 +234,18 @@
         font-weight: 300;
         color: #1d1d1d;
         line-height: 1;
-        text-align: center;
     }
-    .new .tit .more a {
+    .new .tit .more {
         display: block;
-        font-size: 1.125rem;
-        font-weight: 700;
-        margin-right: 0;
-        color: var(--color-deepblue);
         text-align: center;
         margin: 10px 0;
     }
+    .new .tit .more a {
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: var(--color-deepblue);
+        margin-right: 0;
+    }    
     .new .tit .more a::before {
         display: none;
     }
@@ -238,7 +266,7 @@
         text-overflow: ellipsis;
         overflow: hidden;
     }
-    .new .list .info span {
+    .new .list .info .real {
         font-size: 1.625rem;
         font-weight: 700;
         color: var(--color-deepblue);
@@ -246,16 +274,37 @@
     .new .btn {
         display: none;
     }
+    .new .list .more {
+        position: relative;
+        text-align: center;
+        top: 20px;
+    }
+    .new .list .more a {
+        font-size: 1.375rem;
+        font-weight: 700;
+    }
+    .new .list .more a::before {
+        left: 57px;
+        top: 7px;
+        width: 14px;
+        height: 14px;
+    }
 }
 
+.event h2 {
+    display: none;
+}
 .event .inner {
     display: flex;
     margin-bottom: 150px;
 }
 .event .popup_l,
 .event .popup_r {
-    width: 100vh;
-    height: auto;
+    width: 50%;
+}
+.event .popup_l a,
+.event .popup_r a {
+    display: block;
 }
 .event .popup_l img,
 .event .popup_r img {
@@ -274,39 +323,19 @@
         height: 100%;
     }
 }
-.sale em {
+.sale .wrapper {
+    position: relative;
+}
+.sale strong {
     font-weight: 700;
     font-size: 0.813rem;
     color: var(--color-deepblue);
-}
-.sale .tit {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
 }
 .sale .tit h2{
     font-size: 2.5rem;
     font-weight: 300;
     color: #1d1d1d;
     line-height: 1;
-}
-.sale .tit .more a {
-    font-size: 0.938rem;
-    color: #666;
-    position: relative;
-    margin-right: 15px;
-}
-.sale .tit .more a::before {
-    position: absolute;
-    left: 45px;
-    top: 5px;
-    width: 12px;
-    height: 12px;
-    background-position: center center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_26_1454)'%3E%3Cpath d='M5.5 6.5H0V5.5H5.5V0H6.5V5.5H12V6.5H6.5V12H5.5V6.5Z' fill='%235F6368'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_26_1454'%3E%3Crect width='12' height='12' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
-    content: "";
 }
 .sale .list {
     margin: 30px 0 130px 0;
@@ -341,7 +370,7 @@
     color: #1d1d1d;
     margin-bottom: 5px;
 }
-.sale .list ul li .info p:hover {
+.sale .list ul li p:hover {
     text-decoration: underline;
 }
 .sale .list ul li .info .price {
@@ -360,36 +389,42 @@
     font-size: 0.938rem;
     text-decoration: line-through;
 }
+.sale .list .more {
+    position: absolute;
+    top: 60px;
+    right: 0;
+}
+.sale .list .more a {
+    font-size: 0.938rem;
+    color: #666;
+    position: relative;
+    margin-right: 15px;
+}
+.sale .list .more a::before {
+    position: absolute;
+    left: 45px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_26_1454)'%3E%3Cpath d='M5.5 6.5H0V5.5H5.5V0H6.5V5.5H12V6.5H6.5V12H5.5V6.5Z' fill='%235F6368'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_26_1454'%3E%3Crect width='12' height='12' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    content: "";
+}
 
 @media screen and (max-width:768px) {
-    .sale em {
+    .sale .tit strong {
         display: block;
         font-weight: 700;
-        font-size: 1.125rem;
-        text-align: center;
-    }
-    .sale .tit {
-        display: block;
+        font-size: 1.063rem;
     }
     .sale .tit h2{
         font-size: 2.5rem;
         font-weight: 300;
         color: #1d1d1d;
         line-height: 1;
-        text-align: center;
-    }
-    .sale .tit .more a {
-        display: block;
-        font-size: 1.125rem;
-        font-weight: 700;
-        margin-right: 0;
-        color: var(--color-deepblue);
-        text-align: center;
-        margin: 10px 0;
-    }
-    .sale .tit .more a::before {
-        display: none;
-    }
+    }   
     .sale .list {
         margin: 10px 0 80px 0; 
     }
@@ -398,7 +433,7 @@
         justify-content: space-between;
     }
     .sale .list ul li {
-        width: 48%;
+        width: calc(50% - 8px);
     }
     .sale .list ul li .photo img {
         width: 100%;
@@ -407,6 +442,21 @@
         padding: 6px 12px;
         color: #fff;
         font-size: 0.938rem;
+    }
+    .sale .list .more {
+        position: relative;
+        text-align: center;
+        top: 10px;
+    }
+    .sale .list .more a {
+        font-size: 1.375rem;
+        font-weight: 700;
+    }
+    .sale .list .more a::before {
+        left: 57px;
+        top: 7px;
+        width: 14px;
+        height: 14px;
     }
 
 }
@@ -419,7 +469,7 @@
     padding-top: 100px;
     margin-bottom: 30px;
 }
-.md strong {
+.md .st {
     font-weight: 700;
     font-size: 0.813rem;
     color: var(--color-deepblue);
@@ -438,17 +488,20 @@
 .md ul li {
     background-color: #fff;
     border-radius: 20px;
+    width: 392px;
 }
-.md ul li .box_txt,
-.md ul li .list .item  {
-    padding: 0 20px 0 20px;
+.md ul li .box_txt {
+    padding: 0 20px 40px 20px ;
 }
 .md ul li > figure {
-    width: 392px;
     height: 350px;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
 }
 .md ul li > figure img{
-    border-radius: 20px 20px 0 0;
+    object-fit: cover;
     width: 100%;
     height: 100%;
 }
@@ -457,7 +510,7 @@
     font-size: 0.938rem;
     color: #fff;
     padding: 5px 12px;
-    margin: 20px 0 20px 0;
+    margin: 15px 0 10px 0;
     background-color: var(--color-deepblue);
     border-radius: 20px;
 }
@@ -467,15 +520,16 @@
     color: #1d1d1d;
 }
 .md ul li .box_txt > a {
-    display: block;
+    display: inline-block;
     font-size: 0.813rem;
-    margin: 30px 0 50px 0;
+    padding: 10px 20px 10px 0;
+    margin: 10px 0 0 0;
     position: relative;
 }
 .md ul li .box_txt > a::before {
     position: absolute;
     left: 65px;
-    top: 3px;
+    top: 13px;
     width: 12px;
     height: 12px;
     background-position: center center;
@@ -484,10 +538,9 @@
     background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.47049 6L2.5 1.23339L3.26475 0.5L9 6L3.26475 11.5L2.5 10.7666L7.47049 6Z' fill='%23666666'/%3E%3C/svg%3E%0A");
     content: "";
 }
-
 .md ul li .list {
-    padding-bottom: 26px;
     position: relative;
+    padding: 0 20px 26px 20px;
 }
 .md ul li .list::before {
     position: absolute;
@@ -502,11 +555,11 @@
     align-items: center;
     gap: 15px;
 }
-.md ul li .list .item figure img {
-    border-radius: 10px;
-}
 .md ul li .list .item p:hover {
     text-decoration: underline;
+}
+.md ul li .list .item figure img {
+    border-radius: 10px;
 }
 .md ul li .list .item .real {
     font-size: 1.125rem;
@@ -524,7 +577,7 @@
         padding-top: 60px;
         margin-bottom: 30px;
     }
-    .md strong {
+    .md .st {
         font-size: 1.125rem;
     }
     .md .tit .more a {
@@ -551,25 +604,30 @@
         padding-bottom: 60px;
         flex-wrap: wrap;
     }
+    .md ul li .box_txt {
+        padding: 0 10px 40px 10px;
+    }
+    .md ul li .list .item {
+        gap: 10px;
+    }
     .md ul.recommend_box li {
         border-radius: 20px;
         width: 100%;
         height: 100%;
         margin-bottom: 35px;
     }
-    .md ul.recommend_box li:nth-child(2) {
+    .md ul li:nth-child(2) {
         display: none;
     }
-    .md ul.recommend_box li:last-child {
+    .md ul li:last-child {
         display: none;
-    }
-    .md ul li .box_txt,
-    .md ul li .list .item  {
-        padding: 0 12px 0 12px;
     }
     .md ul li .box_txt > a::before  {
         left: 57px;
-        top: 2px;
+        top: 11px;
+    }
+    .md ul li .list {
+        padding: 0 10px 26px 10px;
     }
     .md ul li > figure {
         width: 100%;
@@ -587,10 +645,9 @@
     }
     .md ul li .box_txt > a {
         font-size: 0.813rem;
-        margin: 20px 0 40px 0;
     }
     .md ul li .list .item  p {
-        font-size: 0.938rem;
+        font-size: 1rem;
     }
 }
 
@@ -612,40 +669,22 @@
     border: 1px solid #666;
     content: "";
 }
-.community .head {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-}
-.community .head h2 {
+
+.community h2 {
     color: #1d1d1d;
     font-size: 1.375rem;
     font-weight: 700;
 }
-.community .head a {
-    color: #666;
-    font-size: 0.813rem;
-    margin-right: 12px;
-    position: relative;
-}
-.community .head a::before {
-    position: absolute;
-    left: 40px;
-    top: 4px;
-    width: 10px;
-    height: 10px;
-    background-position: center center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_26_1454)'%3E%3Cpath d='M5.5 6.5H0V5.5H5.5V0H6.5V5.5H12V6.5H6.5V12H5.5V6.5Z' fill='%235F6368'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_26_1454'%3E%3Crect width='12' height='12' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
-    content: "";
-}
 .community .notice {
     margin-right: 68px;
     width: 295px;
+    position: relative;
 }
 .community .notice .list {
     margin-top: 30px;
+}
+.community .notice ul.list a {
+    display: inline-block;
 }
 .community .notice ul.list li {
     margin: 20px 0 30px 0
@@ -660,6 +699,33 @@
 .community .notice ul.list li p:hover {
     text-decoration: underline;
 }
+.community .more {
+    position: absolute;
+    top: 8px;
+    right: 0;
+}
+.community .more a {
+    color: #666;
+    font-size: 0.813rem;
+    margin-right: 12px;
+    position: relative;
+}
+.community .more a::before {
+    position: absolute;
+    left: 40px;
+    top: 4px;
+    width: 10px;
+    height: 10px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_26_1454)'%3E%3Cpath d='M5.5 6.5H0V5.5H5.5V0H6.5V5.5H12V6.5H6.5V12H5.5V6.5Z' fill='%235F6368'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_26_1454'%3E%3Crect width='12' height='12' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    content: "";
+}
+
+.community .review {
+    position: relative;
+}
 .community .review .list {
     display: flex;
     justify-content: space-between;
@@ -669,12 +735,18 @@
 .community .review ul.list li {
     width: 283px;
 }
+.community .review ul.list li a {
+    display: block;
+}
+.community .review ul.list li a p:hover {
+    text-decoration: underline;
+}
 .community .review ul.list li p {
     font-size: 0.938rem;
     line-height: 1.4;
     height: 2.8em;
     overflow: hidden;
-    margin: 15px 0 8px 0;
+    margin: 8px 0;
 }
 .community .review ul.list li em,
 .community .review ul.list li span {
@@ -701,33 +773,10 @@
         border: 1px solid #666;
         content: "";
     }
-    .community .head {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-    }
-    .community .head h2 {
+    .community h2 {
         color: #1d1d1d;
         font-size: 1.375rem;
         font-weight: 700;
-    }
-    .community .head a {
-        color: #666;
-        font-size: 0.938rem;
-        margin-right: 12px;
-        position: relative;
-    }
-    .community .head a::before {
-        position: absolute;
-        left: 40px;
-        top: 4px;
-        width: 10px;
-        height: 10px;
-        background-position: center center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_26_1454)'%3E%3Cpath d='M5.5 6.5H0V5.5H5.5V0H6.5V5.5H12V6.5H6.5V12H5.5V6.5Z' fill='%235F6368'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_26_1454'%3E%3Crect width='12' height='12' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
-        content: "";
     }
     .community .notice {
         margin:0 0 50px 0;
@@ -755,6 +804,11 @@
         height: 100%;
     }
     .community .review ul.list li p {
-        margin: 15px 0 0 0;
+        margin: 5px 0 0 0;
+    }
+    .community .more a::before {
+        left: 35px;
+        
     }
 }
+

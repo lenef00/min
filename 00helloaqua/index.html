@@ -39,14 +39,14 @@
             <div class="header_sub">
                 <div class="wrapper">
                     <h1 class="logo"><a href="index.html">헬로아쿠아</a></h1>
-                    <div class="gnb">
+                    <div class="gnb" id="skip_menu">
                         <div class="gnb_wrap">
                             <ul class="depth1">
-                                <li><a href="#n">홈</a></li>
-                                <li><a href="#n">이벤트</a></li>
-                                <li><a href="#n">신상품</a></li>
-                                <li><a href="#n">특가</a></li>
-                                <li><a href="#n">커뮤니티</a></li>
+                                <li><a href="#n"><span>홈</span></a></li>
+                                <li><a href="#n"><span>이벤트</span></a></li>
+                                <li><a href="#n"><span>신상품</span></a></li>
+                                <li><a href="#n"><span>특가</span></a></li>
+                                <li><a href="#n"><span>커뮤니티</span></a></li>
                             </ul>
                             <ul class="search">
                                 <li class="my_page"><a href="#n">마이페이지</a></li>
@@ -61,8 +61,9 @@
                 </div>
             </div><!-- header_sub -->
         </header>
-        <main class="container">
+        <main class="container" id="skip_contents">
             <section class="visual">
+                <h2>팝업</h2>
                 <div class="swiper"> 
                     <ul class="swiper-wrapper">
                         <li class="swiper-slide bg1">
@@ -87,10 +88,11 @@
                 </div>
             </section><!-- visual -->
             <section class="content">
+                <h2>서비스 바로가기</h2>
                 <div class="wrapper">
                     <div class="content_list">
-                        <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
-                            <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                        <div class="swiper">
+                            <ul class="swiper-wrapper">
                                 <li class="swiper-slide another"><a href="#n"><figure><img src="images/main/con_1.png" alt=""></figure><span>열대어생물</span></a></li>
                                 <li class="swiper-slide another"><a href="#n"><figure><img src="images/main/con_2.png" alt=""></figure><span>수초</span></a></li>
                                 <li class="swiper-slide"><a href="#n"><figure><img src="images/main/con_3.png" alt=""></figure><span>수초관리</span></a></li>
@@ -108,10 +110,9 @@
             </section><!-- content -->
             <section class="new">
                 <div class="wrapper">
-                    <em>새로운 상품!</em>
                     <div class="tit">
+                        <strong>새로운 상품!</strong>
                         <h2>NEW ARRIVE</h2>
-                        <div class="more"><a href="#n">더보기</a></div>
                     </div>
                     <div class="list">
                         <div class="swiper">
@@ -125,7 +126,7 @@
                                     <div class="info">
                                         <strong><a href="#n">열대어생물</a></strong>
                                         <p><a href="#n">플래티넘 엔젤피쉬 4cm 전후크기</a></p>
-                                        <span>7,000</span>
+                                        <span class="real">7,000</span>
                                     </div>
                                 </li>
                                 <li class="swiper-slide">
@@ -137,7 +138,7 @@
                                     <div class="info">
                                         <strong><a href="#n">열대어생물</a></strong>
                                         <p><a href="#n">선셋 구라미</a></p>
-                                        <span>6,000</span>
+                                        <span class="real">6,000</span>
                                     </div>
                                 </li>
                                 <li class="swiper-slide">
@@ -149,7 +150,7 @@
                                     <div class="info">
                                         <strong><a href="#n">열대어생물</a></strong>
                                         <p><a href="#n">(수컷) 코이 루돌프 구피</a></p>
-                                        <span>3,600</span>
+                                        <span class="real">3,600</span>
                                     </div>
                                 </li>
                                 <li class="swiper-slide">
@@ -161,11 +162,12 @@
                                     <div class="info">
                                         <strong><a href="#n">수초</a></strong>
                                         <p><a href="#n">부착형 절단유목 미크로소리움 활착</a></p>
-                                        <span>14,250</span>
+                                        <span class="real">14,250</span>
                                     </div>
                                 </li>
                             </ul>
-                        </div>                   
+                        </div>   
+                        <div class="more"><a href="#n">더보기</a></div>                
                     </div>
                     <div class="btn">
                         <button class="btn_prev">이전 팝업보기</button>
@@ -174,6 +176,7 @@
                 </div>
             </section><!-- new -->
             <section class="event">
+                <h2>이벤트</h2>
                 <div class="inner">
                     <div class="popup_l"><a href="#n"><img src="images/main/event_popup1.png" alt="5만원 이상 무료배송"></a></div>
                     <div class="popup_r"><a href="#n"><img src="images/main/event_popup2.png" alt="구피"></a></div>
@@ -181,10 +184,9 @@
             </section><!-- event -->
             <section class="sale">
                 <div class="wrapper">
-                    <em>오늘의 세일!</em>
                     <div class="tit">
+                        <strong>오늘의 세일!</strong>
                         <h2>BIG SAIL EVENT</h2>
-                        <div class="more"><a href="#n">더보기</a></div>
                     </div>
                     <div class="list">
                         <ul>
@@ -279,110 +281,111 @@
                                 </div>
                             </li>
                         </ul>
+                        <div class="more"><a href="#n">더보기</a></div>    
                     </div>
                 </div>
             </section><!-- sale -->
             <section class="md">
                 <div class="wrapper">
                     <div class="tit">
-                        <strong>헬로아쿠아 MD추천!</strong>
+                        <strong class="st">헬로아쿠아 MD추천!</strong>
                         <h2>MD'S CHOICE</h2>
                     </div>
                     <ul class="recommend_box">
                         <li>
                             <figure><img src="images/main/md01.png" alt="열대어"></figure>
                             <div class="box_txt">
-                                <span class="brand">열대어</span>
-                                <p class="txt_tit"><a href="#n">열대어생물 추천 상품</a></p>
+                                <strong class="brand">열대어</strong>
+                                <h3 class="txt_tit"><a href="#n">열대어생물 추천 상품</a></h3>
                                 <a href="#n"><span>자세히보기</span></a>
                             </div>
                             <div class="list">
-                                <div class="item">
-                                    <figure><a href="#n"><img src="images/main/md_1_1.png" alt=""></a></figure>
+                                <a href="#n" class="item">
+                                    <figure><img src="images/main/md_1_1.png" alt=""></figure>
                                     <div class="txt">
-                                        <p><a href="#n"><span>(수컷) 알비노 스카이블루 구피</span></a></p>
+                                        <p>(수컷) 알비노 스카이블루 구피</p>
                                         <span class="real">6,000</span>
                                     </div>
-                                </div>
-                                <div class="item">
-                                    <figure><a href="#n"><img src="images/main/md_1_2.png" alt=""></a></figure>
+                                </a>
+                                <a href="#n" class="item">
+                                    <figure><img src="images/main/md_1_2.png" alt=""></figure>
                                     <div class="txt">
-                                        <p><a href="#n"><span>(수컷) HB하프문 로즈테일 구피</span></a></p>
+                                        <p>(수컷) HB하프문 로즈테일 구피</p>
                                         <span class="real">15,000</span>
                                     </div>
-                                </div>
-                                <div class="item">
-                                    <figure><a href="#n"><img src="images/main/md_1_3.png" alt=""></a></figure>
+                                </a>
+                                <a href="#n" class="item">
+                                    <figure><img src="images/main/md_1_3.png" alt=""></figure>
                                     <div class="txt">
-                                        <p><a href="#n"><span>(암컷) 블루팬더 구피</span></a></p>
+                                        <p>(암컷) 블루팬더 구피</p>
                                         <span class="real">3,000</span>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </li>
                         <li>
                             <figure><img src="images/main/md02.png" alt="수초"></figure>
                             <div class="box_txt">
-                                <span class="brand">수초</span>
+                                <strong class="brand">수초</strong>
                                 <p class="txt_tit"><a href="#n">수초 추천 상품</a></p>
                                 <a href="#n"><span>자세히보기</span></a>
                             </div>
                             <div class="list">
-                                <div class="item">
-                                    <figure><a href="#n"><img src="images/main/md_2_1.png" alt=""></a></figure>
+                                <a href="#n" class="item">
+                                    <figure><img src="images/main/md_2_1.png" alt=""></figure>
                                     <div class="txt">
-                                        <p><a href="#n"><span>플랜트 케이스 마츠모(5촉)</span></a></p>
+                                        <p>플랜트 케이스 마츠모(5촉)</p>
                                         <span class="real">9,500</span>
                                         <span class="dc">10,000</span>
                                     </div>
-                                </div>
-                                <div class="item">
-                                    <figure><a href="#n"><img src="images/main/md_2_2.png" alt=""></a></figure>
+                                </a>
+                                <a href="#n" class="item">
+                                    <figure><img src="images/main/md_2_2.png" alt=""></figure>
                                     <div class="txt">
-                                        <p><a href="#n"><span>미니 마리모수초 투루포륨</span></a></p>
+                                        <p>미니 마리모수초 투루포륨</p>
                                         <span class="real">3,800</span>
                                         <span class="dc">4,000</span>
                                     </div>
-                                </div>
-                                <div class="item">
-                                    <figure><a href="#n"><img src="images/main/md_2_3.png" alt=""></a></figure>
+                                </a>
+                                <a href="#n" class="item">
+                                    <figure><img src="images/main/md_2_3.png" alt=""></figure>
                                     <div class="txt">
-                                        <p><a href="#n"><span>미니 마리모수초 슈퍼레드</span></a></p>
+                                        <p>미니 마리모수초 슈퍼레드</p>
                                         <span class="real">3,800</span>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </li>
                         <li>
                             <figure><img src="images/main/md03.png" alt="용품"></figure>
                             <div class="box_txt">
-                                <span class="brand">용품</span>
+                                <strong class="brand">용품</strong>
                                 <p class="txt_tit"><a href="#n">용품 추천 상품</a></p>
                                 <a href="#n"><span>자세히보기</span></a>
                             </div>
                             <div class="list">
-                                <div class="item">
-                                    <figure><a href="#n"><img src="images/main/md_3_1.png" alt=""></a></figure>
+                                <a href="#n" class="item">
+                                    <figure><img src="images/main/md_3_1.png" alt=""></figure>
                                     <div class="txt">
-                                        <p><a href="#n"><span>베타스톤 오팔샤이닝 100g</span></a></p>
+                                        <p>베타스톤 오팔샤이닝 100g</p>
                                         <span class="real">5,000</span>
                                     </div>
-                                </div>
-                                <div class="item">
-                                    <figure><a href="#n"><img src="images/main/md_3_2.png" alt=""></a></figure>
+                                </a>
+                                <a href="#n" class="item">
+                                    <figure><img src="images/main/md_3_2.png" alt=""></figure>
                                     <div class="txt">
-                                        <p><a href="#n"><span>파스텔스톤 블루 15알</span></a></p>
+                                        <p>파스텔스톤 블루 15알</p>
                                         <span class="real">1,500</span>
                                         <span class="dc">3,000</span>
                                     </div>
-                                </div>
-                                <div class="item">
-                                    <figure><a href="#n"><img src="images/main/md_3_3.png" alt=""></a></figure>
+                                </a>
+                                <a href="#n" class="item">
+                                    <figure><img src="images/main/md_3_3.png" alt=""></figure>
                                     <div class="txt">
-                                        <p><a href="#n"><span>부상식 연꽃 베타침대 빨간색</span></a></p>
+                                        <p>부상식 연꽃 베타침대 빨간색</p>
                                         <span class="real">4,000</span>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </li>
                     </ul>
@@ -391,54 +394,64 @@
             <section class="community">
                 <div class="wrapper">
                     <div class="notice">
-                        <div class="head">
                             <h2>공지사항</h2>
-                            <a href="#n"><span>더보기</span></a>
-                        </div>
                         <ul class="list">
                             <li>
-                                <span class="date">2024-08-13</span>
-                                <p><a href="#n">생물 카드결제 정상화 안내</a></p>
+                                <a href="#n">
+                                    <span class="date">2024-08-13</span>
+                                    <p>생물 카드결제 정상화 안내</p>
+                                </a>
                             </li>
                             <li>
-                                <span class="date">2024-08-12</span>
-                                <p><a href="#n">금주 생물(물고기,수초)배송안내</a></p>
+                                <a href="#n">
+                                    <span class="date">2024-08-12</span>
+                                    <p>금주 생물(물고기,수초)배송안내</p>
+                                </a>
                             </li>
                             <li>
-                                <span class="date">2024-06-18</span>
-                                <p><a href="#n">생물포장비 무료시행안내</a></p>
+                                <a href="#n">
+                                    <span class="date">2024-06-18</span>
+                                    <p>생물포장비 무료시행안내</p>
+                                </a>
                             </li>
                             <li>
-                                <span class="date">2024-05-19</span>
-                                <p><a href="#n">모바일 주문시 재고부족의 시스템장애</a></p>
+                                <a href="#n">
+                                    <span class="date">2024-05-19</span>
+                                    <p>모바일 주문시 재고부족의 시스템장애</p>
+                                </a>
                             </li>
                         </ul>
+                        <div class="more"><a href="#n"><span>더보기</span></a></div>
                     </div>
                     <div class="review">
-                        <div class="head">
                             <h2>BEST 구매후기</h2>
-                            <a href="#n"><span>더보기</span></a>
-                        </div>
                         <ul class="list">
                             <li>
-                                <figure><a href="#n"><img src="images/main/review01.png" alt="리뷰사진"></a></figure>
-                                <p><a href="#n">구매후기 남기는 법을 이제야 알아내서 뒤늦은 후기를 남깁니다. 물생활 쌩초보로써, 첫물고기로 화려하진 않지만 강인하고 귀여운 백운산을 선택하게 되었습니다.</a></p>
-                                <em>김**</em>
-                                <span class="date">2024-07-05</span>
+                                <a href="#n">
+                                   <figure><img src="images/main/review01.png" alt="리뷰사진"></figure>
+                                    <p>구매후기 남기는 법을 이제야 알아내서 뒤늦은 후기를 남깁니다. 물생활 쌩초보로써, 첫물고기로 화려하진 않지만 강인하고 귀여운 백운산을 선택하게 되었습니다.</p>
+                                    <em>김**</em>
+                                    <span class="date">2024-07-05</span> 
+                                </a>
                             </li>
                             <li>
-                                <figure><a href="#n"><img src="images/main/review02.png" alt="리뷰사진"></a></figure>
-                                <p><a href="#n">새우들의 발색이 매우 좋습니다! 탈피 직후 괴롭히는 다른 생물만 없다면 딱히 탈락없이 건강합니다~! 봉달 후 보름쯤 되어 가는데 벌써 많이 컸다는게 느껴집니다!</a></p>
-                                <em>김**</em>
-                                <span class="date">2024-07-04</span>
+                                <a href="#n">
+                                    <figure><img src="images/main/review02.png" alt="리뷰사진"></figure>
+                                    <p>새우들의 발색이 매우 좋습니다! 탈피 직후 괴롭히는 다른 생물만 없다면 딱히 탈락없이 건강합니다~! 봉달 후 보름쯤 되어 가는데 벌써 많이 컸다는게 느껴집니다!</p>
+                                    <em>김**</em>
+                                    <span class="date">2024-07-04</span>
+                                </a>
                             </li>
                             <li>
-                                <figure><a href="#n"><img src="images/main/review03.png" alt="리뷰사진"></a></figure>
-                                <p><a href="#n">수반을 들여오게 되었는데~ 생각보다 너무 커서 금붕어를 키우기로 했어요. 미키 플래티랑 코리도 같이요~ 1마리 말고는 다들 건강하게 잘 도착했어요.</a></p>
-                                <em>황**</em>
-                                <span class="date">2024-07-01</span>
+                                <a href="#n">
+                                    <figure><img src="images/main/review03.png" alt="리뷰사진"></figure>
+                                    <p>수반을 들여오게 되었는데~ 생각보다 너무 커서 금붕어를 키우기로 했어요. 미키 플래티랑 코리도 같이요~ 1마리 말고는 다들 건강하게 잘 도착했어요.</p>
+                                    <em>황**</em>
+                                    <span class="date">2024-07-01</span>
+                                </a>
                             </li>
                         </ul>
+                        <div class="more"><a href="#n"><span>더보기</span></a></div>
                     </div>
                 </div>
             </section><!-- community -->
@@ -508,7 +521,7 @@
                         <span>mail : artvkrhl@naver.com</span><br><br>  
                         <span>통신판매 : 2016-경기시흥-0118호</span><br>
                         <span>사업자번호 : 717-38-00168</span>
-                        <span class="biz"><a href="#n"></a>사업자확인</span>
+                        <span class="biz"><a href="#n">사업자확인</a></span>
                     </div>
                     <div class="copy">COPYRIGHT (c) HELLOAQUA.COM</div>
                 </div>
