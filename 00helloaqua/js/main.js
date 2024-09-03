@@ -13,13 +13,10 @@ $(document).ready(function(){
   });
   const content_swiper = new Swiper('.content .swiper', { 
     slidesPerView: "auto",
-    spaceBetween: 12,
+    spaceBetween: 24,
     breakpoints: {
-      640: {
-        spaceBetween: 24, 
-      },
       1024: {
-        spaceBetween: 38,
+        spaceBetween: 24,
       },
     },
     centeredSlides: false ,
@@ -29,7 +26,7 @@ $(document).ready(function(){
 
   const new_swiper = new Swiper('.new .swiper', {
     slidesPerView: "auto",
-    spaceBetween: 24,
+    spaceBetween: 12,
     breakpoints: {
       1024: { 
         spaceBetween: 24,

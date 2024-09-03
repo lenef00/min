@@ -38,6 +38,9 @@
     color: #fff;
 }
 @media screen and (max-width:768px) {
+    .visual ul li .wrapper {
+        height: 324px;
+    }    
     .visual ul li strong {
         font-size: 1.125rem;
     }
@@ -208,11 +211,12 @@
     }
     .new .tit .more a {
         display: block;
-        font-size: 1.375rem;
+        font-size: 1.125rem;
         font-weight: 700;
         margin-right: 0;
         color: var(--color-deepblue);
-        text-align: right;
+        text-align: center;
+        margin: 10px 0;
     }
     .new .tit .more a::before {
         display: none;
@@ -221,10 +225,10 @@
         margin: 10px 0 83px 0;
     }
     .new .list .swiper-slide {
-        width: 164px;
+        width: 48%;
     }
     .new .list .photo {
-        height: 164px;
+        height: 48%;
     }
     .new .list .photo img {
         border-radius: 15px;
@@ -235,7 +239,7 @@
         overflow: hidden;
     }
     .new .list .info span {
-        font-size: 1.375rem;
+        font-size: 1.625rem;
         font-weight: 700;
         color: var(--color-deepblue);
     }
@@ -376,11 +380,12 @@
     }
     .sale .tit .more a {
         display: block;
-        font-size: 1.375rem;
+        font-size: 1.125rem;
         font-weight: 700;
         margin-right: 0;
         color: var(--color-deepblue);
-        text-align: right;
+        text-align: center;
+        margin: 10px 0;
     }
     .sale .tit .more a::before {
         display: none;
@@ -393,7 +398,7 @@
         justify-content: space-between;
     }
     .sale .list ul li {
-        width: 49%;
+        width: 48%;
     }
     .sale .list ul li .photo img {
         width: 100%;
@@ -516,7 +521,7 @@
 
 @media screen and (max-width:768px) {
     .md .tit {
-        padding-top: 80px;
+        padding-top: 60px;
         margin-bottom: 30px;
     }
     .md strong {
@@ -543,29 +548,39 @@
     .md ul  {
         display: flex;
         justify-content: center;
-        padding-bottom: 150px;
+        padding-bottom: 60px;
         flex-wrap: wrap;
     }
     .md ul.recommend_box li {
         border-radius: 20px;
-        width: 80%;
+        width: 100%;
         height: 100%;
         margin-bottom: 35px;
+    }
+    .md ul.recommend_box li:nth-child(2) {
+        display: none;
+    }
+    .md ul.recommend_box li:last-child {
+        display: none;
     }
     .md ul li .box_txt,
     .md ul li .list .item  {
         padding: 0 12px 0 12px;
     }
+    .md ul li .box_txt > a::before  {
+        left: 57px;
+        top: 2px;
+    }
     .md ul li > figure {
         width: 100%;
-        height: 10%;
+        height: 100%;
     }
     .md ul li > figure img {
         object-fit: cover;
+        height: 250px;
     }
-    
     .md ul li .box_txt .brand {
-        margin: 15px 0 10px 0;
+        margin: 10px 0 10px 0;
     }
     .md ul li .box_txt .txt_tit {
         font-size: 1.25rem;
@@ -573,6 +588,9 @@
     .md ul li .box_txt > a {
         font-size: 0.813rem;
         margin: 20px 0 40px 0;
+    }
+    .md ul li .list .item  p {
+        font-size: 0.938rem;
     }
 }
 
@@ -666,7 +684,8 @@
 
 @media screen and (max-width:768px) {
     .community {
-        margin: 100px 0 ;
+        margin: 50px 0 ;
+        font-size: 1rem;
     }
     .community .wrapper {
         display: block;
@@ -694,7 +713,7 @@
     }
     .community .head a {
         color: #666;
-        font-size: 0.813rem;
+        font-size: 0.938rem;
         margin-right: 12px;
         position: relative;
     }
@@ -718,7 +737,9 @@
         display: flex;
     }
     .community .notice ul.list li .date {
+        display: flex;
         margin-right: 12px;
+        align-items: center;
     }
     .community .review .list {
         display: flex;

@@ -23,6 +23,7 @@
 header {
     z-index: 100;
     width: 100%;
+    position: relative;
 }
 .header_top {
     height: 40px;
@@ -75,11 +76,14 @@ header {
 
 .header_sub {
     height: 100px;
+    padding-top: 50px;
 }
 .header_sub .logo {
     padding-top: 10px;
-    left: 42%;
-    position: relative;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 40px;
 }
 .header_sub .logo a {
     display: block;
@@ -175,6 +179,9 @@ header {
         background-color: #fff;
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     }
+    header.fixed .header_sub .logo a::before {
+        top: -30px;
+    } 
 }
 @media screen and (max-width:768px) {
     .header_top {
@@ -190,7 +197,10 @@ header {
         height: 150px;
     }
     .header_sub .logo {
-        left: 0;
+        margin: auto; 
+    }
+    .header_sub .logo a::before {
+        text-align: center;
     }
     .header_sub .gnb_wrap {
         display: block;
