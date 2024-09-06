@@ -3,9 +3,288 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <title>서울아트가이드</title>
 </head>
 <body>
-    
+    <div class="skip_nav">
+        <a href="#skip_contents">본문 바로가기</a>
+        <a href="#skip_menu">대메뉴 바로가기</a>
+    </div>
+    <div id="'wrap">
+        <header>
+            <div class="header_wrap">
+                <h1 class="logo"><a href="index.html">서울아트가이드</a></h1>
+                <nav class="gnb" id="skip_menu">
+                    <button class="gnb_open">메뉴열기</button>
+                    <div class="gnb_wrap">
+                        <ul class="depth1">
+                            <li>
+                                <a href="#n">뉴스</a>
+                                <div class="depth2">
+                                    <ul>
+                                        <li><a href="#n"><span>언론</span></a></li>
+                                        <li><a href="#n"><span>문화소사</span></a></li>
+                                        <li><a href="#n"><span>동정</span></a></li>
+                                        <li><a href="#n"><span>학술·행사</span></a></li>
+                                        <li><a href="#n"><span>공모</span></a></li>
+                                        <li><a href="#n"><span>강좌</span></a></li>
+                                        <li><a href="#n"><span>외국소식</span></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#n">전시</a>
+                                <div class="depth2">
+                                    <ul>
+                                        <li><a href="#n"><span>전시일정</span></a></li>
+                                        <li><a href="#n"><span>오늘전시</span></a></li>
+                                        <li><a href="#n"><span>외국전시</span></a></li>
+                                        <li><a href="#n"><span>전시평론</span></a></li>
+                                        <li><a href="#n"><span>화제의 전시</span></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#n">칼럼</a>
+                                <div class="depth2">
+                                    <ul>
+                                        <li><a href="#n"><span>연재칼럼</span></a></li>
+                                        <li><a href="#n"><span>지난칼럼</span></a></li>
+                                        <li><a href="#n"><span>외부칼럼</span></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#n">도서</a>
+                                <div class="depth2">
+                                    <ul>
+                                        <li><a href="#n"><span>단행본</span></a></li>
+                                        <li><a href="#n"><span>연속간행물</span></a></li>
+                                        <li><a href="#n"><span>도서자료검색</span></a></li>
+                                    </ul>
+                                </div>    
+                            </li>
+                            <li>
+                                <a href="#n">색인</a>
+                                <div class="depth2">
+                                    <ul> 
+                                        <li><a href="#n"><span>전시공간</span></a></li>
+                                        <li><a href="#n"><span>인명사전</span></a></li>
+                                        <li><a href="#n"><span>협회·단체</span></a></li>
+                                        <li><a href="#n"><span>웹사이트</span></a></li>
+                                        <li><a href="#n"><span>외국색인</span></a></li>
+                                    </ul>
+                                </div>    
+                            </li>
+                            <li>
+                                <a href="#n">서비스</a>
+                                <div class="depth2">
+                                    <ul>
+                                        <li><a href="#n"><span>서울아트가이드</span></a></li>
+                                        <li><a href="#n"><span>온라인홍보</span></a></li>
+                                        <li><a href="#n"><span>DM스티커</span></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#n">커뮤니티</a>
+                                <div class="depth2">
+                                    <ul>
+                                        <li><a href="#n"><span>알림</span></a></li>
+                                        <li><a href="#n"><span>연구소Blog</span></a></li>
+                                        <li><a href="#n"><span>패널리뷰</span></a></li>
+                                        <li><a href="#n"><span>홍보</span></a></li>
+                                        <li><a href="#n"><span>게시판</span></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#n">김달진미술연구소</a>
+                                <div class="depth2">
+                                    <ul>
+                                        <li><a href="#n"><span>연구소소개</span></a></li>
+                                        <li><a href="#n"><span>연구소언론보도</span></a></li>
+                                        <li><a href="#n"><span>연구소 연혁</span></a></li>
+                                        <li><a href="#n"><span>사업소개</span></a></li>
+                                        <li><a href="#n"><span>축하메시지</span></a></li>
+                                        <li><a href="#n"><span>오시는길</span></a></li>
+                                        <li><a href="#n"><span>김달진소장은</span></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="gnb_close">메뉴닫기</button>
+                </nav>
+                <div class="login"><a href="#n">로그인</a></div>
+            </div>
+        </header>
+        <main class="container" id="skip_contents">
+            <section class="exhibition">
+                <div class="wrapper">
+                    <h2>Exhibition</h2>
+                    <div class="list">
+                        <div class="swiper">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <a href="#n"><img src="images/main/Exhibition_1.png" alt="三國三色:동아시아의 칠기전"></a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n"><img src="images/main/Exhibition_2.png" alt="산단과 도시 : 기계적 감수성의 미학"></a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n"><img src="images/main/Exhibition_3.png" alt="인간과 자연_퇴화와 변성의 조형전"></a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n"><img src="images/main/Exhibition_4.png" alt="로즈마리 트로켈: 드로잉, 오브제, 비디오"></a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n"><img src="images/main/Exhibition_5.png" alt="Kiaf SEOUL 2024"></a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n"><img src="images/main/Exhibition_6.png" alt="정소연: The Pink Moment"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="more"><a href="#n">더보기</a></div>
+                </div>
+            </section><!-- exhibition -->
+            <div class="search_box">
+                <div class="wrapper">
+                    <form action="." method="post">
+                        <input class="search_txt" type="text" placeholder="어떤 자료를 찾으세요?">
+                        <button class="search_btn" type="submit">찾기</button>
+                    </form>
+                </div>
+            </div><!-- search_box -->
+            <section class="news">
+                <div class="wrapper">
+                    <h2>News</h2>
+                        <div class="tab">
+                            <ul>
+                                <li><a href="#n">언론</a></li>
+                                <li><a href="#n">동정</a></li>
+                                <li><a href="#n">학술행사</a></li>
+                                <li><a href="#n">공모</a></li>
+                            </ul>
+                        </div>
+                        <div class="list">
+                            <ul>
+                                <li>
+                                    <a href="https://www.yna.co.kr/view/AKR20240906034800003?section=culture/all">
+                                        <h3>삼화페인트, 경기도미술관과 경기도 문화예술 발전 협약</h3>
+                                        <p>삼화페인트공업은 지난 5일 경기도미술관과 경기도 문화예술 발전을 위한 업무협약(MOU)을 체결했다고 6일 밝혔다. 경기도미술관이 있는 안산에는 삼화페인트 안산공장이 있다.</p>
+                                        <span class="date">2024-09-06</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.seoul.co.kr/news/newsView.php?id=20240906035008">
+                                        <h3>[씨줄날줄] 뭉크전 & 프리즈 서울</h3>
+                                        <p> 프리즈는 아트바젤, 피악(FIAC)과 함께 세계 3대 아트페어로 꼽힌다. 2003년 영국 런던에서 처음 시작해 유럽, 미국 등으로 영역을 확장한 뒤 아시아 진출을 선언하고 2022년 첫 무대를 대한민국 서울로 삼았다. 올해 세 번째를 맞은 ‘프리즈 서울’이 그제 막을 올렸다. 처음부터 함께했던 국내 최대 규모 아트페어인 키아프와 이번에도 공동으로 행사를 열어 국내외 미술 애호가들의 심장을 뛰게 하고 있다.</p>
+                                        <span class="date">2024-09-06</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.imaeil.com/page/view/2024090515204186830">
+                                        <h3>경북의 혼(魂)이 담긴 무형유산 전승자 공예품 한 자리…22일까지 청도박물관서 개최</h3>
+                                        <p>경상북도의 우수한 무형유산 전승 공예품을 한자리에서 감상할 수 있는 전시회가 개최된다. 5일 경북도는 오는 22일까지 청도박물관 기획전시실에서 '경상북도 무형유산 전승공예전' 전시회를 개최한다고 밝혔다.</p>
+                                        <span class="date">2024-09-06</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    <div class="more"><a href="#n">더보기</a></div>
+                </div>
+            </section><!-- news -->
+            <section class="column">
+                <div class="wrapper">
+                    <h2>Column</h2> 
+                    <div>
+                        <div class="tab">
+                            <ul>
+                                <li><a href="#n">연재</a></li>
+                                <li><a href="#n">외부칼럼</a></li>=
+                            </ul>
+                        </div>
+                        <div class="list">
+                            <ul>
+                                <li>
+                                    <a href="#n">
+                                        <img src="images/main/column_1.png">
+                                        <h3>(184)빼앗긴 들에도 봄은 오는가</h3>
+                                        <p>봄이다. 입춘이 지났으니 절기상으로는 봄이다. 기온이 영하권을 살짝 맴돌고 있지만, 지역에 따라 꽃 몽우리가 올라오고 철모르는 꽃나무는 꽃을 활짝 피웠다.</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#n">
+                                        <img src="images/main/column_2.png">
+                                        <h3>(183)서울과 지방의 차이, 그 사이의 매개자</h3>
+                                        <p>필자는 예술이 가장 재미있다고 생각했다. 이미지 하나가 그동안 살아왔던 나의 상식을 완벽히 깨트려 버리는 순간이 있다. 전쟁터의 탱크가 꽃마차가 되는 이용백 작가의 작품, 거짓말이 유구한 신화가 되어버리는 데미안 허스트의 작품처럼 말이다. </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#n">
+                                        <img src="images/main/column_3.png">
+                                        <h3>(182)동시대 한국미술 현장에서의 전통 읽기</h3>
+                                        <p>사회적 거리두기가 완화되며 해외여행에 대한 욕구가 늘어나고 있다. 뮤지엄 큐레이터 17년차인 필자는 여행을 떠나면 늘 ‘한국관’ 혹은 ‘한국실’이 있는 해외박물관을 중심으로 꾸리게 된다. </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#n">
+                                        <img src="images/main/column_4.png">
+                                        <h3>(181)프랑스 사례로 살펴본 미술사교육의 전문화와 보편화</h3>
+                                        <p>필자는 프랑스에서 미술사학을 전공했다. 학부 1,2학년 동안 고고학과 미술사학 과목들을 모두 이수해야 3학년 때 두 분야 중 하나를 선택하여 심화된 전문 지식을 터득할 기회를 가질 수 있었다. </p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="more"><a href="#n">더보기</a></div>
+                </div>
+            </section><!-- column -->
+            <section class="book">
+                <div class="wrapper">
+                    <h2>Book</h2> 
+                    <div class="list">
+                        
+                    </div>
+                    <div class="more"><a href="#n">더보기</a></div>
+                </div>
+            </section><!-- book -->
+            <section class="personal">
+                <div class="wrapper">
+                    <h2>Personal Dictionary</h2> 
+                    <div class="more"><a href="#n">더보기</a></div>
+                </div>
+            </section><!-- personal -->
+            <div class="notice_area">
+                <div class="wrapper">
+                    <section class="service">
+                        <h2>Service</h2>
+                    </section><!-- service -->
+                    <section class="community">
+                        <h2>Community</h2>
+                    <div class="more"><a href="#n">더보기</a></div>
+                    </section><!-- community -->
+                </div>
+            </div><!-- notice_area -->
+        </main>
+        <footer>
+            <div class="wrapper">
+                <div class="family"></div>
+                <div class="sns"></div>
+                <div class="f_nav"></div>
+                <div class="f_info"></div>
+                <div class="copyright"></div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
