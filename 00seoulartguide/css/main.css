@@ -3,6 +3,107 @@
 @import url(common.css); 
 @import url(layout.css); 
 
+section h2 {
+    font-size: var(--txt-tit-size);
+    font-weight: 200;
+    margin-bottom: 30px;
+}
+section .tab > ul > li .tab_menu {
+    font-size: var(--txt-subtab-size);
+    margin-bottom: 20px;
+}
+section .tab > ul > li .tab_menu:hover {
+    font-weight: 700;
+}
+section .tab > ul > li.on .tab_menu {
+    font-weight: 700;
+    color: var(--txt-color-tit)
+}
+
 .exhibition {
+    margin-top: 150px;
+}
+.exhibition .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.exhibition .list ul li{
     
+}
+.exhibition .list ul li a {
+    display: block;
+}
+
+.search_box {
+    text-align: center;
+    margin: 150px 0;
+}
+
+.news .tab {
+    position: relative;
+}
+.news .tab .news_list > ul {
+    display: flex;
+    justify-content: space-between;
+}
+.news .tab > ul > li .tab_menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.news .tab > ul > li.news02 .tab_menu {
+   left: 40px;
+}
+.news .tab > ul > li.news03 .tab_menu {
+    left: 80px;
+}
+.news .tab > ul > li.news04 .tab_menu {
+    left: 150px;
+}
+.news .tab > ul > li .news_list { 
+    display: none;
+    padding-top: 40px;
+}
+.news .tab > ul > li.on .news_list {
+    display: block;
+} 
+
+.news .tab .news_list  ul li {
+    width: 404px;
+}
+
+.column {
+    margin-top: 150px;
+}
+.column .tab {
+    position: relative;
+    justify-content: space-between;
+}
+.column .tab .column_list > ul {
+    display: flex;
+    justify-content: space-between;
+}
+.column .tab > ul > li .tab_menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.column .tab > ul > li.column02 .tab_menu {
+    left: 40px;
+}
+.column .tab > ul > li .column_list { 
+    display: none;
+    padding-top: 40px;
+}
+.column .tab > ul > li.on .column_list {
+    display: block;
+}
+.column .tab ul li .column_list p {
+    line-height: 1.4;
+    height: 2.8em;
+    overflow: hidden;
+}
+
+.column .tab .column_list  ul li {
+    width: 297px;
 }

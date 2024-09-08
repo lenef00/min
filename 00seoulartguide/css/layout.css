@@ -28,7 +28,7 @@ header {
     height: 100px;
     z-index: 100;
     background-color: #fff;
-    /* box-shadow: 0 3px 5px rgba(0,0,0,0.2);    */
+    /* box-shadow: 0 3px 5px rgba(0,0,0,0.2);*/
 }
 header .header_wrap {
     white-space: nowrap; 
@@ -124,7 +124,7 @@ header.fixed {
         color: var(--txt-color-txt);
     }
     header .gnb .gnb_wrap .depth2 > ul > li:hover > a {
-        color: #0C6779;
+        font-weight: 700;
     }
     header .gnb .gnb_open,
     header .gnb .gnb_close {
