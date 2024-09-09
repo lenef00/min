@@ -44,12 +44,7 @@ $(document).ready(function(){
         $(this).addClass('active')
     })
 
-    /* 
-        footer .family button.btn_open 를 클릭하면
-        footer .family 에 open클래스를 줘야 함
-        footer .family button.btn_close 를 클릭하면
-        footer .family 에 open 클래스를 삭제
-    */
+
    $('footer .family button.btn_open').on('click', function(){
         $('footer .family').addClass('open')
         $('footer .family .list').slideDown()
