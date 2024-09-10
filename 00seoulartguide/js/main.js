@@ -5,10 +5,18 @@ $(document).ready(function(){
         slidesPerView: 2,
         spaceBetween: 16,
         breakpoints: {
-            1024: {    /* 640px 이상일때 적용 */
+            1300: {
+                slidesPerView: 6,
+                spaceBetween: 24,
+            },
+            1024: {
                 slidesPerView: 4,
                 spaceBetween: 24,
             },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 24,
+            }
         },
         loop: true,
         
@@ -16,46 +24,32 @@ $(document).ready(function(){
 
     const book_swiper = new Swiper('.book .swiper', {
         slidesPerView: "auto",
-        spaceBetween: 30,
+        spaceBetween: 15,
         breakpoints: {
-            640: {  /* 640px 이상이 되면 적용 */
+            640: {
                 spaceBetween: 30, 
             },
-            // 1024: {  /* 1024px 이상이 되면 적용 */
-            //     spaceBetween: 40,
-            // },
         },
         loop: true,
+
+        
     });
+    
+    let tab_btn = $('.news .tab_area .tab_btn ul li')
+    let tab_name
+    let tab_cnt = $('.news .tab_area .tab_cnt div[role="tabpanel"]')
+    let tab_cnt_parent = $('.news .tab_area .tab_cnt')
 
-    $('.news .tab > ul > li').on('click', function(){
-        $('.news .tab > ul > li').removeClass('on')
-        $(this).addClass('on')
-    })
-
-    $('.column .tab > ul > li').on('click', function(){
-        $('.column .tab > ul > li').removeClass('on') 
-        $(this).addClass('on')
-    })
-
-    $('.book .tab > ul > li').on('click', function(){
-        $('.book .tab > ul > li').removeClass('on')  
-        $(this).addClass('on')
-    })
-
-    $('.community .tab > ul > li').on('click', function(){
-        $('.community .tab > ul > li').removeClass('on')  
-        $(this).addClass('on')
-    })
-
-
-     $('footer .family_site .family_open').on('click', function(){
-        $('footer .family_site').addClass('open')
-        $('footer .family_site ul').slideDown()
-    })
-    $('footer .family_site .family_close').on('click', function(){
-        $('footer .family_site').removeClass('open')
-        $('footer .family_site ul').slideUp()
+    tab_btn.on('click', function(){
+        tab_btn.removeClass('active')
+        $(this).addClass('active')
+        tab_btn.attr('aria-selected', 'false')
+        $(this).attr('aria-selected', 'true')
+        tab_name = $(this).attr('aria-controls')
+        tab_name = '#'+tab_name //id 선택자를 추가로 삽입
+        console.log(tab_name)
+        tab_cnt.removeClass('active')
+        tab_cnt_parent.find(tab_name).addClass('active')
     })
     
 
