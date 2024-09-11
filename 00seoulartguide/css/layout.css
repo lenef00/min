@@ -72,7 +72,7 @@ header .login a::before {
     top: 0;
     width: 100%;
     height: 100%;
-    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.9759 25V23.75H22.9806C23.1731 23.75 23.3495 23.6699 23.5097 23.5097C23.6699 23.3495 23.75 23.1731 23.75 22.9806V7.01937C23.75 6.82687 23.6699 6.65052 23.5097 6.49031C23.3495 6.3301 23.1731 6.25 22.9806 6.25H14.9759V5H22.9806C23.556 5 24.0365 5.19271 24.4219 5.57812C24.8073 5.96354 25 6.44396 25 7.01937V22.9806C25 23.556 24.8073 24.0365 24.4219 24.4219C24.0365 24.8073 23.556 25 22.9806 25H14.9759ZM14.0866 19.4231L13.2091 18.5241L16.1081 15.625H5V14.375H16.1081L13.2091 11.4759L14.0866 10.5769L18.5097 15L14.0866 19.4231Z' fill='%23666666'/%3E%3C/svg%3E%0A");
+    background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.9999 13.2822C13.0374 13.2822 12.2135 12.9395 11.528 12.2541C10.8426 11.5687 10.4999 10.7447 10.4999 9.78223C10.4999 8.81973 10.8426 7.99577 11.528 7.31035C12.2135 6.62493 13.0374 6.28223 13.9999 6.28223C14.9624 6.28223 15.7864 6.62493 16.4718 7.31035C17.1572 7.99577 17.4999 8.81973 17.4999 9.78223C17.4999 10.7447 17.1572 11.5687 16.4718 12.2541C15.7864 12.9395 14.9624 13.2822 13.9999 13.2822ZM5.83325 21.7184V19.7978C5.83325 19.3161 5.97345 18.8655 6.25384 18.4459C6.53442 18.0265 6.91174 17.7008 7.38579 17.4688C8.48674 16.9409 9.58836 16.5449 10.6907 16.2809C11.793 16.017 12.8961 15.8851 13.9999 15.8851C15.1038 15.8851 16.2069 16.017 17.3092 16.2809C18.4115 16.5449 19.5131 16.9409 20.614 17.4688C21.0881 17.7008 21.4654 18.0265 21.746 18.4459C22.0264 18.8655 22.1666 19.3161 22.1666 19.7978V21.7184H5.83325ZM6.99992 20.5517H20.9999V19.7978C20.9999 19.539 20.9165 19.2959 20.7497 19.0686C20.583 18.8413 20.3523 18.6491 20.0575 18.492C19.0974 18.0269 18.1074 17.6705 17.0875 17.423C16.0676 17.1755 15.0384 17.0517 13.9999 17.0517C12.9614 17.0517 11.9322 17.1755 10.9123 17.423C9.89247 17.6705 8.90246 18.0269 7.94229 18.492C7.64752 18.6491 7.41681 18.8413 7.25017 19.0686C7.08334 19.2959 6.99992 19.539 6.99992 19.7978V20.5517ZM13.9999 12.1156C14.6416 12.1156 15.1909 11.8871 15.6478 11.4301C16.1048 10.9732 16.3333 10.4239 16.3333 9.78223C16.3333 9.14056 16.1048 8.59125 15.6478 8.13431C15.1909 7.67737 14.6416 7.44889 13.9999 7.44889C13.3583 7.44889 12.8089 7.67737 12.352 8.13431C11.8951 8.59125 11.6666 9.14056 11.6666 9.78223C11.6666 10.4239 11.8951 10.9732 12.352 11.4301C12.8089 11.8871 13.3583 12.1156 13.9999 12.1156Z' fill='%235F6368'/%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -93,6 +93,7 @@ header.fixed {
     header .gnb .gnb_wrap .depth1 {
         display: flex;
         justify-content: space-between;
+        transform: translateX(-10%);
     }
     header .gnb .gnb_wrap .depth1 > li {
         position: relative;
@@ -106,6 +107,9 @@ header.fixed {
     header .gnb .gnb_wrap ul.depth1 > li:hover > a {
         font-weight: 700;
         color: #0C6779;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li:first-child > .depth2 > ul {
+        transform: translateX(-20%);
     }
     header .gnb .gnb_wrap ul.depth1 > li:last-child > .depth2 > ul {
         transform: translateX(-70%);
@@ -134,7 +138,7 @@ header.fixed {
         display: none;
     }
     header .login {
-        margin: 35px 0 0 171px;
+        margin-top: 35px;
     }
 }
 
@@ -171,7 +175,6 @@ header.fixed {
     header .login {
         display: none;
     }
-
     header.menu_open .gnb .gnb_wrap {
         display: block;
         position: absolute;
@@ -194,12 +197,15 @@ header.fixed {
         margin-bottom: 20px;
         color: var( --txt-color-tit);
     }
+    header.menu_open .gnb .gnb_wrap ul.depth1 > li.open > a {
+        color: #0C6779;
+    }
     header.menu_open .gnb .gnb_wrap ul.depth1 > li > a::before {
         position: absolute;
         right: 0;
         top: 5px;
-        width:24px;
-        height: 24px;
+        width:22px;
+        height: 22px;
         background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.24355 6.67141L3.1298 5.78516L10 12.6554L16.8702 5.78516L17.7565 6.67141L10 14.4279L2.24355 6.67141Z' fill='%231D1D1D'/%3E%3C/svg%3E%0A");
         background-position: center center;
         background-repeat: no-repeat;
@@ -216,7 +222,7 @@ header.fixed {
         display: block;
         padding: 20px 30px;
         margin: 0 0 20px 0;
-        line-height: 2;
+        line-height: 2.4;
         background-color: #EBEFF0;
     }
     header.menu_open .gnb .gnb_close {
@@ -405,6 +411,9 @@ footer .copyright {
     
 }
 @media screen and (max-width:768px) {
+    footer {
+        margin-top: 100px;
+    }
     footer .wrapper {
         position: relative;
     }
