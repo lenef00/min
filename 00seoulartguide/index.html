@@ -183,7 +183,7 @@
                     <form action="." method="post">
                         <div class="box">
                             <input class="search_txt" type="text" placeholder="어떤 자료를 찾으세요?">
-                            <button class="search_btn" type="submit">찾기<img src="images/main/search.png"></button>
+                            <button class="search_btn" type="submit">찾기<img src="images/main/search.png" alt="검색"></button>
                         </div>
                     </form>
                 </div>
@@ -194,10 +194,10 @@
                     <div class="tab_area">
                         <div class="news_btn">
                             <ul role="tablist">
-                                <li id="tab_01" aria-selected="true" aria-controls="panel_01" role=”tab” class="active"><button><span>언론</span></button></li>
-                                <li id="tab_02" aria-selected="false" aria-controls="panel_02" role=”tab”><button><span>동정</span></button></li>
-                                <li id="tab_03" aria-selected="false" aria-controls="panel_03" role=”tab”><button><span>학술행사</span></button></li>
-                                <li id="tab_04" aria-selected="false" aria-controls="panel_04" role=”tab”><button><span>공모</span></button></li>
+                                <li id="tab_01" aria-selected="true" aria-controls="panel_01" role="tab" class="active"><button><span>언론</span></button></li>
+                                <li id="tab_02" aria-selected="false" aria-controls="panel_02" role="tab"><button><span>동정</span></button></li>
+                                <li id="tab_03" aria-selected="false" aria-controls="panel_03" role="tab">><button><span>학술행사</span></button></li>
+                                <li id="tab_04" aria-selected="false" aria-controls="panel_04" role="tab">><button><span>공모</span></button></li>
                             </ul>
                         </div><!-- tab_btn -->
                         <div class="tab_cnt">
@@ -323,12 +323,12 @@
                     <div class="tab_area">
                         <div class="column_btn">
                             <ul role="tablist">
-                                <li id="tab_01" aria-selected="true" aria-controls="panel_01" role=”tab” class="active"><button><span>연재</span></button></li>
-                                <li id="tab_02" aria-selected="false" aria-controls="panel_02" role=”tab”><button><span>외부칼럼</span></button></li>
+                                <li id="tab_05" aria-selected="true" aria-controls="panel_05" role="tab" class="active"><button><span>연재</span></button></li>
+                                <li id="tab_06" aria-selected="false" aria-controls="panel_06" role="tab"><button><span>외부칼럼</span></button></li>
                             </ul>
                         </div>
                         <div class="column_cnt">
-                            <div id="panel_01" role="tabpanel" aria-labelledby="tab_01" class="active">
+                            <div id="panel_05" role="tabpanel" aria-labelledby="tab_05" class="active">
                                 <div class="column_list">
                                     <ul>
                                         <li>
@@ -363,7 +363,7 @@
                                 <div class="more"><a href="#n">연재 더보기</a></div>
                                 </div>
                             </div>
-                            <div id="panel_02" role="tabpanel" aria-labelledby="tab_02">
+                            <div id="panel_06" role="tabpanel" aria-labelledby="tab_06">
                                 <div class="column_list">
                                     <ul>
                                         <li>
@@ -409,14 +409,14 @@
                             <h2>Book</h2>
                         <div class="book_btn">
                             <ul role="tablist">
-                                <li id="tab_01" aria-selected="true" aria-controls="panel_01" role=”tab” class="active"><button><span>추천</span></button></li>
-                                <li id="tab_02" aria-selected="false" aria-controls="panel_02" role=”tab”><button><span>신작</span></button></li>
-                                <li id="tab_03" aria-selected="false" aria-controls="panel_03" role=”tab”><button><span>가이드</span></button></li>
+                                <li id="tab_07" aria-selected="true" aria-controls="panel_07" role="tab" class="active"><button><span>추천</span></button></li>
+                                <li id="tab_08" aria-selected="false" aria-controls="panel_08" role="tab"><button><span>신작</span></button></li>
+                                <li id="tab_09" aria-selected="false" aria-controls="panel_09" role="tab"><button><span>가이드</span></button></li>
                             </ul>
                         </div><!-- book_btn -->
                         </div>
                         <div class="book_cnt">
-                            <div id="panel_01" role="tabpanel" aria-labelledby="tab_01" class="active">
+                            <div id="panel_07" role="tabpanel" aria-labelledby="tab_07" class="active">
                                 <div class="book_list">
                                     <div class="swiper">
                                         <ul class="swiper-wrapper">
@@ -467,7 +467,7 @@
                                     <div class="more"><a href="#n">추천 더보기</a></div>
                                 </div>
                             </div><!--panel_01-->
-                            <div id="panel_02" role="tabpanel" aria-labelledby="tab_02">
+                            <div id="panel_08" role="tabpanel" aria-labelledby="tab_08">
                                 <div class="book_list">
                                     <div class="swiper">
                                         <ul class="swiper-wrapper">
@@ -518,7 +518,7 @@
                                     <div class="more"><a href="#n">신작 더보기</a></div>
                                 </div>
                             </div><!--panel_02-->
-                            <div id="panel_03" role="tabpanel" aria-labelledby="tab_03">
+                            <div id="panel_09" role="tabpanel" aria-labelledby="tab_09">
                                 <div class="book_list">
                                     <div class="swiper">
                                         <ul class="swiper-wrapper">
@@ -643,14 +643,14 @@
                         <div class="tab_area">
                             <div class="community_btn">
                                 <ul role="tablist">
-                                    <li id="tab_01" aria-selected="true" aria-controls="panel_01" role=”tab” class="active"><button><span>알림</span></button></li>
-                                    <li id="tab_02" aria-selected="false" aria-controls="panel_02" role=”tab”><button><span>홍보</span></button></li>
-                                    <li id="tab_03" aria-selected="false" aria-controls="panel_03" role=”tab”><button><span>패널리뷰</span></button></li>
-                                    <li id="tab_04" aria-selected="false" aria-controls="panel_04" role=”tab”><button><span>게시판</span></button></li>
+                                    <li id="tab_010" aria-selected="true" aria-controls="panel_010" role="tab" class="active"><button><span>알림</span></button></li>
+                                    <li id="tab_011" aria-selected="false" aria-controls="panel_11" role="tab"><button><span>홍보</span></button></li>
+                                    <li id="tab_012" aria-selected="false" aria-controls="panel_12" role="tab"><button><span>패널리뷰</span></button></li>
+                                    <li id="tab_013" aria-selected="false" aria-controls="panel_13" role="tab"><button><span>게시판</span></button></li>
                                 </ul>
                             </div><!-- tab_btn -->
                             <div class="community_cnt">
-                                <div id="panel_01" role="tabpanel" aria-labelledby="tab_01" class="active">
+                                <div id="panel_10" role="tabpanel" aria-labelledby="tab_10" class="active">
                                     <div class="com_list">
                                         <ul>
                                             <li>
@@ -669,7 +669,7 @@
                                     </div>
                                     <div class="more"><a href="#n">알림 더보기</a></div>
                                 </div>
-                                <div id="panel_02" role="tabpanel" aria-labelledby="tab_02">
+                                <div id="panel_11" role="tabpanel" aria-labelledby="tab_11">
                                     <div class="com_list">
                                         <ul>
                                             <li>
@@ -688,7 +688,7 @@
                                     </div>
                                     <div class="more"><a href="#n">홍보 더보기</a></div>
                                 </div>
-                                <div id="panel_03" role="tabpanel" aria-labelledby="tab_03">
+                                <div id="panel_12" role="tabpanel" aria-labelledby="tab_12">
                                     <div class="com_list">
                                         <ul>
                                             <li>
@@ -707,7 +707,7 @@
                                     </div>
                                     <div class="more"><a href="#n">패널리뷰 더보기</a></div>
                                 </div>
-                                <div id="panel_04" role="tabpanel" aria-labelledby="tab_04">
+                                <div id="panel_13" role="tabpanel" aria-labelledby="tab_13">
                                     <div class="com_list">
                                         <ul>
                                             <li>
