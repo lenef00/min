@@ -100,19 +100,22 @@ header.fixed {
     header .gnb .gnb_wrap ul.depth1 > li > a {
         display: block;
         text-align: center;
-        padding: 38px 20px 0 20px; 
+        padding: 35px 20px; 
         font-size: 1.25rem;
     }
     header .gnb .gnb_wrap ul.depth1 > li:hover > a {
         font-weight: 700;
         color: #0C6779;
     }
+    header .gnb .gnb_wrap ul.depth1 > li:last-child > .depth2 > ul {
+        transform: translateX(-70%);
+    }
     header .gnb .gnb_wrap .depth2 > ul {
         position: absolute;
-        top: 105px;
+        top: 80px;
         left: 0;
         padding: 15px 0;
-        transform: translateX(-50%);
+        transform: translateX(-40%);
         display: flex;
         justify-content: center;
         border: 1px solid #ccc;
@@ -131,7 +134,7 @@ header.fixed {
         display: none;
     }
     header .login {
-        margin-top: 35px;
+        margin: 35px 0 0 171px;
     }
 }
 
@@ -184,11 +187,27 @@ header.fixed {
         margin: 130px 40px 0 40px;
     }
     header.menu_open .gnb .gnb_wrap ul.depth1 > li > a {
-        display: inline-block;
+        position: relative;
+        display: block;
         font-size: 1.625rem;
         font-weight: 700;
         margin-bottom: 20px;
         color: var( --txt-color-tit);
+    }
+    header.menu_open .gnb .gnb_wrap ul.depth1 > li > a::before {
+        position: absolute;
+        right: 0;
+        top: 5px;
+        width:24px;
+        height: 24px;
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.24355 6.67141L3.1298 5.78516L10 12.6554L16.8702 5.78516L17.7565 6.67141L10 14.4279L2.24355 6.67141Z' fill='%231D1D1D'/%3E%3C/svg%3E%0A");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        content: "";
+    }
+    header.menu_open .gnb .gnb_wrap ul.depth1 > li.open > a::before {
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.7564 13.3286L16.8702 14.2148L9.99999 7.34464L3.12978 14.2148L2.24353 13.3286L9.99999 5.57214L17.7564 13.3286Z' fill='%231D1D1D'/%3E%3C/svg%3E%0A");
     }
     header.menu_open .gnb .gnb_wrap ul li .depth2 {
         padding: 20px 0;

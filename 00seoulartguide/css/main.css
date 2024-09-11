@@ -10,25 +10,7 @@ section h2 {
     font-weight: 200;
     margin-bottom: 30px;
 }
-section .tab > ul > li .tab_menu {
-    font-size: var(--txt-subtab-size);
-    margin-bottom: 20px;
-}
-section .tab > ul > li .tab_menu:hover {
-    font-weight: 700;
-    color: #1d1d1d;
-}
-section .tab > ul > li.on .tab_menu {
-    font-weight: 700;
-    color: #1d1d1d;
-}
-.tab_area .tab_btn ul {
-    display: flex;
-    justify-content: space-between;
-}
-.tab_area .tab_btn ul li {
-    font-size: 1.125rem;
-}
+
 
 @media screen and (max-width:1024px) {
     section h2 {
@@ -74,7 +56,7 @@ section .tab > ul > li.on .tab_menu {
 }
 .exhibition .more {
     position: absolute;
-    top: 300px;
+    top: 280px;
     right: 5%; 
 }
 .exhibition .more a {
@@ -99,7 +81,7 @@ section .tab > ul > li.on .tab_menu {
 }
 @media screen and (max-width:1024px) {
     .exhibition .more {
-        top: 290px;
+        top: 276px;
     }
 }
 @media screen and (max-width:768px) {
@@ -131,7 +113,6 @@ section .tab > ul > li.on .tab_menu {
     }
 }
 
-
 .search_box {
     text-align: center;
     margin: 150px 0; 
@@ -143,13 +124,17 @@ section .tab > ul > li.on .tab_menu {
     display: flex;
     border: 5px solid #1d1d1d;
 }
-input {
+.search_box .box input {
     width: calc(100% - 74px);
     height: 70px;
     padding-left: 25px;
     border: transparent;
     outline: none;
     position: relative;
+}
+.search_box .box input::placeholder {
+    font-size: 1.063rem;
+    color: var(--txt-color-txt);
 }
 .search_box .search_btn {
     font-size: 0;
@@ -175,14 +160,18 @@ input {
     }
 }
 
+.news {
+    background-color: #F6F6F6;
+    padding: 100px 0;
+}
 .news .wrapper {
     position: relative;
 }
-.news .tab_area .tab_btn {
+.news .tab_area .news_btn {
     width: 224px;
 }
-.news .tab_area .tab_btn ul li.active button,
-.news .tab_area .tab_btn ul li button:hover {
+.news .tab_area .news_btn ul li.active button,
+.news .tab_area .news_btn ul li button:hover {
     font-weight: 700;
     color: #1d1d1d;
 }
@@ -191,6 +180,13 @@ input {
 }
 .news .tab_area .tab_cnt div[role="tabpanel"].active {
     display: block;
+}
+.tab_area .news_btn ul {
+    display: flex;
+    justify-content: space-between;
+}
+.tab_area .news_btn ul li {
+    font-size: 1.125rem;
 }
 .news .tab_area .tab_cnt .news_list > ul {
     display: flex;
@@ -209,6 +205,7 @@ input {
     content: "";
 }
 .news .tab_area .tab_cnt .news_list > ul li h3 {
+    color: var(--txt-color-tit);
     margin: 40px 0 5px 0;
     font-size: 1.25rem;
     font-weight: 700;
@@ -231,7 +228,7 @@ input {
 }
 .news .more {
     position: absolute;
-    top: 100px;
+    top: 30px;
     right: 0; 
 }
 .news .more a {
@@ -257,7 +254,7 @@ input {
 
 @media screen and (max-width:1024px) {
     .news .more {
-        top: 85px;
+        top: 27px;
     }
 }
 @media screen and (max-width:768px) {
@@ -296,69 +293,204 @@ input {
     }
 }
 
+.column {
+    margin: 150px 0;
+}
+.column .wrapper {
+    position: relative;
+}
+.column .column_list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.column .column_list ul li {
+    width: calc(25% - 18px);
+    position: relative;
+    margin-top: 20px;
+}
+.column .column_list > ul li a .photo {
+    overflow:hidden; 
+    font-size:0; 
+    line-height:0;
+}
+.column .column_list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.column .column_list  ul li h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--txt-color-tit);
+    margin-top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.column .column_list ul li p {
+    margin-top: 5px;
+    line-height: 1.4;
+    height: 2.8em;
+    overflow: hidden;
+}
+.column .tab_area .column_cnt div[role="tabpanel"] {
+    display: none;
+}
+.column .tab_area .column_cnt div[role="tabpanel"].active {
+    display: block;
+}
+.column .tab_area .column_btn {
+    width: 115px;
+}
+.column .tab_area .column_btn ul li.active button,
+.column .tab_area .column_btn ul li button:hover {
+    font-weight: 700;
+    color: #1d1d1d;
+}
+.tab_area .column_btn ul {
+    display: flex;
+    justify-content: space-between;
+}
+.tab_area .column_btn ul li {
+    font-size: 1.125rem;
+}
+.column .more {
+    position: absolute;
+    top: 30px;
+    right: 0; 
+}
+.column .more a {
+    display: block;
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+    width: 18px;
+    height: 18px;
+}
+.column .more a::before {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_106_151)'%3E%3Cpath d='M8.63158 9.36842H3V8.63158H8.63158V3H9.36842V8.63158H15V9.36842H9.36842V15H8.63158V9.36842Z' fill='%233D3D3D'/%3E%3C/g%3E%3Crect x='0.5' y='0.5' width='17' height='17' stroke='%233D3D3D'/%3E%3Cdefs%3E%3CclipPath id='clip0_106_151'%3E%3Crect width='12' height='12' fill='white' transform='translate(3 3)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+}
 
 @media screen and (max-width:1024px) {
     .column .more {
-        top: 85px;
+        top: 27px;
     }
 }
 @media screen and (max-width:768px) {
-   
+    .column .tab_area .column_btn {
+        width: 100px;
+    }
+    .column .tab_area .column_cnt .column_list > ul li {
+        width: calc(33.33% - 16px);
+        margin-top: 15px;
+    }
+    .column .tab_area .column_cnt .column_list > ul li:last-child {
+        display: none;
+    }
+    .column .more {
+        position: relative;
+        text-align: center;
+        top: auto;
+        right: auto;
+        margin-top: 20px;
+    }
+    .column .more a {
+        display: inline-block;
+        font-size: 1rem;
+        line-height: 1.4;
+        padding: 10px 0;
+        border: 1px solid #666;
+        width: 100px;
+        height: 40px;
+    }
+    .column .more a::before {
+        display: none;
+    }
 }
 @media screen and (max-width:425px) {
-   
+    .column .tab_area .column_cnt .column_list > ul li {
+        width: 48%;
+        margin-top: 15px;
+    }
+    .column .tab_area .column_cnt .column_list > ul li:nth-child(3) {
+        display: none;
+    }
 }
 
+.book .tab_area .book_cnt div[role="tabpanel"] {
+    display: none;
+}
+.book .tab_area .book_cnt div[role="tabpanel"].active {
+    display: block;
+}
+.book .tab_area .book_btn ul li.active button,
+.book .tab_area .book_btn ul li button:hover {
+    font-weight: 700;
+    color: #1d1d1d;
+}
+.tab_area .book_btn ul li {
+    font-size: 1.125rem;
+    padding-bottom: 10px;
+}
+.book .wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.book .left {
+    width: 20%;
+}
+.book .book_cnt {
+    width: 80%;
+}
 .book {
     margin-bottom: 150px;
 }
 .book .wrapper {
     position: relative;
 }
-.book h2 {
-    width: 20%;
-    margin-bottom: 0;
-    float: left;
-}
-.book .tab {
-    position: relative;
-}
-.book .tab > ul > li .book_list { 
-    display: none;
-    padding-top: 20px;
-}
-.book .tab > ul > li.on .book_list {
-    display: block;
-}
-.book .tab > ul > li .book_list .swiper {
+.book .book_list .swiper {
     overflow: hidden;
 }
-.book .tab > ul > li .tab_menu {
-    position: absolute;
-    top: 80px;
-    left: 0;
-}
-.book .tab > ul > li.book02 .tab_menu {
-    top: 120px;
-}
-.book .tab > ul > li.book03 .tab_menu {
-    top: 160px;
-}
-.book .tab ul .book_list ul {
-    display: flex;
-}
-.book .tab ul .book_list ul li {
+.book .book_list ul li {
     width: 226px;
+    height: 410px;
 }
-.book .tab ul li .book_list a {
+.book .book_list ul li a {
     display: block;
+    position: relative;
 }
-.book .tab ul li .book_list .photo {
-    width: 226px;
-    height: 320px;
+.book .book_list ul li a::before {
+    position: absolute;
+    top: 18px;
+    right: 0;
+    width: 206px;
+    height: 300px;
+    border: 2px solid #1d1d1d;
+    z-index: -1;
+    content: "";
 }
-.book .tab ul li .book_list .photo img {
+.book .book_list ul li .photo {
+    width: 206px;
+    height: 300px;
+    overflow:hidden; 
+    font-size:0; 
+    line-height:0;
     border: 2px solid #3d3d3d;
+}
+.book .book_list ul li .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .book .tab ul li .book_list .swiper-slide {
     position: relative;
@@ -373,8 +505,8 @@ input {
     border: 2px solid #3d3d3d;
     content: "";
 }
-.book .tab ul li .book_list h3 {
-    margin: 15px 0 2px 0;
+.book .book_list h3 {
+    margin: 38px 0 2px 0;
     font-size: var(--txt-subtab-size);
     font-weight: 700;
     color: var(--txt-color-tit);
@@ -382,31 +514,33 @@ input {
     height: 2.4em;
     overflow: hidden;
 }
-.book .tab ul li .book_list h3:hover {
+.book .book_list h3:hover {
     text-decoration: underline;
 }
-.book .tab ul li .book_list p {
+.book .book_list p {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 .book .more {
     position: absolute;
-    top: -10px;
-    right: 0;  
+    top: -30px;
+    right: 0; 
 }
 .book .more a {
     display: block;
     position: relative;
     font-size: 0;
     line-height: 0;
+    width: 18px;
+    height: 18px;
 }
 .book .more a::before {
     position: absolute;
     right: 0;
     top: 0;
-    width: 18px;
-    height: 18px;
+    width: 100%;
+    height: 100%;
     background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_106_151)'%3E%3Cpath d='M8.63158 9.36842H3V8.63158H8.63158V3H9.36842V8.63158H15V9.36842H9.36842V15H8.63158V9.36842Z' fill='%233D3D3D'/%3E%3C/g%3E%3Crect x='0.5' y='0.5' width='17' height='17' stroke='%233D3D3D'/%3E%3Cdefs%3E%3CclipPath id='clip0_106_151'%3E%3Crect width='12' height='12' fill='white' transform='translate(3 3)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
     background-position: center center;
     background-repeat: no-repeat;
@@ -415,66 +549,36 @@ input {
 }
 
 @media screen and (max-width:1024px) {
-    .book h2 {
-        width: 25%;
-    }
+    
 
 }
 @media screen and (max-width:768px) {
     .book {
         margin-bottom: 120px;
     }
-    .book .wrapper {
-        position: relative;
-    }
-    .book h2 {
-        width: 100%;
-        margin-bottom: 40px;
-        text-align: center;
-        float: none;
-    }
-    .book .tab {
-        position: relative;
-    }
-    .book .tab > ul > li .book_list .swiper {
-        overflow: hidden;
-    }
-    .book .tab > ul > li .tab_menu {
-        position: absolute;
-        top: -15px;
-        left: 0;
-    }
-    .book .tab > ul > li.book02 .tab_menu {
-        top: -15px;
-        left: 40px;
-    }
-    .book .tab > ul > li.book03 .tab_menu {
-        top: -15px;
-        left: 80px;
-    }
-    .book .tab ul li .book_list p {
-        font-size: 0.929rem;
-    }
     .book .more {
         position: relative;
         text-align: center;
-        top: 25px;
+        top: auto;
+        right: auto;
+        margin-top: 20px;
     }
     .book .more a {
         display: inline-block;
         font-size: 1rem;
         line-height: 1.4;
-        padding: 6px 28px;
+        padding: 10px 0;
         border: 1px solid #666;
+        width: 100px;
+        height: 40px;
     }
     .book .more a::before {
         display: none;
     }
 }
 @media screen and (max-width:425px) {
-    .book .more a {
-        font-size: 0.929rem;
-        padding: 5px 20px;
+    .book .book_cnt {
+        width: 70%;
     }
 }
 
@@ -508,21 +612,23 @@ input {
 }
 .personal .more {
     position: absolute;
-    top: 54px;  
-    right: 0;  
+    top: 30px;
+    right: 0; 
 }
 .personal .more a {
     display: block;
     position: relative;
     font-size: 0;
     line-height: 0;
+    width: 18px;
+    height: 18px;
 }
 .personal .more a::before {
     position: absolute;
     right: 0;
     top: 0;
-    width: 18px;
-    height: 18px;
+    width: 100%;
+    height: 100%;
     background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_106_151)'%3E%3Cpath d='M8.63158 9.36842H3V8.63158H8.63158V3H9.36842V8.63158H15V9.36842H9.36842V15H8.63158V9.36842Z' fill='%233D3D3D'/%3E%3C/g%3E%3Crect x='0.5' y='0.5' width='17' height='17' stroke='%233D3D3D'/%3E%3Cdefs%3E%3CclipPath id='clip0_106_151'%3E%3Crect width='12' height='12' fill='white' transform='translate(3 3)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
     background-position: center center;
     background-repeat: no-repeat;
@@ -541,7 +647,7 @@ input {
         display: none;
     }
     .personal .more {
-        top: 40px;
+        top: 26px;
     }
 }
 @media screen and (max-width:768px) {
@@ -557,14 +663,18 @@ input {
     .personal .more {
         position: relative;
         text-align: center;
-        top: 25px;
+        top: auto;
+        right: auto;
+        margin-top: 20px;
     }
     .personal .more a {
         display: inline-block;
         font-size: 1rem;
         line-height: 1.4;
-        padding: 6px 28px;
+        padding: 10px 0;
         border: 1px solid #666;
+        width: 100px;
+        height: 40px;
     }
     .personal .more a::before {
         display: none;
@@ -576,10 +686,6 @@ input {
     }
     .personal .list ul li:nth-child(3) {
         display: none;
-    }
-    .personal .more a {
-        font-size: 0.929rem;
-        padding: 5px 20px;
     }
 }
 
@@ -596,6 +702,7 @@ input {
 }
 .service .s_con h3 {
     margin-bottom: 35px;
+    font-size: var(--txt-subtab-size);
 }
 .service .s_con ul {
     position: relative;
@@ -613,7 +720,7 @@ input {
     padding-bottom: 20px;
 }
 .service .s_con ul li a {
-    display: inline-block;
+    display: block;
 }
 .service .s_con .left {
     width: 48%;
@@ -621,39 +728,37 @@ input {
 .service .s_con .right {
     width: 48%;
 }
-.service .s_con ul li a {
-    display: inline-block;
-}
 
+.community .tab_area .community_cnt div[role="tabpanel"] {
+    display: none;
+}
+.community .tab_area .community_cnt div[role="tabpanel"].active {
+    display: block;
+}
+.community .tab_area .community_btn {
+    width: 213px;
+}
+.community .tab_area .community_btn ul {
+    display: flex;
+    justify-content: space-between;
+}
+.community .tab_area .community_btn ul li.active button,
+.community .tab_area .community_btn ul li button:hover {
+    font-weight: 700;
+    color: #1d1d1d;
+}
+.tab_area .community_btn ul li {
+    font-size: 1.125rem;
+}
 .community {
     position: relative;
     width: 50%;
 }
-.community .tab > ul > li .tab_menu {
-    position: absolute;
-    top: 75px;
-    left: 0;
-}
-.community .tab > ul > li.community02 .tab_menu {
-    left: 40px;
-}
-.community .tab > ul > li.community03 .tab_menu {
-    left: 80px;
-}
-.community .tab > ul > li.community04 .tab_menu {
-    left: 150px;
-}
-.community .tab > ul > li > .com_list { 
-    display: none;
-}
-.community .tab > ul > li.on > .com_list {
-    display: block;
-} 
-.community .tab .com_list {
-    margin-top: 88px;
+.community .com_list {
+    margin-top: 35px;
     position: relative;
 }
-.community .tab .com_list::before {
+.community .com_list::before {
     position: absolute;
     top: -20px;
     left: 0;
@@ -661,16 +766,16 @@ input {
     width: 100%;
     content: "";
 }
-.community .tab .com_list ul li {
+.community .com_list ul li {
     padding: 15px 0;
     position: relative;
     display: flex;
     justify-content: space-between;
 }
-.community .tab .com_list ul li:first-child {
+.community .com_list ul li:first-child {
     padding: 0 0 15px 0;
 }
-.community .tab .com_list ul li::before {
+.community .com_list ul li::before {
     position: absolute;
     border: 1px solid rgba(0,0,0,0.1);
     bottom: 0;
@@ -678,39 +783,42 @@ input {
     width: 100%;
     content: "";
 }
-.community .tab .com_list ul li p {
+.community .com_list ul li p {
     font-size: var(--txt-subtab-size);
     font-weight: 700;
     color: var(--txt-color-tit);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 70%;
+    width: calc((100% - 120px));
 }
-.community .tab .com_list ul li p:hover {
+.community .com_list ul li p:hover {
     text-decoration: underline;
 }
-.community .tab .com_list ul li span {
+.community .com_list ul li span {
     font-size: 0.875rem;
     color: var(--txt-color-gray);
+    width: 90px;
 }
 .community .more {
     position: absolute;
-    top: 90px;
-    right: 0;  
+    top: 30px;
+    right: 0; 
 }
 .community .more a {
     display: block;
     position: relative;
     font-size: 0;
     line-height: 0;
+    width: 18px;
+    height: 18px;
 }
 .community .more a::before {
     position: absolute;
     right: 0;
     top: 0;
-    width: 18px;
-    height: 18px;
+    width: 100%;
+    height: 100%;
     background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_106_151)'%3E%3Cpath d='M8.63158 9.36842H3V8.63158H8.63158V3H9.36842V8.63158H15V9.36842H9.36842V15H8.63158V9.36842Z' fill='%233D3D3D'/%3E%3C/g%3E%3Crect x='0.5' y='0.5' width='17' height='17' stroke='%233D3D3D'/%3E%3Cdefs%3E%3CclipPath id='clip0_106_151'%3E%3Crect width='12' height='12' fill='white' transform='translate(3 3)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
     background-position: center center;
     background-repeat: no-repeat;
@@ -719,7 +827,11 @@ input {
 }
 
 @media screen and (max-width:1024px) {
-
+    .community .more {
+        position: absolute;
+        top: 27px;
+        right: 0; 
+    }
 }
 @media screen and (max-width:768px) {
     .notice_area .wrapper {
@@ -735,22 +847,23 @@ input {
     .community .more {
         position: relative;
         text-align: center;
-        top: 25px;
+        top: auto;
+        right: auto;
+        margin-top: 20px;
     }
     .community .more a {
         display: inline-block;
         font-size: 1rem;
         line-height: 1.4;
-        padding: 6px 28px;
+        padding: 10px 0;
         border: 1px solid #666;
+        width: 100px;
+        height: 40px;
     }
     .community .more a::before {
         display: none;
     }
 }     
 @media screen and (max-width:425px) {
-    .personal .more a {
-        font-size: 0.929rem;
-        padding: 5px 20px;
-    }
+    
 }

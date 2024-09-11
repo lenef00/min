@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+    console = {};
+    console.log = function(){};
+    console.warn = function(){};
+    console.error = function(){};
+
     let pc_mobile
     let window_w
 
@@ -70,4 +75,5 @@ $(document).ready(function(){
         $('footer .family_site ul').slideUp()
     })
         
+
 })
