@@ -43,16 +43,7 @@ html, body {
     color: #1d1d1d;
 }
 
-/*
-    20px - 1.25rem
-    15px - 0.938rem
-    14px - 0.875rem
-*/
-/* 
-    100/li의 갯수 = 33.33%
-    중간여백 총합 24*2 = 48 / li의 갯수 = 48/3 = 16
-    calc(33.33% - 16px)
-*/
+
 :root {
     --txt-color-tit: #1d1d1d;
     --txt-color-txt: #3d3d3d;
