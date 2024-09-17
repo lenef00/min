@@ -3,3 +3,144 @@
 @import url(common.css); 
 @import url(layout.css); 
 
+section h2 {
+    font-size: var(--txt-tit-size);
+    font-weight: 600;
+    color: #1d1d1d;
+    line-height: 1;
+    position: relative;
+}
+
+.visual {
+    background-image: url(../images/main/visual_bg.png);
+    height: 707px;
+}
+.visual h2 {
+    color: #fff;
+    font-size: 6.4rem;
+    font-weight: 600;
+    line-height: 1;
+    padding-top: 100px;
+}
+.visual p {
+    color: #fff;
+    margin-top: 20px;
+}
+
+.intro {
+    padding: 124px 0;
+}
+.intro .wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+.intro .photo {
+    overflow:hidden; 
+    font-size:0; 
+    line-height:0; 
+    border-radius: 50px;
+}
+.intro .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.intro .info {
+   margin: auto 0;
+}
+.intro .info h2 {
+    padding-left: 10px;
+}
+.intro .info h2::before {
+    position: absolute;
+    top: 110px;
+    left: 0;
+    z-index: -1;
+    border: 6px solid #5F9F9E;
+    width: 444px;
+    content: "";
+}
+.intro .info p {
+    margin: 40px 0;
+    font-size: 16px;
+    line-height: 2;
+}
+.intro .info .more {
+    width: 213px;
+    height: 51px;
+    padding: 15px 0 15px 25px;
+    color: #fff;
+    background-color: var(--txt-color-blue);
+    border-radius: 40px;
+}
+.intro .info .more a {
+    display: block;
+    position: relative;
+}
+.intro .info .more a::before {
+    position: absolute;
+    right: 25px;
+    top: 5px;
+    width: 22px;
+    height: 7px;
+    background-image: url("data:image/svg+xml,%3Csvg width='21' height='7' viewBox='0 0 21 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.8462 1L20 6H0' stroke='white' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    content: "";
+}
+
+.product h2 {
+    display: none;
+}
+.product .product_list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.product .product_list ul li {
+    width: calc(16.66% - 20px);
+    height: 118px;
+    text-align: center;
+    background-color: #F1F5FA;
+    border-radius: 22px;
+}
+.product .product_list ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-top: 77px;
+    font-weight: 600;
+    color: #1d1d1d;
+    position: relative;
+}
+.product .product_list ul li a::before {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    content: "";
+}
+.product .product_list ul li.pro_1 a::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='45' viewBox='0 0 20 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_35_5254)'%3E%3Cpath d='M18.7114 22.4961V35.2824C18.7114 39.4499 15.8834 42.9513 12.0419 43.979C8.2074 42.9513 5.37939 39.4499 5.37939 35.2824V22.4961H18.7185H18.7114Z' fill='%231BB9E6'/%3E%3Cpath d='M9.6537 0.708984H9.76002C14.7002 0.708984 18.7118 4.72064 18.7118 9.66079V22.5038H0.708984V9.6537C0.708984 4.72064 4.72064 0.708984 9.6537 0.708984Z' stroke='%231D1D1D' stroke-width='2' stroke-miterlimit='10'/%3E%3Cpath d='M18.7116 22.4961V35.2824C18.7116 39.4499 15.8836 42.9513 12.042 43.979C11.2978 44.1775 10.5182 44.2838 9.71015 44.2838C4.74165 44.2838 0.71582 40.2579 0.71582 35.2824V22.4961H18.7187H18.7116Z' stroke='%231D1D1D' stroke-width='2' stroke-miterlimit='10'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_35_5254'%3E%3Crect width='19.4204' height='45' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+.product .product_list ul li.pro_2 a::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='45' viewBox='0 0 20 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_35_5259)'%3E%3Cpath d='M17.1613 12.5117H5.52002V32.9481H17.1613V12.5117Z' fill='%23FFC132'/%3E%3Cpath d='M17.1566 8.11523H2.41748V33.0003H17.1566V8.11523Z' stroke='%231D1D1D' stroke-width='2' stroke-miterlimit='10'/%3E%3Cpath d='M12.806 38.5575H6.76875L5.7998 33H13.775L12.806 38.5575Z' stroke='%231D1D1D' stroke-width='2' stroke-miterlimit='10'/%3E%3Cpath d='M11.2593 3.40625H8.31982V8.11588H11.2593V3.40625Z' stroke='%231D1D1D' stroke-width='2' stroke-miterlimit='10'/%3E%3Cpath d='M14.8511 1.99009V1.88295C14.8511 1.10083 14.217 0.466797 13.4349 0.466797L6.70356 0.466797C5.92144 0.466797 5.28741 1.10083 5.28741 1.88295V1.99009C5.28741 2.77221 5.92144 3.40624 6.70356 3.40624L13.4349 3.40624C14.217 3.40624 14.8511 2.77221 14.8511 1.99009Z' stroke='%231D1D1D' stroke-width='2' stroke-miterlimit='10'/%3E%3Cpath d='M9.78711 38.5566V44.9992' stroke='%231D1D1D' stroke-width='2' stroke-miterlimit='10'/%3E%3Cpath d='M9.78711 16.8125H17.1567' stroke='%231D1D1D' stroke-width='2' stroke-miterlimit='10'/%3E%3Cpath d='M9.78711 22.5977H17.1567' stroke='%231D1D1D' stroke-width='2' stroke-miterlimit='10'/%3E%3Cpath d='M9.78711 28.3887H17.1567' stroke='%231D1D1D' stroke-width='2' stroke-miterlimit='10'/%3E%3Cpath d='M0 8.11523H19.5745' stroke='%231D1D1D' stroke-width='2' stroke-miterlimit='10'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_35_5259'%3E%3Crect width='19.5745' height='45' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+.product .product_list ul li.pro_3 a::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='37' height='45' viewBox='0 0 37 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_35_5299)'%3E%3Cpath d='M6.38086 26.8711C6.38086 33.3602 11.6403 38.6113 18.1211 38.6113C24.6019 38.6113 29.8613 33.3519 29.8613 26.8711H6.38086Z' fill='%23FFC132'/%3E%3Cpath d='M22.6081 8.11682V0.830078H13.643V8.11682C13.643 9.27173 12.9451 10.3352 11.865 10.7507C5.02689 13.4012 0.299233 20.2808 0.880843 28.1824C1.52892 37.0228 9.00677 44.0354 17.8722 44.1683C27.5435 44.3096 35.4285 36.516 35.4285 26.8779C35.4285 19.5413 30.8587 13.2765 24.4111 10.759C23.3227 10.3352 22.6164 9.28004 22.6164 8.11682H22.6081Z' stroke='%231D1D1D' stroke-width='2' stroke-miterlimit='10'/%3E%3Cpath d='M10.228 0.830078H26.0229' stroke='%231D1D1D' stroke-width='2' stroke-miterlimit='10'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_35_5299'%3E%3Crect width='36.2509' height='45' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+.product .product_list ul li.pro_4 a::before {
+    
+}
+.product .product_list ul li.pro_5 a::before {
+    
+}
+.product .product_list ul li.pro_6 a::before {
+    
+}

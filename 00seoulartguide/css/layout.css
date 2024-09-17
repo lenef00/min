@@ -150,7 +150,6 @@ header.fixed {
     header .gnb .gnb_wrap {
         display: none;
     }
-    
     header .gnb .gnb_open {
         display: block;
         font-size: 0;

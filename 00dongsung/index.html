@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/common.js"></script>
     <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
@@ -15,206 +16,277 @@
         <a href="#skip_contents">본문 바로가기</a>
         <a href="#skip_menu">대메뉴 바로가기</a>
     </div>
-    <div id="'wrap">
+    <div id="wrap">
         <header>
             <h1 class="logo"><a href="index.html">동성제약주식회사</a></h1>
-            <nav class="gnb" id="skip_menu">
-                <button class="gnb_open">메뉴열기</button>
-                <div class="gnb_wrap">
-                    <ul class="depth1">
-                        <li>
-                            <a href="#n">회사소개</a>
-                            <div class="depth2">
-                                <ul>
-                                    <li><a href="#n">CEO인사말</a></li>
-                                    <li><a href="#n">기업소개</a></li>
-                                    <li><a href="#n">동성연혁</a></li>
-                                    <li><a href="#n">공장소개</a></li>
-                                    <li><a href="#n">암센터소개</a></li>
-                                    <li><a href="#n">지점안내</a></li>
-                                    <li><a href="#n">오시는 길</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#n">제품정보</a>
-                            <div class="depth2">
-                                <ul>
-                                    <li><a href="#n">일반의약품</a></li>
-                                    <li><a href="#n">전문의약품</a></li>
-                                    <li><a href="#n">염모제/펌제</a></li>
-                                    <li><a href="#n">화장품</a></li>
-                                    <li><a href="#n">건강기능식품</a></li>
-                                    <li><a href="#n">의료기기</a></li>
-                                    <li><a href="#n">의약외품/기타</a></li>
-                                    <li><a href="#n">의약품공지사항</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#n">투자정보</a>
-                            <div class="depth2">
-                                <ul>
-                                    <li><a href="#n">주가정보 </a></li>
-                                    <li><a href="#n">공시정보</a></li>
-                                    <li><a href="#n">감사보고서</a></li>
-                                    <li><a href="#n">사업보고서</a></li>
-                                    <li><a href="#n">결산공고</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#n">기업홍보</a>
-                            <div class="depth2">
-                                <ul>
-                                    <li><a href="#n">보도자료</a></li>
-                                    <li><a href="#n">광고자료</a></li>
-                                    <li><a href="#n">홍보동영상</a></li>
-                                    <li><a href="#n">동성굿뉴스</a></li>
-                                    <li><a href="#n">사회공헌활동</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#n">지속가능경영</a>
-                            <div class="depth2">
-                                <ul>
-                                    <li><a href="#n">윤리준법경영</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul><!--depth1-->
-                </div><!--gnb_wrap-->
-                <button class="gnb_close">메뉴닫기</button>
-            </nav>
-            <div class="tnb">
-                <a href="#n" class="search">검색</a>
-                <a href="#n" class="lang">언어</a>
+            <div class="header_r">
+                <nav class="gnb" id="skip_menu">
+                    <button class="gnb_open">메뉴열기</button>
+                    <div class="gnb_wrap">
+                        <ul class="depth1">
+                            <li>
+                                <a href="#n">회사소개</a>
+                                <div class="depth2">
+                                    <ul>
+                                        <li><a href="#n">CEO인사말</a></li>
+                                        <li><a href="#n">기업소개</a></li>
+                                        <li><a href="#n">동성연혁</a></li>
+                                        <li><a href="#n">공장소개</a></li>
+                                        <li><a href="#n">암센터소개</a></li>
+                                        <li><a href="#n">지점안내</a></li>
+                                        <li><a href="#n">오시는 길</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#n">제품정보</a>
+                                <div class="depth2">
+                                    <ul>
+                                        <li><a href="#n">일반의약품</a></li>
+                                        <li><a href="#n">전문의약품</a></li>
+                                        <li><a href="#n">염모제/펌제</a></li>
+                                        <li><a href="#n">화장품</a></li>
+                                        <li><a href="#n">건강기능식품</a></li>
+                                        <li><a href="#n">의료기기</a></li>
+                                        <li><a href="#n">의약외품/기타</a></li>
+                                        <li><a href="#n">의약품공지사항</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#n">투자정보</a>
+                                <div class="depth2">
+                                    <ul>
+                                        <li><a href="#n">주가정보 </a></li>
+                                        <li><a href="#n">공시정보</a></li>
+                                        <li><a href="#n">감사보고서</a></li>
+                                        <li><a href="#n">사업보고서</a></li>
+                                        <li><a href="#n">결산공고</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#n">기업홍보</a>
+                                <div class="depth2">
+                                    <ul>
+                                        <li><a href="#n">보도자료</a></li>
+                                        <li><a href="#n">광고자료</a></li>
+                                        <li><a href="#n">홍보동영상</a></li>
+                                        <li><a href="#n">동성굿뉴스</a></li>
+                                        <li><a href="#n">사회공헌활동</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#n">지속가능경영</a>
+                                <div class="depth2">
+                                    <ul>
+                                        <li><a href="#n">윤리준법경영</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul><!--depth1-->
+                    </div><!--gnb_wrap-->
+                    <button class="gnb_close">메뉴닫기</button>
+                </nav>
+                <div class="tnb">
+                    <a href="#n" class="search">검색</a>
+                    <a href="#n" class="lang">언어</a>
+                </div>
             </div>
         </header>
         <main class="container" id="skip_contents">
+            <section class="visual">
+                <div class="wrapper">
+                    <h2>DongSung</h2>
+                    <p>60년에 이르는 동성제약은 화장품에서 완제의약품까지<br>미래지향적인 마케팅과 고객지향의 토탈 서비스를 제공합니다.</p>
+                </div>
+            </section>
             <section class="intro">
-                <div class="photo"><img src="images/main/intro_img.png" alt="사진"></div>
-                <h2>Health <br>from Nature</h2>
-                <p>자연에서 찾은 건강과 아름다움,<br>
-                    'Health from Nature'는 자연과의 공존,<br> 
-                    자연에서의 가치발견을 통한 건강과 아름다움의 실현을 의미합니다.<br>
-                    동성제약은 'Health from Nature' 기업이념 아래 <br>
-                    제약, 화장품, 염모제, 광역학치료등 각분야에서 자연 친화적인 제품 개발에 힘을 쏟고 있습니다.</p>
-                <div class="more"><a href="#n">기업소개 바로가기</a></div>
+                <div class="wrapper">
+                    <div class="photo"><img src="images/main/intro_img.png" alt="사진"></div>
+                    <div class="info">
+                        <h2>Health <br>from Nature</h2>
+                        <p>자연에서 찾은 건강과 아름다움,<br>
+                            'Health from Nature'는 자연과의 공존,<br> 
+                            자연에서의 가치발견을 통한 건강과 아름다움의 실현을 의미합니다.<br>
+                            동성제약은 'Health from Nature' 기업이념 아래 <br>
+                            제약, 화장품, 염모제, 광역학치료등 각분야에서 자연 친화적인 제품 개발에 힘을 쏟고 있습니다.</p>
+                        <div class="more"><a href="#n">기업소개 바로가기</a></div>
+                    </div>
+                </div>
             </section><!--intro-->
             <section class="product">
                 <h2>제품소개</h2>
                 <div class="product_list">
-                    <ul>
-                        <li><a href="#n">일반의약품</a></li>
-                        <li><a href="#n">전문의약품</a></li>
-                        <li><a href="#n">염모제/펌제</a></li>
-                        <li><a href="#n">화장품</a></li>
-                        <li><a href="#n">건강기능식품</a></li>
-                        <li><a href="#n">의약외품/기타</a></li>
-                    </ul>
-                </div><!--product-->
-            </section>
-            <section class="search">
-                <h2>Search</h2>
-                <div class="search_box">
                     <div class="wrapper">
-                        <form action="." method="post">
-                            <div class="box">
-                                <input class="search_txt" type="text" placeholder="찾으시는 제품이 있으신가요?">
-                                <button class="search_btn" type="submit">찾기<img src="images/main/search.png" alt="검색"></button>
-                            </div>
-                        </form>
+                        <ul>
+                            <li class="pro_1"><a href="#n"><span>일반의약품</span></a></li>
+                            <li class="pro_2"><a href="#n"><span>전문의약품</span></a></li>
+                            <li class="pro_3"><a href="#n"><span>염모제/펌제</span></a></li>
+                            <li class="pro_4"><a href="#n"><span>화장품</span></a></li>
+                            <li class="pro_5"><a href="#n"><span>건강기능식품</span></a></li>
+                            <li class="pro_6"><a href="#n"><span>의약외품/기타</span></a></li>
+                        </ul>
                     </div>
                 </div>
-                <div class="tag_area">
-                    <ul>
-                        <li><a href="#n">&#35;헤열제</a></li>
-                        <li><a href="#n">&#35;진통소염제</a></li>
-                        <li><a href="#n">&#35;항히스타민제</a></li>
-                        <li><a href="#n">&#35;동성 랑스</a></li>
-                        <li><a href="#n">&#35;항생제</a></li>
-                        <li><a href="#n">&#35;동성 정로환</a></li>
-                        <li><a href="#n">&#35;리케아 프로페셔널</a></li>
-                    </ul>
+            </section><!--product-->
+            <section class="search">
+                <div class="wrapper">
+                    <h2>Search</h2>
+                    <div class="search_box">
+                        <div class="wrapper">
+                            <form action="." method="post">
+                                <div class="box">
+                                    <input class="search_txt" type="text" placeholder="찾으시는 제품이 있으신가요?">
+                                    <button class="search_btn" type="submit">찾기<img src="images/main/search.png" alt="검색"></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="tag_area">
+                        <ul>
+                            <li><a href="#n">&#35;헤열제</a></li>
+                            <li><a href="#n">&#35;진통소염제</a></li>
+                            <li><a href="#n">&#35;항히스타민제</a></li>
+                            <li><a href="#n">&#35;동성 랑스</a></li>
+                            <li><a href="#n">&#35;항생제</a></li>
+                            <li><a href="#n">&#35;동성 정로환</a></li>
+                            <li><a href="#n">&#35;리케아 프로페셔널</a></li>
+                        </ul>
+                    </div>
                 </div>
             </section><!--search-->
             <section class="best">
-                <h2>Best Seller</h2>
-                <div class="list_box">
-                    <ul>
-                        <li>
-                            <div class="photo"><img src="" alt="동성 정로환 에프정"></div>
-                            <strong>일반의약품</strong>
-                            <h3>동성 정로환 에프정</h3>
-                        </li>
-                        <li>
-                            <div class="photo"><img src="" alt="허브 칼라크림"></div>
-                            <strong>염모제/펌제</strong>
-                            <h3>허브 칼라크림</h3>
-                        </li>
-                        <li>
-                            <div class="photo"><img src="" alt="동성 랑스 오크라 미스트"></div>
-                            <strong>화장품</strong>
-                            <h3>동성 랑스 오크라 미스트</h3>
-                        </li>
-                        <li>
-                            <div class="photo"><img src="" alt="바이오 츄어블 비타민D 4000IU"></div>
-                            <strong>건강기능식품</strong>
-                            <h3>바이오 츄어블 비타민D 4000IU</h3>
-                        </li>
-                        <li>
-                            <div class="photo"><img src="" alt="멘자펜정"></div>
-                            <strong>일반의약품</strong>
-                            <h3>멘자펜정</h3>
-                        </li>
-                        <li>
-                            <div class="photo"><img src="" alt="로다인정"></div>
-                            <strong>일반의약품</strong>
-                            <h3>로다인정</h3>
-                        </li>
-                    </ul>
+                <div class="wrapper">
+                    <h2>Best Seller</h2>
+                    <div class="list_box">
+                        <ul>
+                            <li>
+                                <div class="photo"><img src="" alt="동성 정로환 에프정"></div>
+                                <strong>일반의약품</strong>
+                                <h3>동성 정로환 에프정</h3>
+                            </li>
+                            <li>
+                                <div class="photo"><img src="" alt="허브 칼라크림"></div>
+                                <strong>염모제/펌제</strong>
+                                <h3>허브 칼라크림</h3>
+                            </li>
+                            <li>
+                                <div class="photo"><img src="" alt="동성 랑스 오크라 미스트"></div>
+                                <strong>화장품</strong>
+                                <h3>동성 랑스 오크라 미스트</h3>
+                            </li>
+                            <li>
+                                <div class="photo"><img src="" alt="바이오 츄어블 비타민D 4000IU"></div>
+                                <strong>건강기능식품</strong>
+                                <h3>바이오 츄어블 비타민D 4000IU</h3>
+                            </li>
+                            <li>
+                                <div class="photo"><img src="" alt="멘자펜정"></div>
+                                <strong>일반의약품</strong>
+                                <h3>멘자펜정</h3>
+                            </li>
+                            <li>
+                                <div class="photo"><img src="" alt="로다인정"></div>
+                                <strong>일반의약품</strong>
+                                <h3>로다인정</h3>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="more"><a href="#n">제품소개 바로가기</a></div>
                 </div>
-                <div class="more"><a href="#n">제품소개 바로가기</a></div>
             </section><!--best-->
             <section class="news">
-                <h2>동성제약뉴스</h2>
-                <div class="news_list">
-                    
+                <div class="wrapper">
+                    <h2>동성제약뉴스</h2>
+                    <div class="news_list">
+                        
+                    </div>
                 </div>
             </section><!--news-->
             <section class="invest">
-                <h2>Invest</h2>
-                <div class="invest_list">
-                    <ul>
-                        <li>
-                            <a href="#n">
-                                <h3>공시정보</h3>
-                                <p>투명한 책임경영을 실현하는<br>기업이 되겠습니다.</p>
-                            </a>
-                        </li>
-                         <li>
-                            <a href="#n">
-                                <h3>채용정보</h3>
-                                <p> 열정, 창의를 갖춘<br>역동적인 인재를 환영합니다.</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#n">
-                                <h3>지속가능경영</h3>
-                                <p>인류에 봉사하는 기업이념으로<br>기업윤리를 다짐하겠습니다.</p>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="wrapper">
+                    <h2>Invest</h2>
+                    <div class="invest_list">
+                        <ul>
+                            <li>
+                                <a href="#n">
+                                    <h3>공시정보</h3>
+                                    <p>투명한 책임경영을 실현하는<br>기업이 되겠습니다.</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <h3>채용정보</h3>
+                                    <p> 열정, 창의를 갖춘<br>역동적인 인재를 환영합니다.</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <h3>지속가능경영</h3>
+                                    <p>인류에 봉사하는 기업이념으로<br>기업윤리를 다짐하겠습니다.</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </section><!--invest-->
             <section class="contact">
-                <h2>Contact us</h2>
+                <div class="wrapper">
+                    <h2>Contact us</h2>
+                </div>
+                <div class="cts_map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3158.3058476660663!2d127.03767558943548!3d37.665520546294815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cb9f7a7c95c7b%3A0x96c68c408fa03048!2z64-Z7ISx7KCc7JW97KO87Iud7ZqM7IKs!5e0!3m2!1sko!2skr!4v1726541337693!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="ect">
+                    <div class="wrapper">
+                        <p>동성제약과 관련하여<br>자주 문의하시는 질문을 확인하실 수 있습니다.</p>
+                        <div class="come"><a href="#n">오시는 길</a></div>
+                        <div class="service"><a href="#n">고객 센터</a></div>
+                    </div>
+                </div>
             </section><!--contact-->
         </main>
         <footer>
-
+            <div class="wrapper">
+                <div class="family_site">
+                    <button class="family_open">family site</button>
+                    <ul>
+                        <li><a href="https://dseshop.co.kr/goods/goods_list.php?brandCd=002" target="_blank" title="새창열림">세븐에이트</a></li>
+                        <li><a a href="https://smartstore.naver.com/eznstyle/" target="_blank" title="새창열림">이지엔</a></li>
+                        <li><a href="hhttps://dongsungbio.kr/" target="_blank" title="새창열림"></a>동성바이오</li>
+                        <li><a href="https://www.dspmall.kr/intro/member.php?returnUrl=%2F" target="_blank" title="새창열림">동성제약 전문몰</a></li>
+                        <li><a href="https://dongsung-azero.com/" target="_blank" title="새창열림">동성 A-zero</a></li>
+                        <li><a href="https://www.dseshop.co.kr/" target="_blank" title="새창열림">동성이샵</a></li>
+                        <li><a href="https://dsob.modoo.at/" target="_blank" title="새창열림">동성동우회</a></li>
+                    </ul>
+                </div>
+                <div class="f_sns">
+                    <ul>
+                        <li class="youtube"><a href="https://www.youtube.com/user/dongsungpharm">유튜브</a></li>
+                        <li class="insta"><a href="https://www.instagram.com/dongsung_healthcare/">인스타</a></li>
+                        <li class="blog"><a href="https://blog.naver.com/dspharmstory">네이버 블로그</a></li>
+                    </ul>
+                </div>
+                <div class="f_info">
+                    <ul class="left">
+                        <address>서울특별시 도봉구 도봉로 683 (방학동 동성빌딩)</address>
+                        <span>대표 : 이양구사업자번호</span>
+                        <span>사업자번호 : 211-81-25288</span>
+                        <span>TEL : 02-6911-3600</span>
+                    </ul>
+                    <ul class="right">
+                       <ul class="left"></ul>
+                        <span>소비자 상담 전화번호</span>
+                        <span>의약품/외품 080-001-0921</span>
+                        <span>건강기능식품 080-856-3300</span>
+                        <span>화장품 080-020-2500</span>
+                        <span>염모제 080-547-3571</span>
+                    </ul>
+                </div>
+                <div class="copy">COPYRIGHTⓒ DONGSUNG BIO PHARM. CO., LTD. ALL RIGHT RESERVED.</div>
+            </div>
         </footer>
     </div>
 </body>
