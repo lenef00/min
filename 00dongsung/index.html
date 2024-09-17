@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
@@ -90,7 +92,7 @@
                     <button class="gnb_close">메뉴닫기</button>
                 </nav>
                 <div class="tnb">
-                    <a href="#n" class="search">검색</a>
+                    <a href="#n" class="h_search">검색</a>
                     <a href="#n" class="lang">언어</a>
                 </div>
             </div>
@@ -139,17 +141,19 @@
                             <form action="." method="post">
                                 <div class="box">
                                     <input class="search_txt" type="text" placeholder="찾으시는 제품이 있으신가요?">
-                                    <button class="search_btn" type="submit">찾기<img src="images/main/search.png" alt="검색"></button>
+                                    <button class="search_btn" type="submit">찾기<div class="photo"><img src="images/main/search.png" alt="검색"></div></button>
                                 </div>
                             </form>
                         </div>
                     </div>
                     <div class="tag_area">
-                        <ul>
+                        <ul class="tag_top">
                             <li><a href="#n">&#35;헤열제</a></li>
                             <li><a href="#n">&#35;진통소염제</a></li>
                             <li><a href="#n">&#35;항히스타민제</a></li>
                             <li><a href="#n">&#35;동성 랑스</a></li>
+                        </ul>
+                        <ul class="tag_bottom">
                             <li><a href="#n">&#35;항생제</a></li>
                             <li><a href="#n">&#35;동성 정로환</a></li>
                             <li><a href="#n">&#35;리케아 프로페셔널</a></li>
@@ -159,70 +163,114 @@
             </section><!--search-->
             <section class="best">
                 <div class="wrapper">
-                    <h2>Best Seller</h2>
-                    <div class="list_box">
+                    <div class="best_tit">
+                        <h2>Best Seller</h2>
+                    </div>
+                    <div class="list_box" data-aos="fade-up" data-aos-delay="500">
                         <ul>
                             <li>
-                                <div class="photo"><img src="" alt="동성 정로환 에프정"></div>
-                                <strong>일반의약품</strong>
-                                <h3>동성 정로환 에프정</h3>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/main/best_1.png" alt="동성 정로환 에프정"></div>
+                                    <strong>일반의약품</strong>
+                                    <h3>동성 정로환 에프정</h3>
+                                </a>
                             </li>
                             <li>
-                                <div class="photo"><img src="" alt="허브 칼라크림"></div>
-                                <strong>염모제/펌제</strong>
-                                <h3>허브 칼라크림</h3>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/main/best_2.png" alt="허브 칼라크림"></div>
+                                    <strong>염모제/펌제</strong>
+                                    <h3>허브 칼라크림</h3>
+                                </a>
                             </li>
                             <li>
-                                <div class="photo"><img src="" alt="동성 랑스 오크라 미스트"></div>
-                                <strong>화장품</strong>
-                                <h3>동성 랑스 오크라 미스트</h3>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/main/best_3.png" alt="동성 랑스 오크라 미스트"></div>
+                                    <strong>화장품</strong>
+                                    <h3>동성 랑스 오크라 미스트</h3>
+                                </a>
                             </li>
                             <li>
-                                <div class="photo"><img src="" alt="바이오 츄어블 비타민D 4000IU"></div>
-                                <strong>건강기능식품</strong>
-                                <h3>바이오 츄어블 비타민D 4000IU</h3>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/main/best_4.png" alt="바이오 츄어블 비타민D 4000IU"></div>
+                                    <strong>건강기능식품</strong>
+                                    <h3>바이오 츄어블 비타민D 4000IU</h3>
+                                </a>
                             </li>
                             <li>
-                                <div class="photo"><img src="" alt="멘자펜정"></div>
-                                <strong>일반의약품</strong>
-                                <h3>멘자펜정</h3>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/main/best_5.png" alt="멘자펜정"></div>
+                                    <strong>일반의약품</strong>
+                                    <h3>멘자펜정</h3>
+                                </a>
                             </li>
                             <li>
-                                <div class="photo"><img src="" alt="로다인정"></div>
-                                <strong>일반의약품</strong>
-                                <h3>로다인정</h3>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/main/best_6.png" alt="로다인정"></div>
+                                    <strong>일반의약품</strong>
+                                    <h3>로다인정</h3>
+                                </a>
                             </li>
                         </ul>
                     </div>
-                    <div class="more"><a href="#n">제품소개 바로가기</a></div>
-                </div>
+                    <div class="more" data-aos="fade-up" data-aos-delay="500"><a href="#n">제품소개 바로가기</a></div>
+                </div><!--wrapper-->   
             </section><!--best-->
             <section class="news">
                 <div class="wrapper">
-                    <h2>동성제약뉴스</h2>
-                    <div class="news_list">
-                        
+                    <div class="new_bar">
+                        <h2>동성제약뉴스</h2>
+                        <div class="news_list">
+                            <div class="swiper">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <p>동성제약 ‘이지엔’, 이지(eZ)한 숏폼 공모전 성료</p>
+                                            <span class="date">2024-08-29</span>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <p>동성제약, 로열젤리 주름 개선 기능성 앰플 개발</p>
+                                            <span class="date">2024-08-29</span>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <p>동성제약, 다한증 치료제 ‘디클리어액’ 출시</p>
+                                            <span class="date">2024-08-29</span>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <p>동성제약, 진통소염제 ‘록소앤겔 롤온’ 신제품 출시</p>
+                                            <span class="date">2024-08-29</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="more">더보기</div>
+                        </div>
                     </div>
                 </div>
             </section><!--news-->
             <section class="invest">
                 <div class="wrapper">
                     <h2>Invest</h2>
-                    <div class="invest_list">
+                    <div class="invest_list" data-aos="fade-up">
                         <ul>
-                            <li>
+                            <li class="list_1">
                                 <a href="#n">
                                     <h3>공시정보</h3>
                                     <p>투명한 책임경영을 실현하는<br>기업이 되겠습니다.</p>
                                 </a>
                             </li>
-                            <li>
+                            <li class="list_2">
                                 <a href="#n">
                                     <h3>채용정보</h3>
                                     <p> 열정, 창의를 갖춘<br>역동적인 인재를 환영합니다.</p>
                                 </a>
                             </li>
-                            <li>
+                            <li class="list_3">
                                 <a href="#n">
                                     <h3>지속가능경영</h3>
                                     <p>인류에 봉사하는 기업이념으로<br>기업윤리를 다짐하겠습니다.</p>
@@ -234,16 +282,20 @@
             </section><!--invest-->
             <section class="contact">
                 <div class="wrapper">
-                    <h2>Contact us</h2>
-                </div>
-                <div class="cts_map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3158.3058476660663!2d127.03767558943548!3d37.665520546294815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cb9f7a7c95c7b%3A0x96c68c408fa03048!2z64-Z7ISx7KCc7JW97KO87Iud7ZqM7IKs!5e0!3m2!1sko!2skr!4v1726541337693!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <div class="ect">
-                    <div class="wrapper">
-                        <p>동성제약과 관련하여<br>자주 문의하시는 질문을 확인하실 수 있습니다.</p>
-                        <div class="come"><a href="#n">오시는 길</a></div>
-                        <div class="service"><a href="#n">고객 센터</a></div>
+                    <div class="c_tit">
+                        <h2>Contact us</h2>
+                    </div>
+                    <div class="c_info">
+                        <div class="cts_map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3158.3058476660663!2d127.03767558943548!3d37.665520546294815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cb9f7a7c95c7b%3A0x96c68c408fa03048!2z64-Z7ISx7KCc7JW97KO87Iud7ZqM7IKs!5e0!3m2!1sko!2skr!4v1726541337693!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="ect">
+                            <p>동성제약과 관련하여<br>자주 문의하시는 질문을 확인하실 수 있습니다.</p>
+                            <div class="ect_more">
+                                <div class="come"><a href="#n">오시는 길</a></div>
+                                <div class="service"><a href="#n">고객 센터</a></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section><!--contact-->
@@ -289,5 +341,12 @@
             </div>
         </footer>
     </div>
+    <script>
+        AOS.init({
+        offset: 150, // 해당 콘텐츠가 하단에서 몇 px 위로 올라와에 나타나는 효과가 나타날지 셋팅하는 값
+        duration: 500, // 애니메이션 효과가 작동되는 시간
+        easing: 'ease', // 가속도
+        });
+    </script>
 </body>
 </html>

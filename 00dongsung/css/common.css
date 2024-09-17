@@ -65,10 +65,11 @@ html, body {
     --txt-color-tit: #1d1d1d;
     --txt-color-txt: #3d3d3d;
     --txt-color-gray: #666;
+    --txt-color-white: #fff;
     --txt-color-blue: #295F9B;
     --txt-tit-size : 4.267rem;
     --txt-best-size : 1.333rem;
-    --sub-best-size : 0.867rem;
+    --sub-best-size : 0.933rem;
     --txt-invest-size : 1.6rem;
 }
 

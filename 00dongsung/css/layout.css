@@ -13,7 +13,7 @@
     height: 50px;
     line-height: 50px;
     background-color: #0C6779;
-    color: #fff;
+    color:  var(--txt-color-white);
     text-align: center;
 }
 .skip_nav a:focus {
@@ -97,7 +97,7 @@ header .logo a::before {
         width: 120px;
         padding: 15px 0;
         text-align: center;
-        background-color: #fff;
+        background-color:  var(--txt-color-white);
         border: 1px solid #ccc;
     }
     header .gnb .depth1 > li:last-child > .depth2  {
@@ -119,13 +119,12 @@ header .logo a::before {
     header .gnb .depth1 > li.on > .depth2 > ul > li:hover > a {
         color: var(--txt-color-blue);
     }
-    
     header .tnb {
         width: 100px;
         display: flex;
         justify-content: flex-end;
     }
-    header .tnb .search {
+    header .tnb .h_search {
         margin-right: 15px;
     }
     header .tnb a {
@@ -148,7 +147,7 @@ header .logo a::before {
         content: "";
     }
 
-    header .tnb a.search::before {
+    header .tnb a.h_search::before {
         background-image: url("data:image/svg+xml,%3Csvg width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16.356' cy='15.5445' r='7.52299' stroke='%23666666' stroke-width='2'/%3E%3Cline x1='21.5079' y1='20.6679' x2='27.7064' y2='26.8664' stroke='%23666666' stroke-width='2'/%3E%3C/svg%3E%0A");
     }
     
@@ -160,7 +159,7 @@ header .logo a::before {
     header.fixed.menu_over {
         position: fixed;
         border-bottom: 1px solid #ccc;
-        background-color: #fff;
+        background-color:  var(--txt-color-white);
     }
 }
 @media screen and (max-width:1024px) {
@@ -170,4 +169,10 @@ header .logo a::before {
 }
 @media screen and (max-width:768px) {
 
+}
+
+footer {
+    background-color: var(--txt-color-tit);
+    padding: 50px 0;
+    color: #BEBEBE;
 }
