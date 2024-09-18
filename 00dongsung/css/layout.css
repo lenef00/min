@@ -176,4 +176,143 @@ footer {
     padding: 50px 0;
     color: #BEBEBE;
 }
+footer .wrapper {
+    position: relative;
+}
+footer .family_site {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    text-align: right;
+}
+footer .family_site button {
+    position: relative;
+    width: 189px;
+    height: 42px;
+    background-color: #3d3d3d;
+    text-align: left;
+    padding-left: 15px;
+}
+footer .family_site button::before {
+    position: absolute;
+    right: 5px;
+    top: 9px;
+    width: 24px;
+    height: 24px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content:""
+}
+footer .family_site .family_open::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 9L17 14L7 14L12 9Z' fill='%23EDEDED'/%3E%3C/svg%3E%0A");
+}
+footer .family_site button.family_close::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 15L7 10L17 10L12 15Z' fill='%23EDEDED'/%3E%3C/svg%3E%0A");
+}
+footer .family_site .family_close {
+    display: none;
+}
+footer .family_site ul {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    background-color: #3d3d3d;
+    width: 189px;
+    height: 229px;
+    padding-top: 10px;
+}
+footer .family_site ul li a {
+    text-align: center;
+    display: block;
+    line-height: 2;
+}
+footer .family_site.open .family_open {
+    display: none;
+}
+footer .family_site.open .family_close {
+    display: block;
+}
+footer .f_sns ul {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+}
+footer .f_sns ul li {
+    position: relative;
+    line-height: 0;
+    font-size: 0;
+}
+footer .f_sns ul li a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+footer .f_sns ul li a::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content:""
+}
+footer .f_sns ul li.youtube a::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='35' height='35' viewBox='0 0 35 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='17.5' cy='17.5' r='17.5' fill='white'/%3E%3Cg clip-path='url(%23clip0_32_4652)'%3E%3Cpath d='M28 15.1061C28 12.5594 25.9348 10.5 23.3939 10.5H11.6061C9.06519 10.5 7 12.5652 7 15.1061V20.5881C7 23.1348 9.06519 25.1942 11.6061 25.1942H23.3881C25.9348 25.1942 27.9942 23.129 27.9942 20.5881V15.1061H28ZM21.0677 18.2619L15.7829 20.8782C15.574 20.9884 14.8721 20.8376 14.8721 20.6055V15.2395C14.8721 15.0017 15.5798 14.8508 15.7887 14.9669L20.8472 17.7166C21.0619 17.8384 21.2823 18.1459 21.0677 18.2619Z' fill='%231D1D1D'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_32_4652'%3E%3Crect width='21' height='14.7' fill='white' transform='translate(7 10.5)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+footer .f_sns ul li.insta a::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='35' height='35' viewBox='0 0 35 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='17.5' cy='17.5' r='17.5' fill='white'/%3E%3Cg clip-path='url(%23clip0_32_4646)'%3E%3Cpath d='M23.0551 10.748C22.3773 10.748 21.8232 11.3021 21.8232 11.9799C21.8232 12.6577 22.3773 13.2117 23.0551 13.2117C23.7329 13.2117 24.2869 12.6577 24.2869 11.9799C24.2869 11.3021 23.7329 10.748 23.0551 10.748Z' fill='%231D1D1D'/%3E%3Cpath d='M17.585 12.3281C14.7323 12.3281 12.416 14.6503 12.416 17.4971C12.416 20.3438 14.7382 22.666 17.585 22.666C20.4317 22.666 22.7539 20.3438 22.7539 17.4971C22.7539 14.6503 20.4317 12.3281 17.585 12.3281ZM17.585 20.8095C15.7579 20.8095 14.2726 19.3242 14.2726 17.4971C14.2726 15.67 15.7579 14.1847 17.585 14.1847C19.4121 14.1847 20.8974 15.67 20.8974 17.4971C20.8974 19.3242 19.4121 20.8095 17.585 20.8095Z' fill='%231D1D1D'/%3E%3Cpath d='M21.6876 28H13.3065C9.82908 28 7 25.1709 7 21.6935V13.3124C7 9.82908 9.82908 7 13.3065 7H21.6876C25.165 7 27.9941 9.82908 27.9941 13.3065V21.6876C27.9941 25.165 25.165 27.9941 21.6876 27.9941V28ZM13.3065 8.97446C10.9194 8.97446 8.97446 10.9194 8.97446 13.3065V21.6876C8.97446 24.0747 10.9194 26.0196 13.3065 26.0196H21.6876C24.0747 26.0196 26.0196 24.0747 26.0196 21.6876V13.3065C26.0196 10.9194 24.0747 8.97446 21.6876 8.97446H13.3065Z' fill='%231D1D1D'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_32_4646'%3E%3Crect width='21' height='21' fill='white' transform='translate(7 7)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+footer .f_sns ul li.blog a::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='35' height='35' viewBox='0 0 35 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='17.5' cy='17.5' r='17.5' fill='white'/%3E%3Cg clip-path='url(%23clip0_32_4656)'%3E%3Cpath d='M28 7.70117V27.0072H20.951L14.049 17.2912V27.0072H7V7.70117H14.049L20.951 17.8162V7.70117H28Z' fill='%231D1D1D'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_32_4656'%3E%3Crect width='21' height='19.306' fill='white' transform='translate(7 7.70117)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+footer .f_info {
+    padding-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.933rem;
+}
+footer .f_info ul {
+    line-height: 1.8;
+}
+footer .copy {
+    font-size:  0.867rem;
+}
 
+@media screen and (max-width:768px) {
+    footer .family_site {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: calc(90%);
+        margin: 0 auto;
+    }
+    footer .family_site button {
+        width: 100%;
+    }
+    footer .family_site ul {
+        width: 100%;
+        padding: 25px 0;
+    }
+    footer .f_sns ul {
+        position: relative;
+        top: auto;
+        left: auto;
+        justify-content: center;
+        margin-top: 24px;
+    }
+    footer .f_info {
+        padding-top: 24px;
+        display: block;
+        text-align: center;
+    }
+    footer .copy {
+        padding-top: 10px;
+        text-align: center;
+    }
+}

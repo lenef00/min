@@ -46,4 +46,13 @@ $(document).ready(function(){
             }
         })
 
+    $('footer .family_site .family_open').on('click', function(){
+        $('footer .family_site').addClass('open')
+        $('footer .family_site ul').slideDown()
+    })
+    $('footer .family_site .family_close').on('click', function(){
+        $('footer .family_site').removeClass('open')
+        $('footer .family_site ul').slideUp()
+    })    
+
 })

@@ -12,8 +12,8 @@ section h2 {
 }
 
 .visual {
-    background-image: url(../images/main/visual_bg.png);
-    height: 707px;
+    background: url(../images/main/visual_bg.png) no-repeat center center / cover;
+    height: 100vh;
 }
 .visual h2 {
     color:  var(--txt-color-white);
@@ -26,7 +26,30 @@ section h2 {
     color:  var(--txt-color-white);
     margin-top: 20px;
 }
-
+@media screen and (max-width:1024px) {
+    .visual {
+        height: 550px;
+    }
+    .visual h2 {
+        font-size: 4.857rem;
+    }
+}
+@media screen and (max-width:768px) {
+    .visual {
+        height: 440px;
+    }
+    .visual h2 {
+        font-size: 4.308rem;
+    }
+}
+@media screen and (max-width:425px) {
+    .visual h2 {
+        font-size: 3.385rem;
+    }
+    .visual p {
+        display: none;
+    }
+}
 .intro {
     padding: 124px 0;
 }
@@ -63,8 +86,8 @@ section h2 {
 }
 .intro .info p {
     margin: 40px 0;
-    font-size: 16px;
-    line-height: 2;
+    font-size: 1.067rem;
+    line-height: 1.6;
 }
 .intro .info .more a {
     display: block;
@@ -72,7 +95,7 @@ section h2 {
     line-height: 1;
     width: 213px;
     height: 51px;
-    padding: 15px 0 15px 25px;
+    padding: 17px 0 15px 25px;
     color:  var(--txt-color-tit);
     border: 1px solid var(--txt-color-gray);
     border-radius: 40px;
@@ -97,11 +120,71 @@ section h2 {
 .intro .info .more:hover a::before {
     background-image: url("data:image/svg+xml,%3Csvg width='21' height='7' viewBox='0 0 21 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.8462 1L20 6H0' stroke='white' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 }
-@media screen and (max-width:1024px) {
 
+@media screen and (max-width:1024px) {
+    .intro {
+        padding: 100px 0;
+    }
+    .intro .wrapper {
+        display: block;
+    }
+    .intro .photo {
+        height: 500px;
+        border-radius: 0;
+    }
+    .intro .info {
+       margin: 50px 0 0 0;
+    }
+    .intro .info h2::before {
+        top: 74px;
+        width: 320px;
+    }
+    .intro .info p {
+        margin: 30px 0;
+    }
 }
 @media screen and (max-width:768px) {
-    
+    .intro {
+        padding: 70px 0;
+    }
+    .intro .photo {
+        height: 350px;
+    }
+    .intro .info {
+       margin: 30px 0 0 0;
+    }
+    .intro .info h2::before {
+        top: 62px;
+        width: 280px;
+    }
+    .intro .info p {
+        margin: 30px 0;
+    }
+    .intro .info .more a {
+        color:  var(--txt-color-white);
+        background-color: var(--txt-color-blue);
+        border: transparent;
+        border-radius: 40px;
+    }
+    .intro .info .more a::before {
+        background-image: url("data:image/svg+xml,%3Csvg width='21' height='7' viewBox='0 0 21 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.8462 1L20 6H0' stroke='white' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    }
+}
+@media screen and (max-width:425px) {
+    .intro {
+        padding: 50px 0;
+    }
+    .intro .photo {
+        height: 200px;
+    }
+    .intro .info {
+        margin: 20px 0 0 0;
+    }
+    .intro .info h2::before {
+        top: 60px;
+        width: 245px;
+        border: 4px solid #5F9F9E;
+    }
 }
 
 .product h2 {
@@ -183,10 +266,54 @@ section h2 {
     background-image: url("data:image/svg+xml,%3Csvg width='37' height='45' viewBox='0 0 37 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_39_41)'%3E%3Cpath d='M5.90234 39.9079V45.0006H36.6121V8.72852H31.5195V39.9079H5.90234Z' fill='white'/%3E%3Cpath d='M31.5194 3.63477H0.80957V39.9068H31.5194V3.63477Z' stroke='white' stroke-width='2' stroke-miterlimit='10'/%3E%3Cpath d='M22.9779 0H9.35156V7.2706H22.9779V0Z' fill='white'/%3E%3Cpath d='M6.25879 16.3477H26.0708' stroke='white' stroke-width='2' stroke-miterlimit='10'/%3E%3Cpath d='M6.25879 24.5488H26.0708' stroke='white' stroke-width='2' stroke-miterlimit='10'/%3E%3Cpath d='M6.25879 32.7578H26.0708' stroke='white' stroke-width='2' stroke-miterlimit='10'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_39_41'%3E%3Crect width='36.6121' height='45' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
 }
 @media screen and (max-width:1024px) {
-
+    .product .product_list ul li {
+        height: 95px;
+    }
+    .product .product_list ul li a {
+        padding-top: 65px;
+    }
+    .product .product_list ul li a::before {
+        height: 38px;
+    }
+    .product .product_list ul li.pro_4 a::before {
+        top: 30px;
+    }
 }
 @media screen and (max-width:768px) {
-    
+    .product .product_list ul {
+        flex-wrap: wrap;
+    }
+    .product .product_list ul li {
+        width: 31%;
+        height: 80px; 
+    }
+    .product .product_list ul li.pro_1,
+    .product .product_list ul li.pro_2,
+    .product .product_list ul li.pro_3 {
+        margin-bottom: 25px;
+    }
+    .product .product_list ul li a {
+        display: block;
+        padding-top: 30px;
+        font-size: 1.286rem;
+    }
+    .product .product_list ul li a::before {
+        display: none;
+    }
+}
+@media screen and (max-width:425px) {
+    .product .product_list ul li {
+        height: 60px; 
+    }
+    .product .product_list ul li.pro_1,
+    .product .product_list ul li.pro_2,
+    .product .product_list ul li.pro_3 {
+        margin-bottom: 15px;
+    }
+    .product .product_list ul li a {
+        padding-top: 20px;
+        font-size: 1rem;
+    }
 }
 
 .search {
@@ -253,10 +380,37 @@ section h2 {
 }
 
 @media screen and (max-width:1024px) {
-
+    .search {
+        margin: 60px 0 100px 0;
+    }
+    .search h2 {
+        margin-bottom: 25px;
+    }
+    .search .search_box .box input {
+        height: 62px;
+    }
+    .search .search_box .search_btn {
+        width: 62px;
+        height: 62px;
+    }
+    .search .tag_area ul li a {
+        padding: 12px 20px;
+    }
 }
 @media screen and (max-width:768px) {
-    
+    .search h2 {
+        margin-bottom: 15px;
+    }
+    .search .search_box .box input {
+        height: 55px;
+    }
+    .search .search_box .search_btn {
+        width: 55px;
+        height: 55px;
+    }
+    .search .tag_area ul li a {
+        padding: 10px 18px;
+    }
 }
 
 .best {
@@ -341,7 +495,64 @@ section h2 {
     content: "";
 }
 @media screen and (max-width:1024px) {
-
+    .best {
+        background-image: linear-gradient(to bottom,#EEF3F9, #B6C0CC, #EEF3F9);
+        padding: 150px 0;
+        height: auto;
+    }
+    .best .wrapper {
+        display: block;
+        justify-content: space-between;
+    }
+    .best .list_box {
+        padding: 60px 0;
+        width: 54%;
+    }
+    .best .list_box ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .best .list_box ul li {
+        width: calc(50% - 60px);
+        margin: 0 0 80px 60px;
+        background-color:  var(--txt-color-white);
+        border-radius: 10px;
+    }
+    .best .list_box ul li:nth-child(even) {
+        transform: translateY(100px);
+    }
+    .best .list_box ul li a {
+        display: block;
+        text-align: center;
+        width:100%;
+        height: 100%;
+    }
+    .best .list_box ul li .photo {
+        overflow:hidden; 
+        font-size:0; 
+        line-height:0; 
+    }
+    .best .list_box ul li .photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .best .list_box ul li strong {
+        font-family: 'one_pop';
+        font-size: var(--sub-best-size);
+        color: var(--txt-color-blue);
+    }
+    .best .list_box ul li h3 {
+        font-family: 'one_title';
+        font-size: var(--txt-best-size);
+        color: var(--txt-color-tit);
+        padding: 0 35px 20px 35px;
+    }
+    .best .more {
+        position: relative;
+        top: auto;
+        left: auto;
+    }
 }
 @media screen and (max-width:768px) {
     
@@ -355,6 +566,8 @@ section h2 {
     background-color: #eee;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    border-radius: 100px;
 }
 .news .new_bar h2 {
     font-size: 1.467rem;
@@ -362,23 +575,28 @@ section h2 {
     color: var( --txt-color-tit);
     position: relative;
     white-space : nowrap;
+    margin-left: 60px;
 }
 .news .new_bar h3 {
     font-size: 1.333rem;
     line-height: 1;
 }
+.news .new_bar h3:hover {
+    text-decoration: underline;
+}
 .news .new_bar .date {
     font-size: 1.067rem;
 }
-.news .new_bar .swiper {
-    height: 140px;
+.news .new_bar .news_info {
+    width: 68%;
 }
-.news .new_bar .swiper ul li a {
+.news .new_bar .news_info a {
     padding: 60px 0;
     display: flex;
+    justify-content: space-between;
 }
 .news .new_bar .more {
-
+    margin-right: 60px;
 }
 .news .new_bar .more a {
     display: block;

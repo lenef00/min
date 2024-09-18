@@ -48,22 +48,8 @@ html, body {
     중간여백 총합 24*2 = 48 / li의 갯수 = 48/3 = 16
     calc(33.33% - 16px)
 */
-/* 
-    96px - 6.4rem
-    64px - 4.267rem 
-    24px - 1.6rem
-    22px - 1.467rem
-    20px - 1.333rem
-    18px - 1.2rem
-    16px - 1.067rem
-    15px - 1rem
-    14px - 0.933rem
-    13px - 0.867rem
-
-*/
 :root {
     --txt-color-tit: #1d1d1d;
-    --txt-color-txt: #3d3d3d;
     --txt-color-gray: #666;
     --txt-color-white: #fff;
     --txt-color-blue: #295F9B;
