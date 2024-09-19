@@ -1,10 +1,10 @@
 $(document).ready(function(){
 
-    window.addEventListener(
-        'scroll',
-        throttle(() => {
-            handleScroll($aosElements, options.once);
-      }, options.throttleDelay)
-    );
-    
+    AOS.init({
+        once: true,
+    });
+    $(window).on('load', function () {
+        AOS.refresh();
+    });
+
 })
