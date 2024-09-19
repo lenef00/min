@@ -9,8 +9,11 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <title>동성제약주식회사</title>
 </head>
 <body>
@@ -137,82 +140,83 @@
                 <div class="wrapper">
                     <h2>Search</h2>
                     <div class="search_box">
-                        <div class="wrapper">
-                            <form action="." method="post">
-                                <div class="box">
-                                    <input class="search_txt" type="text" placeholder="찾으시는 제품이 있으신가요?">
-                                    <button class="search_btn" type="submit">찾기<img src="images/main/search.png" alt="검색"></button>
-                                </div>
-                            </form>
-                        </div>
+                        <form action="." method="post">
+                            <div class="box">
+                                <input class="search_txt" type="text" placeholder="찾으시는 제품이 있으신가요?">
+                                <button class="search_btn" type="submit">찾기</button>
+                            </div>
+                        </form>
                     </div>
                     <div class="tag_area">
-                        <ul class="tag_top">
-                            <li><a href="#n">&#35;헤열제</a></li>
-                            <li><a href="#n">&#35;진통소염제</a></li>
-                            <li><a href="#n">&#35;항히스타민제</a></li>
-                            <li><a href="#n">&#35;동성 랑스</a></li>
-                        </ul>
-                        <ul class="tag_bottom">
-                            <li><a href="#n">&#35;항생제</a></li>
-                            <li><a href="#n">&#35;동성 정로환</a></li>
-                            <li><a href="#n">&#35;리케아 프로페셔널</a></li>
-                        </ul>
+                        <div class="tag_top">
+                            <span><a href="#n">&#35;헤열제</a></span>
+                            <span><a href="#n">&#35;진통소염제</a></span>
+                            <span><a href="#n">&#35;항히스타민제</a></span>
+                            <span><a href="#n">&#35;동성 랑스</a></span>
+                        </div>
+                        <div class="tag_bottom">
+                            <span><a href="#n">&#35;항생제</a></span>
+                            <span><a href="#n">&#35;동성 정로환</a></span>
+                            <span><a href="#n">&#35;리케아 프로페셔널</a></span>
+                        </div>
                     </div>
                 </div>
             </section><!--search-->
             <section class="best">
                 <div class="wrapper">
-                    <div class="best_tit">
-                        <h2>Best Seller</h2>
+                        <div class="tit">
+                            <h2>Best Seller</h2>
+                            <div class="more"><a href="#n">제품소개 바로가기</a></div>
+                        </div> <!-- 고정될 요소 -->
+                        <div class="cont_wrap"> <!-- 스크롤될 요소를 감싸는 요소 -->
+                            <div class="list_box"> <!-- 스크롤될 요소 (이 내부에 콘텐츠를 코딩해야함, 스크롤될 요소가 여러개면 안됨) -->
+                                <ul>
+                                    <li>
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/main/best_1.png" alt="동성 정로환 에프정"></div>
+                                            <strong>일반의약품</strong>
+                                            <h3>동성 정로환 에프정</h3>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/main/best_2.png" alt="허브 칼라크림"></div>
+                                            <strong>염모제/펌제</strong>
+                                            <h3>허브 칼라크림</h3>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/main/best_3.png" alt="동성 랑스 오크라 미스트"></div>
+                                            <strong>화장품</strong>
+                                            <h3>동성 랑스 오크라 미스트</h3>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/main/best_4.png" alt="바이오 츄어블 비타민D 4000IU"></div>
+                                            <strong>건강기능식품</strong>
+                                            <h3>바이오 츄어블 비타민D</h3>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/main/best_5.png" alt="멘자펜정"></div>
+                                            <strong>일반의약품</strong>
+                                            <h3>멘자펜정</h3>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/main/best_6.png" alt="로다인정"></div>
+                                            <strong>일반의약품</strong>
+                                            <h3>로다인정</h3>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="list_box" data-aos="fade-up">
-                        <ul>
-                            <li>
-                                <a href="#n">
-                                    <div class="photo"><img src="images/main/best_1.png" alt="동성 정로환 에프정"></div>
-                                    <strong>일반의약품</strong>
-                                    <h3>동성 정로환 에프정</h3>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#n">
-                                    <div class="photo"><img src="images/main/best_2.png" alt="허브 칼라크림"></div>
-                                    <strong>염모제/펌제</strong>
-                                    <h3>허브 칼라크림</h3>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#n">
-                                    <div class="photo"><img src="images/main/best_3.png" alt="동성 랑스 오크라 미스트"></div>
-                                    <strong>화장품</strong>
-                                    <h3>동성 랑스 오크라 미스트</h3>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#n">
-                                    <div class="photo"><img src="images/main/best_4.png" alt="바이오 츄어블 비타민D 4000IU"></div>
-                                    <strong>건강기능식품</strong>
-                                    <h3>바이오 츄어블 비타민D</h3>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#n">
-                                    <div class="photo"><img src="images/main/best_5.png" alt="멘자펜정"></div>
-                                    <strong>일반의약품</strong>
-                                    <h3>멘자펜정</h3>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#n">
-                                    <div class="photo"><img src="images/main/best_6.png" alt="로다인정"></div>
-                                    <strong>일반의약품</strong>
-                                    <h3>로다인정</h3>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="more" data-aos="fade-up"><a href="#n">제품소개 바로가기</a></div>
                 </div><!--wrapper-->   
             </section><!--best-->
             <section class="news">
