@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
-    // console = {};
-    // console.log = function(){};
-    // console.warn = function(){};
-    // console.error = function(){};
+    console = {};
+    console.log = function(){};
+    console.warn = function(){};
+    console.error = function(){};
 
     let pc_mobile 
     let window_w 
@@ -33,19 +33,35 @@ $(document).ready(function(){
     })
 
     $('header .gnb_wrap .depth1 > li').on('mouseenter', function(){
+        if(pc_mobile == 'pc'){
+            $('header').addClass('menu_over')
+            $('header .gnb_wrap .depth1 > li').removeClass('on')
+            $(this).addClass('on')
+        }     
+    })
+    $('header').on('mouseleave', function(){
         if(pc_mobile == 'pc'){ //pc일 경우에만
-                $('header').addClass('menu_over')
-                $('header .gnb_wrap .depth1 > li').removeClass('on')
-                $(this).addClass('on')//마우스를 오버한 li만
-            }     
-        })
-        $('header').on('mouseleave', function(){
-            if(pc_mobile == 'pc'){ //pc일 경우에만
-                $('header').removeClass('menu_over')
-                $('header .gnb_wrap .depth1 > li').removeClass('on')
-            }
-        })
+            $('header').removeClass('menu_over')
+            $('header .gnb_wrap .depth1 > li').removeClass('on')
+        }
+    })
 
+    $('header .gnb .gnb_open').on('click', function(){
+        $('header').addClass('menu_open')
+        $("html, body").css({overflow : "hidden", height : $(window).height()}).bind("scroll touchmove mousewheel", function(e){e.preventDefault();e.stopPropagation();return false;},function(){passive:false});
+    })
+    $('header .gnb .gnb_close').on('click', function(){
+        $('header').removeClass('menu_open')
+        $('header').addClass('fixed')
+        $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
+    })
+    $('header .gnb .gnb_wrap ul.depth1 > li > a').on("click", function(e){
+        if(pc_mobile == 'mobile'){
+            e.preventDefault();
+            $(this).parent().toggleClass('open')
+        }
+    });
+    
     $('footer .family_site .family_open').on('click', function(){
         $('footer .family_site').addClass('open')
         $('footer .family_site ul').slideDown()

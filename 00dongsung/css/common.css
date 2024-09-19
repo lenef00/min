@@ -68,7 +68,7 @@ html, body {
     :root {
         --txt-tit-size : 3.286rem;
         --txt-invest-size : 1.571rem;
-        --txt-best-size : 1.286rem;
+        --txt-best-size : 1.214rem;
         --sub-best-size : 0.857rem;
     }
 }
@@ -76,12 +76,13 @@ html, body {
     :root {
         --txt-tit-size : 3.077rem;
         --txt-invest-size : 1.538rem;
-        --txt-best-size : 1.077rem;
-        --sub-best-size : 0.769rem;
+        --txt-best-size : 1.231rem;
+        --sub-best-size : 0.923rem;
     }
 }
 @media screen and (max-width:425px) {
     :root {
         --txt-tit-size : 2.769rem;
+         --txt-best-size : 1.077rem;
     }
 }
