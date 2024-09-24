@@ -1,0 +1,77 @@
+html, body {
+    font-family: "Montserrat", 'one_Regular', 'one_pop', 'one_title', 'Pretendard', "Malgun Gothic", "맑은 고딕", Dotum, 돋움 ;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0em;
+    line-height: 1.4;
+    color: #3d3d3d;
+    word-break: break-all;
+    word-wrap: break-word;
+    overflow-x: hidden;
+}
+
+#wrap {
+    min-width: 1260px;
+    overflow: hidden;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width:1300px) {
+    #wrap {
+        min-width: 100%
+    }
+    .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+}/* media */
+@media screen and (max-width:1024px) {
+    html, body {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:768px) {
+    html, body {
+        font-size: 13px;
+    }
+}
+::selection {
+    background-color: #295F9B;
+    color: #fff;
+}
+
+/*
+    100/li의 갯수 = 33.33%
+    중간여백 총합 24*2 = 48 / li의 갯수 = 48/3 = 16
+    calc(33.33% - 16px)
+*/
+:root {
+    --txt-color-tit: #1d1d1d;
+    --txt-color-gray: #666;
+    --txt-color-white: #fff;
+    --txt-tit-size : 3.2rem;
+}
+
+@media screen and (max-width:1300px) {
+    :root {
+        
+    }
+}
+@media screen and (max-width:1024px) {
+    :root {
+       
+    }
+}
+@media screen and (max-width:768px) {
+    :root {
+       
+    }
+}
+@media screen and (max-width:425px) {
+    :root {
+        
+    }
+}
