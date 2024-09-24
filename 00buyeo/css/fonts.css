@@ -1,5 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+    font-weight: 700;
+    font-style: normal;
+}
 @font-face {
     font-family: 'Gmarket';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
