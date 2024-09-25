@@ -1,5 +1,5 @@
 html, body {
-    font-family: "Montserrat", 'Noto Sans KR', 'Gmarket';
+    font-family: "Montserrat", 'Noto Sans KR';
     font-weight: 400;
     font-size: 15px;
     letter-spacing: 0em;
@@ -39,10 +39,9 @@ html, body {
     }
 }
 ::selection {
-    background-color: #295F9B;
+    background-color: #666;
     color: #fff;
 }
-
 /*
     100/li의 갯수 = 33.33%
     중간여백 총합 24*2 = 48 / li의 갯수 = 48/3 = 16
@@ -50,8 +49,10 @@ html, body {
 */
 :root {
     --txt-color-tit: #1d1d1d;
+    --txt-color-txt: #3d3d3d;
     --txt-color-gray: #666;
     --txt-color-white: #fff;
+    --txt-color-pink: #FB3F58;
     --txt-tit-size : 3.2rem;
 }
 
@@ -62,16 +63,16 @@ html, body {
 }
 @media screen and (max-width:1024px) {
     :root {
-       
+       --txt-tit-size : 2.533rem;
     }
 }
 @media screen and (max-width:768px) {
     :root {
-       
+       --txt-tit-size : 1.867rem;
     }
 }
 @media screen and (max-width:425px) {
     :root {
-        
+        --txt-tit-size : 1.6rem;
     }
 }
