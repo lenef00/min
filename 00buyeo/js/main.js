@@ -75,5 +75,18 @@ $(document).ready(function(){
             prevEl: '.thema #panel_04 .btn_prev',
         },
     });
+
+    const banner_swiper = new Swiper('.banner .swiper', {
+
+        effect: "fade",
+
+        loop: true,
+
+        navigation: { 
+            nextEl: '.banner .btn_next',
+            prevEl: '.banner .btn_prev',  
+        },
+
+    });
  
 })

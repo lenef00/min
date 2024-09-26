@@ -308,7 +308,8 @@
 }
 
 .heritage {
-    padding-top: 150px;
+    padding-top: 150px; 
+    position: relative;
 }
 .heritage h2 {
     font-family: 'GmarketSans';
@@ -324,6 +325,7 @@
 .heritage ul {
     display: flex;
     justify-content: space-between;
+    
 }
 .heritage ul li {
     width: calc(25% - 18px);
@@ -346,4 +348,218 @@
 
 .heritage ul li .info_box p {
     display: none;
+}
+
+.heritage .more {
+    float: right;
+}
+.heritage .more a {
+    display: block;
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+    width: 70px;
+    height: 70px;
+}
+.heritage .more a::before {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='78' height='78' viewBox='0 0 78 78' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d_48_6496)'%3E%3Ccircle cx='39' cy='35' r='35' fill='white'/%3E%3Cpath d='M37.8017 38.1699H24.7031V33.8037H37.8017V20.7051H42.1679V33.8037H55.2665V38.1699H42.1679V51.2685H37.8017V38.1699Z' fill='%23666666'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d_48_6496' x='0' y='0' width='78' height='78' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='4'/%3E%3CfeGaussianBlur stdDeviation='2'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_48_6496'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_48_6496' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+}
+.heritage .more:hover a::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='78' height='78' viewBox='0 0 78 78' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d_57_6512)'%3E%3Ccircle cx='39' cy='35' r='35' fill='white'/%3E%3Cpath d='M37.8017 38.1699H24.7031V33.8037H37.8017V20.7051H42.1679V33.8037H55.2665V38.1699H42.1679V51.2685H37.8017V38.1699Z' fill='%23FC576D'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d_57_6512' x='0' y='0' width='78' height='78' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='4'/%3E%3CfeGaussianBlur stdDeviation='2'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_57_6512'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_57_6512' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+
+.n_layout {
+    margin-top: 150px;
+}
+.n_layout .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.n_layout .notice {
+    width: 66%;
+    position: relative;
+}
+.n_layout .notice h2 {
+    font-size: 2.133rem;
+    font-family: 'GmarketSans';
+    color: var(--txt-color-tit);
+    padding-bottom: 30px;
+    line-height: 1;
+}
+.n_layout .notice .notice_area ul li {
+    position: relative;
+}
+.n_layout .notice .notice_area ul li::before {
+    position: absolute;
+    border: 1px solid rgba(0,0,0,0.1);
+    top: 0;
+    left: 0;
+    width: 100%;
+    content: "";
+}
+.n_layout .notice .notice_area ul li:last-child::after {
+    position: absolute;
+    border: 1px solid rgba(0,0,0,0.1);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    content: "";
+}
+.n_layout .notice .notice_area ul li a {
+    padding: 32px 0;
+    display: flex;
+    align-items: center;
+}
+.n_layout .notice .notice_area ul li .date {
+   width: 12%;
+   text-align: center;
+}
+.n_layout .notice .notice_area ul li .date .day {
+    font-size: 2.133rem;
+    font-weight: 700;
+    color: var(--txt-color-pink);
+}
+.n_layout .notice .notice_area ul li .n_info {
+    width: 88%;
+    padding: 0 10px;
+}
+.n_layout .notice .notice_area ul li .n_info h3,
+.n_layout .notice .notice_area ul li .n_info p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.n_layout .notice .notice_area ul li .n_info h3 {
+    font-size: 1.333rem;
+    font-weight: 700;
+    color: var(--txt-color-tit);
+    padding-bottom: 3px;
+}
+.n_layout .notice .notice_area ul li .n_info h3:hover {
+    text-decoration: underline;
+}
+.n_layout .notice .notice_area .more {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.n_layout .notice .notice_area .more a {
+    width: 32px;
+    height: 32px;
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    position: relative;
+}
+.n_layout .notice .notice_area .more a::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.6928 18.0689H4.57031V14.6947H14.6928V4.57227H18.0669V14.6947H28.1894V18.0689H18.0669V28.1913H14.6928V18.0689Z' fill='%23666666'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+.n_layout .notice .notice_area .more:hover a::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.6928 18.0689H4.57031V14.6947H14.6928V4.57227H18.0669V14.6947H28.1894V18.0689H18.0669V28.1913H14.6928V18.0689Z' fill='%23FC576D'/%3E%3C/svg%3E%0A");
+}
+.n_layout .banner {
+    width: 298px;
+    position: relative;
+}
+.n_layout .banner h2 {
+    font-size: 2.133rem;
+    font-family: 'GmarketSans';
+    color: var(--txt-color-tit);
+    line-height: 1;
+    padding-bottom: 30px;
+}
+.n_layout .banner .photo {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+.n_layout .banner .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.n_layout .banner .btn_wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.n_layout .banner button {
+    width: 20px;
+    height: 18px;
+    font-size: 0;
+    line-height: 0;
+    position: relative;
+}
+.n_layout .banner button::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+.n_layout .banner button.btn_prev::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='11' height='20' viewBox='0 0 11 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 1L1 10L10 19' stroke='%23666666'/%3E%3C/svg%3E%0A");
+} 
+.n_layout .banner button.btn_prev:hover:before {
+    background-image: url("data:image/svg+xml,%3Csvg width='11' height='20' viewBox='0 0 11 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 1L1 10L10 19' stroke='%23FC576D'/%3E%3C/svg%3E%0A");
+} 
+.n_layout .banner button.btn_next::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='11' height='20' viewBox='0 0 11 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L10 10L1 19' stroke='%23666666'/%3E%3C/svg%3E%0A");
+}
+.n_layout .banner button.btn_next:hover::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='11' height='20' viewBox='0 0 11 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L10 10L1 19' stroke='%23FC576D'/%3E%3C/svg%3E%0A");
+}
+
+.Shortcut {
+    padding-top: 150px;
+}
+.Shortcut h2 {
+    display: none;
+}
+.Shortcut ul {
+    display: flex;
+    justify-content: space-between;
+}
+.Shortcut ul li {
+    width: calc(33.33% - 16px);
+    padding: 30px 0 44px 24px;
+}
+.Shortcut ul li.s_youtube {
+    background-color: #F4F4F4;
+}
+.Shortcut ul li.s_temple {
+    background-color: #FAE5E7;
+}
+.Shortcut ul li.s_visit {
+    background-color: #E8F4EA;
+}
+.Shortcut ul li h3 {
+    font-size: 1.333rem;
+    color: var(--txt-color-tit);
+    font-weight: 700;
+}
+.Shortcut ul li p {
+    padding-top: 10px;
 }
