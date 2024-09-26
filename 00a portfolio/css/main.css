@@ -1,0 +1,135 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css); 
+@import url(layout.css); 
+
+.intro h2 {
+    font-size: 128px;
+    font-weight: 200;
+    color: #1d1d1d;
+    text-align: center;
+    margin-top: 150px;
+    position: relative;
+}
+.intro h2::before {
+    position: absolute;
+    border: 40px solid #f4f4f4;
+    width: 550px;
+    top: 90px;
+    right: 220px;
+    z-index: -1;
+    content: "";
+}
+.intro .contect {
+    float: right;
+    margin-top: 240px;
+}
+.intro .contect h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin-bottom: 15px;
+}
+.intro .contect h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1d1d1d;
+}
+.intro .contect p {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.about h2 {
+    margin-top: 60px;
+    font-weight: 200;
+    font-size: 65px;
+    color: #1d1d1d;
+    float: left;
+}
+.about .profile {
+    margin-top: 120px;
+    float: right;
+}
+.about .profile li {
+    padding-bottom: 60px;
+}
+.about .profile li:last-child {
+    padding-bottom: 0;
+}
+.about .profile h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1d1d1d;
+    padding-bottom: 15px;
+}
+.about .profile p,
+.about .profile span {
+    font-size: 20px;
+    color: #3d3d3d;
+    line-height: 1.6;
+}
+
+.index {
+    margin-left: 330px;
+}
+.index h2 {
+    display: none;
+}
+.index ul {
+    height: 100%;
+    border-left: 1px solid #1d1d1d;
+}
+.index ul li {
+    height: 25%;
+    border-bottom: 1px solid #1d1d1d;
+    color: #1d1d1d;
+}
+.index ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.index ul li a::before {
+    position: absolute;
+    right: 20px;
+    top: 85px;
+    width: 95px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='96' height='26' viewBox='0 0 96 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M65.7692 1L95 25H0' stroke='%231D1D1D' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+}
+.index ul li strong {
+    font-size: 58px;
+    font-weight: 300;
+    padding: 0 25px 0 60px;
+}
+.index ul li p {
+    font-size: 58px;
+    font-weight: 300;
+    white-space: nowrap;
+}
+@media screen and (max-width:768px) {
+    .index {
+        margin-left: 0;
+    }
+}
+
+.hello h2 { 
+    font-size: 48px;
+    font-weight: 300;
+    color: #1d1d1d;
+}
+.hello .info {
+    
+}
+.hello .mockup img {
+    width: 100%;
+    height: 100%;
+}

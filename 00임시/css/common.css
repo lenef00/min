@@ -1,0 +1,53 @@
+html, body {
+    font-family: "Montserrat", 'Noto Sans KR';
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0em;
+    line-height: 1.4;
+    color: #3d3d3d;
+    word-break: break-all;
+    word-wrap: break-word;
+    overflow-x: hidden;
+}
+
+body {
+    min-width: 1260px;
+}
+
+#wrap {
+    min-width: 1260px;
+    overflow: hidden;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+    height: 100%;
+}
+.container {
+    height: calc(100vh - 100px);
+}
+section {
+    height: calc(100vh - 100px);
+}
+.swiper {
+    height: 100%;
+}
+
+/* @media screen and (max-width:1300px) {
+    #wrap {
+        min-width: 100%
+    }
+    .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+} */
+::selection {
+    background-color: #f4f4f4;
+    color: #3d3d3d;
+}
+/*
+    100/li의 갯수 = 33.33%
+    중간여백 총합 24*2 = 48 / li의 갯수 = 48/3 = 16
+    calc(33.33% - 16px)
+*/
