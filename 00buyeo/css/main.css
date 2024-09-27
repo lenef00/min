@@ -168,13 +168,12 @@
     color: #1d1d1d;
     white-space: nowrap;
 }
-.thema  .tab_area .tab_btn ul li.active button,
-.thema  .tab_area .tab_btn ul li button:hover  {
+.thema .tab_area .tab_btn ul li.active button,
+.thema .tab_area .tab_btn ul li button:hover  {
     background-color:#FAE5E7;
     color: #BF2D50;
     font-weight: 700;
 }
-
 .thema .tab_area .tab_cnt {
     width: 68%;
 }
@@ -243,6 +242,8 @@
     width: calc(14.2% - 60px);
     height: 155px;
     text-align: center;
+    font-weight: 700;
+    color: var(--txt-color-tit);
 } 
 .t_guide ul li a {
     display: block;
@@ -345,7 +346,6 @@
     height: 100%;
     object-fit: cover;
 }
-
 .heritage ul li .info_box p {
     display: none;
 }

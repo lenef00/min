@@ -11,4 +11,30 @@ $(document).ready(function(){
         
     });
 
+    $('header .gnb ul li.about').on('click', function(){
+        swiper.slideTo(1);
+    })
+    $('header .gnb ul li.g_index').on('click', function(){
+        swiper.slideTo(2);
+    })
+    $('header .gnb ul li.helloaqua').on('click', function(){
+        swiper.slideTo(3);
+    })
+    $('header .gnb ul li.artguaide').on('click', function(){
+        swiper.slideTo(4);
+    })
+    $('header .gnb ul li.donsung').on('click', function(){
+        swiper.slideTo(5);
+    })
+
+    $('.index ul li.index_1').on('click', function(){
+        swiper.slideTo(3);
+    })
+    $('.index ul li.index_2').on('click', function(){
+        swiper.slideTo(4);
+    })
+    $('.index ul li.index_3').on('click', function(){
+        swiper.slideTo(5);
+    })
+
 })
